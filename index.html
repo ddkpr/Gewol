@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gewol — Streamer & Kreator Konten</title>
+  <meta name="description" content="Gewol (Didik Pribadi), streamer dan kreator konten asal Cilacap, mahasiswa Teknik Informatika. Temukan semua media sosialnya di sini." />
+  <meta name="theme-color" content="#070716" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="loading">
+  <!-- Layar pembuka -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-kanji">配信中 · NOW LOADING</div>
+      <h2 class="glitch" data-text="GEWOL">GEWOL</h2>
+      <div class="bar"><span id="barFill"></span></div>
+      <p id="loaderPct">0%</p>
+    </div>
+  </div>
+
+  <!-- Kursor kustom -->
+  <div class="cur-dot"></div>
+  <div class="cur-ring"></div>
+
+  <!-- Kelopak sakura jatuh -->
+  <canvas id="sakura"></canvas>
+  <div class="bg">
+    <span class="orb o1"></span>
+    <span class="orb o2"></span>
+    <span class="orb o3"></span>
+    <span class="grid-lines"></span>
+  </div>
+
+  <!-- Navigasi -->
+  <header class="nav" id="nav">
+    <button id="menuBtn" class="theme-btn menu-btn" aria-label="Buka menu" aria-expanded="false" aria-controls="navLinks" data-i18n-attr="aria-label:menu_label"><span></span><span></span><span></span></button>
+    <a href="#home" class="logo">GEWOL<span>★</span></a>
+    <nav id="navLinks">
+      <a href="#about" data-i18n="nav_about">Tentang</a>
+      <a href="#setup" data-i18n="nav_setup">Setup</a>
+      <a href="#live" data-i18n="nav_live">Live</a>
+      <a href="#request" class="m-only" data-i18n="nav_request">Request</a>
+      <a href="#proyek" class="m-only" data-i18n="nav_gallery">Galeri</a>
+      <a href="#karya" class="m-only" data-i18n="nav_works">Karya</a>
+      <a href="#sosmed" data-i18n="nav_social">Sosmed</a>
+      <a href="#dukung" class="m-only" data-i18n="nav_support">Dukung</a>
+      <a href="#kontak" data-i18n="nav_contact">Kontak</a>
+    </nav>
+    <div class="nav-btns">
+      <a href="https://sociabuzz.com/gewol" target="_blank" rel="noopener" class="donate-pill" id="donateNav" title="Donate"><span aria-hidden="true">☕</span><b data-i18n="donate_btn">Donasi</b></a>
+      <button id="langToggle" class="lang-btn" aria-label="Ganti bahasa / Switch language" title="Bahasa / Language"><span data-l="id">ID</span><span data-l="en">EN</span></button>
+      <button id="soundToggle" class="theme-btn" aria-label="Suara klik" title="Suara klik" data-i18n-attr="aria-label:sound_label,title:sound_label">🔊</button>
+      <button id="themeToggle" class="theme-btn" aria-label="Ganti tema" data-i18n-attr="aria-label:theme_label,title:theme_label">🌙</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero reveal">
+      <div class="hero-text">
+        <span class="chip">配信者 · STREAMER</span>
+        <p class="hello" data-i18n="hello">Halo, saya</p>
+        <h1>Gewol</h1>
+        <p class="realname">Didik Pribadi</p>
+        <p class="typing"><span data-i18n="iam">Saya</span> <span id="typed"></span><span class="cursor">|</span></p>
+        <p class="origin" data-i18n="origin">📍 Desa Rejodadi, Cimanggu, Cilacap, Jawa Tengah</p>
+        <ul class="hero-facts">
+          <li data-i18n="hf_age">🎂 19 tahun</li>
+          <li data-i18n="hf_study">🎓 Teknik Informatika</li>
+        </ul>
+        <div class="hero-actions">
+          <a href="#sosmed" class="btn primary" data-i18n="btn_follow">Ikuti Saya</a>
+          <a href="#about" class="btn ghost" data-i18n="btn_intro">Kenalan Dulu</a>
+          <a href="https://sociabuzz.com/gewol" target="_blank" rel="noopener" class="btn donate-btn">☕ <span data-i18n="donate_btn">Donasi</span></a>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <div class="photo-frame">
+          <img src="foto.png" alt="Foto profil Gewol" data-i18n-attr="alt:photo_alt" />
+        </div>
+        <span class="tag t1">クリエイター</span>
+        <span class="tag t2">LIVE ●</span>
+      </div>
+    </section>
+
+
+    <!-- STATISTIK -->
+    <!-- TikTok & YouTube disinkronkan otomatis lewat bagian SINKRONISASI di script.js.
+         Angka data-count di bawah dipakai sebagai cadangan (dan untuk Jam Streaming / Konten Dibuat). Ganti dengan angka aslimu. -->
+    <section id="stats" class="stats reveal">
+      <div class="stat"><b class="count" data-stat="tiktok" data-count="1000" data-suffix="+">0</b><span data-i18n="stat_tt">Pengikut TikTok</span></div>
+      <div class="stat"><b class="count" data-stat="youtube" data-count="500" data-suffix="+">0</b><span data-i18n="stat_yt">Subscriber YouTube</span></div>
+      <div class="stat"><b class="count" data-count="100" data-suffix="+">0</b><span data-i18n="stat_hours">Jam Live</span></div>
+      <div class="stat"><b class="count" data-count="50" data-suffix="+">0</b><span data-i18n="stat_content">Konten Dibuat</span></div>
+    </section>
+
+    <!-- TENTANG -->
+    <section id="about" class="section reveal">
+      <h2><small>01 / 自己紹介</small><span data-i18n="about_title">Tentang Saya</span></h2>
+      <div class="card about-card">
+        <p data-i18n-html="about_p">Halo, saya <strong>Didik Pribadi</strong>, lebih dikenal sebagai <strong>Gewol</strong>. Usia saya 19 tahun, mahasiswa program studi <strong>Teknik Informatika</strong> di <strong>Universitas Komputama</strong>, berasal dari Desa Rejodadi, Kecamatan Cimanggu, Kabupaten Cilacap, Jawa Tengah. Saya seorang streamer dan kreator konten. Di sini kamu bisa menemukan semua tempat saya berkarya, mulai dari live streaming sampai konten harian. Yuk mampir dan ikuti!</p>
+        <ul class="facts">
+          <li><strong data-i18n="f_real">🪪 Nama asli</strong><span>Didik Pribadi</span></li>
+          <li><strong data-i18n="f_stage">🎤 Nama panggung</strong><span>Gewol</span></li>
+          <li><strong data-i18n="f_age">🎂 Usia</strong><span data-i18n="f_age_v">19 tahun</span></li>
+          <li class="half"><strong data-i18n="f_job">🎬 Profesi</strong><span data-i18n="f_job_v">Streamer & Kreator Konten</span></li>
+          <li class="half"><strong data-i18n="f_edu">🎓 Program studi</strong><span data-i18n="f_edu_v">Teknik Informatika, Universitas Komputama</span></li>
+          <li class="wide"><strong data-i18n="f_from">📍 Asal</strong><span data-i18n="f_from_v">Desa Rejodadi, Kecamatan Cimanggu, Kabupaten Cilacap, Jawa Tengah, Indonesia</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SETUP SAYA -->
+    <section id="setup" class="section reveal">
+      <h2><small>02 / セットアップ</small><span data-i18n="setup_title">Setup Saya</span></h2>
+      <p class="sub" data-i18n="setup_sub">Perangkat yang saya pakai untuk berkarya</p>
+      <div class="setup-grid">
+        <div class="part"><em>🧠</em><div><span>CPU</span><h3>AMD Ryzen 5 5600G</h3></div></div>
+        <div class="part"><em>🔌</em><div><span>Motherboard</span><h3>ASRock B550M Pro SE</h3></div></div>
+        <div class="part"><em>⚡</em><div><span>RAM</span><h3>ADATA XPG Spectrix 32GB (2×16GB)</h3></div></div>
+        <div class="part"><em>💾</em><div><span>SSD</span><h3>ADATA Legend 900 512GB</h3></div></div>
+        <div class="part"><em>🔋</em><div><span>PSU</span><h3>ADATA XPG Pylon 650W</h3></div></div>
+        <div class="part"><em>🎮</em><div><span>GPU</span><h3 data-i18n="gpu_h">Tanpa GPU terpisah</h3><small data-i18n="gpu_s">Memakai grafis terintegrasi bawaan Ryzen 5 5600G</small></div></div>
+        <!-- Tambah perangkat lain dengan menyalin satu blok "part", misalnya mikrofon, kamera, headset, monitor -->
+      </div>
+    </section>
+
+    <!-- JADWAL LIVE -->
+    <section id="live" class="section reveal">
+      <h2><small>03 / ライブ</small><span data-i18n="live_title">Jadwal Live</span></h2>
+      <p class="sub" data-i18n="live_sub">Satu sesi setiap hari. Kalau berhalangan, kabar terbaru ada di media sosial.</p>
+      <div class="live-card day">
+        <span class="live-ico" aria-hidden="true">☀️</span>
+        <div>
+          <h3 data-i18n="live_day">Live Setiap Hari</h3>
+          <p class="time">13.00 – 15.00 <small>WIB</small></p>
+          <p class="live-note" data-i18n="live_note">Kecuali ada kesibukan.</p>
+        </div>
+        <p class="live-status" id="liveStatus" aria-live="polite"></p>
+        <div class="live-actions">
+          <a class="live-btn tt" href="https://www.tiktok.com/@gewolx" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.4a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .8.1V9.2a6.3 6.3 0 1 0 5.5 6.2V8.6a8.2 8.2 0 0 0 4.8 1.5V6.7z"/></svg><span data-i18n="watch_tt">Tonton di TikTok</span></a>
+          <a class="live-btn yt" href="https://youtube.com/@gewolx" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg><span data-i18n="watch_yt">Tonton di YouTube</span></a>
+        </div>
+      </div>
+      <ol class="week" id="week">
+        <li data-d="1" data-i18n="d_1">Sen</li>
+        <li data-d="2" data-i18n="d_2">Sel</li>
+        <li data-d="3" data-i18n="d_3">Rab</li>
+        <li data-d="4" data-i18n="d_4">Kam</li>
+        <li data-d="5" data-i18n="d_5">Jum</li>
+        <li data-d="6" data-i18n="d_6">Sab</li>
+        <li data-d="0" data-i18n="d_0">Min</li>
+      </ol>
+      <div id="request" class="card request-card">
+        <h3 data-i18n="req_title">Request untuk Live</h3>
+        <p class="req-sub" data-i18n="req_sub">Punya game atau lagu yang ingin saya mainkan saat live? Tulis di sini, saya cek sebelum live berikutnya.</p>
+        <!-- Pakai ID Formspree yang sama dengan formulir kontak juga boleh. Request akan masuk ke email dengan subjek khusus. -->
+        <form id="requestForm" action="https://formspree.io/f/ID_FORMSPREE_KAMU" method="POST">
+          <input type="hidden" name="_subject" value="Request live dari website Gewol" />
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <fieldset class="field">
+            <legend data-i18n="req_type">Jenis request</legend>
+            <div class="seg">
+              <label><input type="radio" name="jenis" value="Game" checked /><span data-i18n="req_game">🎮 Game</span></label>
+              <label><input type="radio" name="jenis" value="Lagu" /><span data-i18n="req_song">🎵 Lagu</span></label>
+              <label><input type="radio" name="jenis" value="Lainnya" /><span data-i18n="req_other">💬 Lainnya</span></label>
+            </div>
+          </fieldset>
+          <div class="row2">
+            <div class="field">
+              <label for="reqItem" data-i18n="req_item">Judul game atau lagu</label>
+              <input type="text" id="reqItem" name="judul" maxlength="120" placeholder="Judul game atau lagu" data-i18n-attr="placeholder:req_ph_item" required />
+            </div>
+            <div class="field">
+              <label for="reqName" data-i18n="req_name">Nama panggilan (opsional)</label>
+              <input type="text" id="reqName" name="nama" maxlength="40" placeholder="Contoh: Budi" data-i18n-attr="placeholder:req_ph_name" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="reqNote" data-i18n="req_note">Catatan (opsional)</label>
+            <textarea id="reqNote" name="catatan" rows="2" maxlength="300" placeholder="Alasan atau detail tambahan" data-i18n-attr="placeholder:req_ph_note"></textarea>
+          </div>
+          <button type="submit" class="btn primary submit" data-i18n="req_send">Kirim Request</button>
+          <p class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- PROYEK / GALERI -->
+    <section id="proyek" class="section reveal">
+      <h2><small>04 / ギャラリー</small><span data-i18n="gal_title">Momen Ikonik</span></h2>
+      <p class="sub" data-i18n="gal_sub">Momen berkesan dalam perjalanan saya. Klik foto untuk memperbesar.</p>
+      <div class="gallery">
+        <article class="photo-card portrait">
+          <span class="badge">🏆 2024</span>
+          <img src="momen-2024.jpg" data-full="momen-2024.jpg" width="1200" height="1600" alt="Penganugerahan Juara 1 Lomba Film Dokumenter tingkat Kabupaten Cilacap 2024" data-i18n-attr="alt:g1_alt" loading="lazy" />
+          <div class="photo-info"><h3 data-i18n="g1_t">Juara 1 Film Dokumenter 2024</h3><p data-i18n="g1_d">LARWASIPDA 2024, Lomba Pembuatan Film Dokumenter tingkat Kabupaten Cilacap.</p></div>
+        </article>
+        <article class="photo-card landscape">
+          <span class="badge">🥇 2025</span>
+          <img src="momen-2025.jpg" data-full="momen-2025.jpg" width="1600" height="904" alt="Penganugerahan Juara Harapan 1 Lomba Film Dokumenter tingkat Kabupaten Cilacap 2025" data-i18n-attr="alt:g2_alt" loading="lazy" />
+          <div class="photo-info"><h3 data-i18n="g2_t">Juara Harapan 1 Film Dokumenter 2025</h3><p data-i18n="g2_d">Lomba Pembuatan Film Dokumenter tingkat Kabupaten Cilacap 2025.</p></div>
+        </article>
+      </div>
+    </section>
+
+
+
+    <!-- KARYA FILM -->
+    <section id="karya" class="section reveal">
+      <h2><small>05 / 作品</small><span data-i18n="karya_title">Karya Film</span></h2>
+      <p class="sub" data-i18n="karya_sub">Dua film dokumenter yang membawa saya ke podium. Klik untuk memutar.</p>
+      <div class="works">
+        <article class="work">
+          <span class="badge">🏆 2024</span>
+          <button type="button" class="video" data-yt="zaieWmBWt6M" aria-label="Putar film dokumenter Juara 1 2024" data-i18n-attr="aria-label:v1_label">
+            <img src="https://i.ytimg.com/vi/zaieWmBWt6M/hqdefault.jpg" alt="" loading="lazy" />
+            <span class="play" aria-hidden="true">▶</span>
+          </button>
+          <div class="photo-info">
+            <h3 data-i18n="v1_t">Film Dokumenter Juara 1 (2024)</h3>
+            <p data-i18n="v1_d">Karya yang meraih Juara 1 tingkat Kabupaten Cilacap.</p>
+            <a class="text-link" href="https://youtu.be/zaieWmBWt6M" target="_blank" rel="noopener" data-i18n="v_open">Buka di YouTube</a>
+          </div>
+        </article>
+        <article class="work">
+          <span class="badge">🥇 2025</span>
+          <button type="button" class="video" data-yt="Q4FjFzTVkEI" aria-label="Putar film dokumenter Juara Harapan 1 2025" data-i18n-attr="aria-label:v2_label">
+            <img src="https://i.ytimg.com/vi/Q4FjFzTVkEI/hqdefault.jpg" alt="" loading="lazy" />
+            <span class="play" aria-hidden="true">▶</span>
+          </button>
+          <div class="photo-info">
+            <h3 data-i18n="v2_t">Film Dokumenter Juara Harapan 1 (2025)</h3>
+            <p data-i18n="v2_d">Karya yang meraih Juara Harapan 1 tingkat Kabupaten Cilacap.</p>
+            <a class="text-link" href="https://youtu.be/Q4FjFzTVkEI" target="_blank" rel="noopener" data-i18n="v_open">Buka di YouTube</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SOSIAL MEDIA -->
+    <section id="sosmed" class="section reveal">
+      <h2><small>06 / ソーシャル</small><span data-i18n="soc_title">Media Sosial</span></h2>
+      <p class="sub" data-i18n="soc_sub">Temukan saya di sini</p>
+
+      <div class="grid">
+        <a class="social fb" href="https://facebook.com/ddkpri" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.69.24 2.69.24v2.97h-1.52c-1.49 0-1.96.93-1.96 1.88v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+          <div><h3>Facebook</h3><span>ddkpri</span></div>
+          <i>→</i>
+        </a>
+
+        <a class="social tt" href="https://tiktok.com/@gewolx" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.4a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .8.1V9.2a6.3 6.3 0 1 0 5.5 6.2V8.6a8.2 8.2 0 0 0 4.8 1.5V6.7z"/></svg>
+          <div><h3>TikTok</h3><span>@gewolx</span></div>
+          <i>→</i>
+        </a>
+
+        <a class="social yt" href="https://youtube.com/@gewolx" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+          <div><h3>YouTube</h3><span>@gewolx</span></div>
+          <i>→</i>
+        </a>
+
+        <a class="social dc" href="#" data-copy="gewolx" title="Klik untuk menyalin username" data-i18n-attr="title:dc_title">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.2.5a18 18 0 0 0-6.4 0L8.6 3a19.8 19.8 0 0 0-4.9 1.4C.6 9 -.3 13.5.1 18a19.9 19.9 0 0 0 6 3l1.3-2.1c-.7-.3-1.4-.6-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1l1.3 2.1a19.9 19.9 0 0 0 6-3c.5-5.2-.8-9.7-3.6-13.6zM8.5 15.3c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.1 1.1 2.1 2.4-.9 2.4-2.1 2.4zm7 0c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.1 1.1 2.1 2.4-.9 2.4-2.1 2.4z"/></svg>
+          <div><h3>Discord</h3><span data-i18n="dc_copy">gewolx · klik untuk menyalin</span></div>
+          <i>⧉</i>
+        </a>
+
+        <a class="social ig" href="https://instagram.com/ddkpri" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 4 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7C8.3 24 8.7 24 12 24s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg>
+          <div><h3>Instagram</h3><span>@ddkpri</span></div>
+          <i>→</i>
+        </a>
+
+        <a class="social tg" href="https://t.me/didikpribadi" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.94 0A12 12 0 1 0 24 12 12 12 0 0 0 11.94 0zm5.5 8.2-1.8 8.5c-.1.6-.5.8-1 .5l-2.8-2-1.3 1.3c-.2.2-.3.3-.6.3l.2-2.9 5.2-4.7c.2-.2 0-.3-.3-.1l-6.4 4-2.8-.9c-.6-.2-.6-.6.1-.9l10.8-4.2c.5-.2 1 .1.7.9z"/></svg>
+          <div><h3>Telegram</h3><span>@didikpribadi</span></div>
+          <i>→</i>
+        </a>
+      </div>
+    </section>
+
+    <!-- DUKUNGAN -->
+    <section id="dukung" class="section reveal">
+      <h2><small>07 / サポート</small><span data-i18n="sup_title">Dukung Gewol</span></h2>
+      <div class="card donate">
+        <div class="donate-text">
+          <h3 data-i18n="don_h">Traktir Gewol ☕</h3>
+          <p data-i18n="don_p">Suka dengan kontennya? Dukunganmu membantu saya terus berkarya dan lebih sering live.</p>
+        </div>
+        <div class="donate-actions">
+          <a href="https://sociabuzz.com/gewol" target="_blank" rel="noopener" class="btn primary" data-i18n="don_btn">Dukung lewat SociaBuzz</a>
+          <a href="https://sociabuzz.com/gewol/tribe" target="_blank" rel="noopener" class="btn ghost" data-i18n="tribe_btn">Gabung Tribe</a>
+        </div>
+      </div>
+      <div class="wall">
+        <h3 data-i18n="wall_title">Dinding Dukungan</h3>
+        <p class="sub" data-i18n="wall_sub">Terima kasih untuk semua yang sudah mendukung. Nama ditampilkan atas izin masing-masing.</p>
+        <ul class="wall-list" id="wallList"></ul>
+        <p class="wall-empty" id="wallEmpty" data-i18n="wall_empty">Belum ada nama di sini. Jadilah pendukung pertama!</p>
+      </div>
+    </section>
+
+    <!-- MUSIK -->
+    <section id="musik" class="section reveal">
+      <h2><small>08 / ミュージック</small><span data-i18n="mus_title">Lagu Terpopuler</span></h2>
+      <p class="sub" data-i18n="mus_sub">Top Hits Indonesia, selalu diperbarui oleh Spotify</p>
+      <div class="card spotify">
+        <!-- Playlist resmi Spotify "Top Hits Indonesia". Mau ganti playlist lain?
+             Spotify → titik tiga playlist → Share → Embed playlist → salin link src-nya -->
+        <iframe
+          src="https://open.spotify.com/embed/playlist/37i9dQZF1DXa2EiKmMLhFD?utm_source=generator&theme=0"
+          width="100%" height="352" frameborder="0" loading="lazy"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify playlist"></iframe>
+        <p class="note" data-i18n="mus_note">Masuk ke akun Spotify di browser agar lagu diputar penuh. Tanpa masuk, hanya cuplikan 30 detik.</p>
+      </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section id="kontak" class="section reveal">
+      <h2><small>09 / お問い合わせ</small><span data-i18n="con_title">Mari Terhubung</span></h2>
+      <p class="sub" data-i18n="con_sub">Ada pertanyaan, tawaran kolaborasi, atau sekadar ingin menyapa? Kirim pesan di sini.</p>
+      <div class="card">
+        <!-- Daftar gratis di formspree.io, buat form baru, lalu ganti ID_FORMSPREE_KAMU dengan ID formmu -->
+        <form id="contactForm" action="https://formspree.io/f/ID_FORMSPREE_KAMU" method="POST">
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <div class="field">
+            <label for="nama" data-i18n="lbl_name">Nama</label>
+            <input type="text" id="nama" name="nama" placeholder="Nama lengkap" data-i18n-attr="placeholder:ph_name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="email@contoh.com" data-i18n-attr="placeholder:ph_email" required />
+          </div>
+          <div class="field">
+            <label for="pesan" data-i18n="lbl_msg">Pesan</label>
+            <textarea id="pesan" name="pesan" rows="5" placeholder="Tulis pesanmu di sini..." data-i18n-attr="placeholder:ph_msg" required></textarea>
+          </div>
+          <button type="submit" class="btn primary" id="submitBtn" data-i18n="send">Kirim Pesan</button>
+          <p id="formStatus" class="form-status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <button id="toTop" class="to-top" aria-label="Kembali ke atas" data-i18n-attr="aria-label:totop">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>
+  </button>
+
+  <div id="toast" class="toast" data-i18n="copied">Berhasil disalin!</div>
+
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Galeri foto" data-i18n-attr="aria-label:lb_label">
+    <button class="lb-close" aria-label="Tutup" data-i18n-attr="aria-label:close">✕</button>
+    <button class="lb-nav prev" aria-label="Foto sebelumnya" data-i18n-attr="aria-label:lb_prev">‹</button>
+    <figure class="lb-figure">
+      <img src="" alt="" draggable="false" />
+      <figcaption><strong id="lbTitle"></strong><span id="lbDesc"></span><small id="lbCount"></small></figcaption>
+    </figure>
+    <button class="lb-nav next" aria-label="Foto berikutnya" data-i18n-attr="aria-label:lb_next">›</button>
+  </div>
+
+  <footer>
+    <p>© <span id="year"></span> <span data-i18n="footer">Gewol (Didik Pribadi). Dibuat dengan ❤️ di Cilacap.</span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
