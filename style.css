@@ -718,3 +718,37 @@ body.lb-open { overflow: hidden; }
   .lb-nav:hover { transform: scale(1.08); }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+
+/* ===== Ikon sosmed di hero ===== */
+.hero-social { list-style: none; display: flex; gap: 12px; margin: 2px 0 16px; }
+.hs {
+  --brand: var(--violet);
+  display: grid; place-items: center; width: 46px; height: 46px; border-radius: 14px;
+  background: var(--card); border: 1px solid var(--border); color: var(--text);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  transition: transform 0.25s, background 0.25s, color 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+.hs svg { width: 22px; height: 22px; }
+.hs:hover, .hs:focus-visible {
+  transform: translateY(-4px) rotate(-6deg);
+  background: var(--brand); color: #fff; border-color: var(--brand);
+  box-shadow: 0 10px 26px color-mix(in srgb, var(--brand) 45%, transparent);
+}
+@media (max-width: 760px) { .hero-social { justify-content: center; } }
+
+/* ===== Slogan ===== */
+.slogan {
+  margin-top: 4px; font-weight: 700; font-size: 1.02rem; letter-spacing: 2px; text-transform: uppercase;
+  background: var(--grad); -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; width: fit-content;
+}
+@media (max-width: 760px) { .slogan { margin-inline: auto; } }
+
+/* ===== Galeri baris kedua (foto kelas + momen live) ===== */
+.gallery-2 { margin-top: 18px; }
+.photo-card.wide { flex-grow: 178; }
+.photo-card.wide img { aspect-ratio: 16 / 9; }
+.photo-card.tall { flex-grow: 56; }
+.photo-card.tall img { aspect-ratio: 1200 / 2132; }
+@media (max-width: 700px) { .photo-card.wide, .photo-card.tall { flex: none; width: 100%; } }
