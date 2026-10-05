@@ -22,6 +22,9 @@
     </div>
   </div>
 
+  <!-- Garis progres scroll -->
+  <div id="progress" class="progress" aria-hidden="true"><span></span></div>
+
   <!-- Kursor kustom -->
   <div class="cur-dot"></div>
   <div class="cur-ring"></div>
@@ -46,13 +49,15 @@
       <a href="#request" class="m-only" data-i18n="nav_request">Request</a>
       <a href="#proyek" class="m-only" data-i18n="nav_gallery">Galeri</a>
       <a href="#karya" class="m-only" data-i18n="nav_works">Karya</a>
+      <a href="#terbaru" class="m-only" data-i18n="nav_latest">Terbaru</a>
       <a href="#sosmed" data-i18n="nav_social">Sosmed</a>
       <a href="#dukung" class="m-only" data-i18n="nav_support">Dukung</a>
       <a href="#kontak" data-i18n="nav_contact">Kontak</a>
     </nav>
     <div class="nav-btns">
-      <a href="https://sociabuzz.com/gewol" target="_blank" rel="noopener" class="donate-pill" id="donateNav" title="Donate"><span aria-hidden="true">☕</span><b data-i18n="donate_btn">Donasi</b></a>
+      <a href="https://sociabuzz.com/gewol/donate" target="_blank" rel="noopener" class="donate-pill" id="donateNav" title="Donate"><span aria-hidden="true">☕</span><b data-i18n="donate_btn">Donasi</b></a>
       <button id="langToggle" class="lang-btn" aria-label="Ganti bahasa / Switch language" title="Bahasa / Language"><span data-l="id">ID</span><span data-l="en">EN</span></button>
+      <button id="musicToggle" class="theme-btn" aria-label="Musik latar" title="Musik latar" data-i18n-attr="aria-label:music_label,title:music_label">🎵</button>
       <button id="soundToggle" class="theme-btn" aria-label="Suara klik" title="Suara klik" data-i18n-attr="aria-label:sound_label,title:sound_label">🔊</button>
       <button id="themeToggle" class="theme-btn" aria-label="Ganti tema" data-i18n-attr="aria-label:theme_label,title:theme_label">🌙</button>
     </div>
@@ -62,6 +67,8 @@
     <!-- HERO -->
     <section id="home" class="hero reveal">
       <div class="hero-text">
+        <!-- Sapaan sesuai jam di perangkat pengunjung (diatur di script.js: bagian "Sapaan sesuai jam") -->
+        <p class="greet" id="greet" aria-live="off"></p>
         <span class="chip">配信者 · STREAMER</span>
         <p class="hello" data-i18n="hello">Halo, saya</p>
         <h1>Gewol</h1>
@@ -82,7 +89,7 @@
         <div class="hero-actions">
           <a href="#sosmed" class="btn primary" data-i18n="btn_follow">Ikuti Saya</a>
           <a href="#about" class="btn ghost" data-i18n="btn_intro">Kenalan Dulu</a>
-          <a href="https://sociabuzz.com/gewol" target="_blank" rel="noopener" class="btn donate-btn">☕ <span data-i18n="donate_btn">Donasi</span></a>
+          <a href="https://sociabuzz.com/gewol/donate" target="_blank" rel="noopener" class="btn donate-btn">☕ <span data-i18n="donate_btn">Donasi</span></a>
         </div>
       </div>
 
@@ -92,6 +99,12 @@
         </div>
         <span class="tag t1">クリエイター</span>
         <span class="tag t2">LIVE ●</span>
+        <!-- Muncul otomatis hanya saat jam live (jadwal diatur di script.js) -->
+        <div class="live-badge" id="liveBadge" hidden>
+          <span class="lb-dot" aria-hidden="true"></span><b data-i18n="live_now">LIVE SEKARANG</b>
+          <a class="lb-btn tt" href="https://www.tiktok.com/@gewolx" target="_blank" rel="noopener" aria-label="Tonton di TikTok" title="Tonton di TikTok" data-i18n-attr="aria-label:watch_tt,title:watch_tt"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.4a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .8.1V9.2a6.3 6.3 0 1 0 5.5 6.2V8.6a8.2 8.2 0 0 0 4.8 1.5V6.7z"/></svg></a>
+          <a class="lb-btn yt" href="https://youtube.com/@gewolx" target="_blank" rel="noopener" aria-label="Tonton di YouTube" title="Tonton di YouTube" data-i18n-attr="aria-label:watch_yt,title:watch_yt"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg></a>
+        </div>
       </div>
     </section>
 
@@ -126,15 +139,32 @@
     <section id="setup" class="section reveal">
       <h2><small>02 / セットアップ</small><span data-i18n="setup_title">Setup Saya</span></h2>
       <p class="sub" data-i18n="setup_sub">Perangkat yang saya pakai untuk berkarya</p>
-      <div class="setup-grid">
+      <div class="tabs" id="setupTabs" role="tablist" aria-label="Kategori setup" data-i18n-attr="aria-label:tabs_label">
+        <button type="button" role="tab" class="tab on" data-tab="pc" aria-selected="true" data-i18n="tab_pc">PC</button>
+        <button type="button" role="tab" class="tab" data-tab="peri" aria-selected="false" tabindex="-1" data-i18n="tab_peri">Periferal</button>
+        <button type="button" role="tab" class="tab" data-tab="av" aria-selected="false" tabindex="-1" data-i18n="tab_av">Audio &amp; Video</button>
+      </div>
+      <div class="setup-grid" role="tabpanel" data-panel="pc">
         <div class="part"><em>🧠</em><div><span>CPU</span><h3>AMD Ryzen 5 5600G</h3></div></div>
         <div class="part"><em>🔌</em><div><span>Motherboard</span><h3>ASRock B550M Pro SE</h3></div></div>
         <div class="part"><em>⚡</em><div><span>RAM</span><h3>ADATA XPG Spectrix 32GB (2×16GB)</h3></div></div>
         <div class="part"><em>💾</em><div><span>SSD</span><h3>ADATA Legend 900 512GB</h3></div></div>
         <div class="part"><em>🔋</em><div><span>PSU</span><h3>ADATA XPG Pylon 650W</h3></div></div>
         <div class="part"><em>🎮</em><div><span>GPU</span><h3 data-i18n="gpu_h">Tanpa GPU terpisah</h3><small data-i18n="gpu_s">Memakai grafis terintegrasi bawaan Ryzen 5 5600G</small></div></div>
-        <!-- Tambah perangkat lain dengan menyalin satu blok "part", misalnya mikrofon, kamera, headset, monitor -->
+        <div class="part"><em>🧱</em><div><span>Case</span><h3>aigo darkFlash DLM21 MESH</h3><small>Tempered Glass • Micro ATX</small></div></div>
       </div>
+      <div class="setup-grid" role="tabpanel" data-panel="peri" hidden>
+        <div class="part"><em>🖥️</em><div><span>Monitor</span><h3>Xiaomi Gaming Monitor G24i 2026</h3><small>Fast IPS • FHD • 200Hz</small></div></div>
+        <div class="part"><em>⌨️</em><div><span>Keyboard</span><h3>Redragon DRAGONBORN K630W-RGB</h3><small>Mechanical Gaming Keyboard • RGB • White</small></div></div>
+        <div class="part"><em>🖱️</em><div><span>Mouse</span><h3>Press Play ATLAS 3311</h3><small>Ergo Ultralight • Wireless Gaming Mouse</small></div></div>
+        <div class="part"><em>🕹️</em><div><span>Gamepad</span><h3>Rexus Pro Gaming ASTA GX150</h3><small>Wireless Gamepad</small></div></div>
+      </div>
+      <div class="setup-grid" role="tabpanel" data-panel="av" hidden>
+        <div class="part"><em>🎧</em><div><span>Headset</span><h3>Rexus Vonix F30</h3><small>Gaming Headset • Free Splitter</small></div></div>
+        <div class="part"><em>🔊</em><div><span>Speaker</span><h3>NEMESIS Falcon SPN-08</h3><small>Gaming Stereo • RGB</small></div></div>
+        <div class="part"><em>📷</em><div><span>Webcam</span><h3>TECGEAR 2KV2</h3><small>QHD 2K • 30FPS • Autofocus • Mic • Privacy Shutter</small></div></div>
+      </div>
+      <!-- Tambah perangkat: salin satu baris "part" ke panel yang sesuai (pc / peri / av) -->
     </section>
 
     <!-- JADWAL LIVE -->
@@ -167,7 +197,7 @@
         <h3 data-i18n="req_title">Request untuk Live</h3>
         <p class="req-sub" data-i18n="req_sub">Punya game atau lagu yang ingin saya mainkan saat live? Tulis di sini, saya cek sebelum live berikutnya.</p>
         <!-- Pakai ID Formspree yang sama dengan formulir kontak juga boleh. Request akan masuk ke email dengan subjek khusus. -->
-        <form id="requestForm" action="https://formspree.io/f/ID_FORMSPREE_KAMU" method="POST">
+        <form id="requestForm" action="https://formspree.io/f/mdeaonrr" method="POST">
           <input type="hidden" name="_subject" value="Request live dari website Gewol" />
           <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <fieldset class="field">
@@ -202,6 +232,7 @@
     <section id="proyek" class="section reveal">
       <h2><small>04 / ギャラリー</small><span data-i18n="gal_title">Momen Ikonik</span></h2>
       <p class="sub" data-i18n="gal_sub">Momen berkesan dalam perjalanan saya. Klik foto untuk memperbesar.</p>
+      <div class="gallery-wrap" id="galWrap">
       <div class="gallery">
         <article class="photo-card portrait">
           <span class="badge">🏆 2024</span>
@@ -226,6 +257,8 @@
           <div class="photo-info"><h3 data-i18n="g4_t">Gift Paus dari Ainayy</h3><p data-i18n="g4_d">Momen live streaming ketika Ainayy mengirim gift Paus.</p></div>
         </article>
       </div>
+      </div>
+      <div class="gal-dots" id="galDots"></div>
     </section>
 
 
@@ -262,9 +295,17 @@
       </div>
     </section>
 
+    <!-- KONTEN TERBARU (YouTube Shorts & TikTok) -->
+    <!-- Daftar linknya ada di script.js (LATEST_LINKS). Tempel link baru di sana, kartu dibuat otomatis. -->
+    <section id="terbaru" class="section reveal">
+      <h2><small>06 / 最新</small><span data-i18n="latest_title">Konten Terbaru</span></h2>
+      <p class="sub" data-i18n="latest_sub">Video dan postingan terbaru dari YouTube dan TikTok.</p>
+      <div class="latest" id="latestGrid"></div>
+    </section>
+
     <!-- SOSIAL MEDIA -->
     <section id="sosmed" class="section reveal">
-      <h2><small>06 / ソーシャル</small><span data-i18n="soc_title">Media Sosial</span></h2>
+      <h2><small>07 / ソーシャル</small><span data-i18n="soc_title">Media Sosial</span></h2>
       <p class="sub" data-i18n="soc_sub">Temukan saya di sini</p>
 
       <div class="grid">
@@ -308,38 +349,26 @@
 
     <!-- DUKUNGAN -->
     <section id="dukung" class="section reveal">
-      <h2><small>07 / サポート</small><span data-i18n="sup_title">Dukung Gewol</span></h2>
+      <h2><small>08 / サポート</small><span data-i18n="sup_title">Dukung Gewol</span></h2>
       <div class="card donate">
         <div class="donate-text">
           <h3 data-i18n="don_h">Traktir Gewol ☕</h3>
           <p data-i18n="don_p">Suka dengan kontennya? Dukunganmu membantu saya terus berkarya dan lebih sering live.</p>
         </div>
         <div class="donate-actions">
-          <a href="https://sociabuzz.com/gewol" target="_blank" rel="noopener" class="btn primary" data-i18n="don_btn">Dukung lewat SociaBuzz</a>
+          <a href="https://sociabuzz.com/gewol/donate" target="_blank" rel="noopener" class="btn primary" data-i18n="don_btn">Dukung lewat SociaBuzz</a>
           <a href="https://sociabuzz.com/gewol/tribe" target="_blank" rel="noopener" class="btn ghost" data-i18n="tribe_btn">Gabung Tribe</a>
         </div>
       </div>
-      <div class="wall">
-        <h3 data-i18n="wall_title">Dinding Dukungan</h3>
-        <p class="sub" data-i18n="wall_sub">Terima kasih untuk semua yang sudah mendukung. Nama ditampilkan atas izin masing-masing.</p>
-        <ul class="wall-list" id="wallList"></ul>
-        <p class="wall-empty" id="wallEmpty" data-i18n="wall_empty">Belum ada nama di sini. Jadilah pendukung pertama!</p>
-      </div>
-    </section>
-
-    <!-- MUSIK -->
-    <section id="musik" class="section reveal">
-      <h2><small>08 / ミュージック</small><span data-i18n="mus_title">Lagu Terpopuler</span></h2>
-      <p class="sub" data-i18n="mus_sub">Top Hits Indonesia, selalu diperbarui oleh Spotify</p>
-      <div class="card spotify">
-        <!-- Playlist resmi Spotify "Top Hits Indonesia". Mau ganti playlist lain?
-             Spotify → titik tiga playlist → Share → Embed playlist → salin link src-nya -->
-        <iframe
-          src="https://open.spotify.com/embed/playlist/37i9dQZF1DXa2EiKmMLhFD?utm_source=generator&theme=0"
-          width="100%" height="352" frameborder="0" loading="lazy"
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          title="Spotify playlist"></iframe>
-        <p class="note" data-i18n="mus_note">Masuk ke akun Spotify di browser agar lagu diputar penuh. Tanpa masuk, hanya cuplikan 30 detik.</p>
+      <div class="wall top-supporter">
+        <h3 data-i18n="top_title">🏆 Top Supporter</h3>
+        <p class="sub" data-i18n="top_sub">Terima kasih untuk para pendukung teratas yang bikin channel ini terus hidup.</p>
+        <!-- Diisi otomatis dari daftar TOP_SUPPORTERS di script.js -->
+        <div class="podium" id="podium" aria-label="Podium top supporter"></div>
+        <ol class="top-rest" id="topRest"></ol>
+        <div class="top-cta">
+          <a href="https://sociabuzz.com/gewol/donate" target="_blank" rel="noopener" class="btn primary" data-i18n="top_cta">Jadi Top Supporter ☕</a>
+        </div>
       </div>
     </section>
 
@@ -348,8 +377,8 @@
       <h2><small>09 / お問い合わせ</small><span data-i18n="con_title">Mari Terhubung</span></h2>
       <p class="sub" data-i18n="con_sub">Ada pertanyaan, tawaran kolaborasi, atau sekadar ingin menyapa? Kirim pesan di sini.</p>
       <div class="card">
-        <!-- Daftar gratis di formspree.io, buat form baru, lalu ganti ID_FORMSPREE_KAMU dengan ID formmu -->
-        <form id="contactForm" action="https://formspree.io/f/ID_FORMSPREE_KAMU" method="POST">
+        <!-- Form tersambung ke Formspree. Untuk mengganti tujuan, ubah ID di atribut action di bawah -->
+        <form id="contactForm" action="https://formspree.io/f/mdeaonrr" method="POST">
           <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <div class="field">
             <label for="nama" data-i18n="lbl_name">Nama</label>
@@ -370,6 +399,14 @@
     </section>
   </main>
 
+  <!-- Menu bawah (hanya tampil di HP) -->
+  <nav class="bottom-nav" id="bottomNav" aria-label="Navigasi cepat" data-i18n-attr="aria-label:bn_label">
+    <a href="#home" data-s="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg><span data-i18n="nav_home">Home</span></a>
+    <a href="#live" data-s="live"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2.2" fill="currentColor"/><path d="M7.8 7.8a6 6 0 0 0 0 8.4M16.2 7.8a6 6 0 0 1 0 8.4M4.9 4.9a10 10 0 0 0 0 14.2M19.1 4.9a10 10 0 0 1 0 14.2"/></svg><span data-i18n="nav_live">Live</span></a>
+    <a href="#proyek" data-s="proyek"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="1.8"/><path d="m21 16-5-5-8 8"/></svg><span data-i18n="nav_gallery">Galeri</span></a>
+    <a href="#sosmed" data-s="sosmed"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="6" r="2.6"/><circle cx="18" cy="18" r="2.6"/><path d="m8.3 10.8 7.4-3.6M8.3 13.2l7.4 3.6"/></svg><span data-i18n="nav_social">Sosmed</span></a>
+  </nav>
+
   <button id="toTop" class="to-top" aria-label="Kembali ke atas" data-i18n-attr="aria-label:totop">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>
   </button>
@@ -387,8 +424,20 @@
   </div>
 
   <footer>
-    <p>© <span id="year"></span> <span data-i18n="footer">Gewol (Didik Pribadi). Dibuat dengan ❤️ di Cilacap.</span></p>
+    <p>© 2026 Gewol. All Rights Reserved.</p>
   </footer>
+
+  <!-- Pemutar musik: daftar lagu diatur di script.js (PLAYLIST) -->
+  <div id="player" class="player" role="group" aria-label="Musik latar" data-i18n-attr="aria-label:music_label">
+    <button id="plPrev" class="pl-btn" type="button" aria-label="Lagu sebelumnya" data-i18n-attr="aria-label:pl_prev" hidden>⏮</button>
+    <button id="plPlay" class="pl-btn main" type="button" aria-label="Putar / jeda" data-i18n-attr="aria-label:pl_play">▶</button>
+    <button id="plNext" class="pl-btn" type="button" aria-label="Lagu berikutnya" data-i18n-attr="aria-label:pl_next" hidden>⏭</button>
+    <span class="eq" id="plEq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+    <div class="pl-info"><small data-i18n="pl_now">Sedang diputar</small><b id="plTitle">Backsound</b></div>
+    <label class="pl-vol"><span id="plVolIco" aria-hidden="true">🔉</span><input id="plVol" type="range" min="0" max="100" step="1" value="30" aria-label="Volume" data-i18n-attr="aria-label:pl_vol" /></label>
+  </div>
+
+  <audio id="bgm" preload="auto"></audio>
 
   <script src="script.js"></script>
 </body>

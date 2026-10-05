@@ -32,8 +32,9 @@ const I18N = {
     req_name: "Nama panggilan (opsional)", req_ph_name: "Contoh: Budi",
     req_note: "Catatan (opsional)", req_ph_note: "Alasan atau detail tambahan",
     req_send: "Kirim Request", req_ok: "Request terkirim. Terima kasih!", req_wait: "Tunggu sebentar sebelum mengirim request lagi.",
-    wall_title: "Dinding Dukungan", wall_sub: "Terima kasih untuk semua yang sudah mendukung. Nama ditampilkan atas izin masing-masing.",
-    wall_empty: "Belum ada nama di sini. Jadilah pendukung pertama!", tribe_btn: "Gabung Tribe",
+    tribe_btn: "Gabung Tribe",
+    top_title: "🏆 Top Supporter", top_sub: "Terima kasih untuk para pendukung teratas yang bikin channel ini terus hidup.",
+    top_cta: "Jadi Top Supporter ☕",
     d_1: "Sen", d_2: "Sel", d_3: "Rab", d_4: "Kam", d_5: "Jum", d_6: "Sab", d_0: "Min",
     ls_on: "Sedang masuk jam live", ls_today: "Mulai hari ini pukul 13.00 WIB", ls_next: "Berikutnya besok pukul 13.00 WIB",
     gal_title: "Momen Ikonik", gal_sub: "Momen berkesan dalam perjalanan saya. Klik foto untuk memperbesar.",
@@ -56,15 +57,23 @@ const I18N = {
     sup_title: "Dukung Gewol", don_h: "Traktir Gewol ☕",
     don_p: "Suka dengan kontennya? Dukunganmu membantu saya terus berkarya dan lebih sering live.",
     don_btn: "Dukung lewat SociaBuzz",
-    mus_title: "Lagu Terpopuler", mus_sub: "Top Hits Indonesia, selalu diperbarui oleh Spotify",
-    mus_note: "Masuk ke akun Spotify di browser agar lagu diputar penuh. Tanpa masuk, hanya cuplikan 30 detik.",
+    music_label: "Musik latar",
+    pl_prev: "Lagu sebelumnya", pl_next: "Lagu berikutnya", pl_play: "Putar / jeda", pl_vol: "Volume", pl_now: "Sedang diputar",
+    nav_latest: "Terbaru", latest_title: "Konten Terbaru", latest_sub: "Video dan postingan terbaru dari YouTube dan TikTok.",
+    lt_short: "▶ Shorts", lt_tt: "♪ TikTok", lt_photo: "🖼 Foto TikTok",
+    lt_short_t: "Video terbaru di YouTube", lt_tt_t: "Video terbaru di TikTok", lt_photo_t: "Postingan foto di TikTok",
+    lt_play: "Putar video", lt_open: "Buka di TikTok", lt_open_yt: "Buka di YouTube",
+    ls_in: "Live dimulai {t} lagi", ls_end: "Sedang live, berakhir {t} lagi",
+    u_h: "jam", u_m: "menit", u_s: "detik",
+    gr_morning: "Selamat pagi! ☀️", gr_noon: "Selamat siang! 🌤️", gr_evening: "Selamat sore! 🌇", gr_night: "Selamat malam! 🌙", gr_late: "Selamat malam, belum tidur? 🦉",
+    nav_home: "Home", live_now: "LIVE SEKARANG", tab_pc: "PC", tab_peri: "Periferal", tab_av: "Audio & Video",
+    tabs_label: "Kategori setup", bn_label: "Navigasi cepat",
     con_title: "Mari Terhubung", con_sub: "Ada pertanyaan, tawaran kolaborasi, atau sekadar ingin menyapa? Kirim pesan di sini.",
     lbl_name: "Nama", lbl_msg: "Pesan", ph_name: "Nama lengkap", ph_email: "email@contoh.com", ph_msg: "Tulis pesanmu di sini...",
     send: "Kirim Pesan", sending: "Mengirim...",
     form_unlinked: "Formulir belum tersambung. Ganti ID_FORMSPREE_KAMU di index.html terlebih dahulu.",
     form_ok: "Pesan terkirim. Terima kasih!", form_fail: "Pesan gagal terkirim. Silakan coba lagi nanti.",
     copied: "Berhasil disalin!", toast_discord: "Username Discord disalin: ", close: "Tutup",
-    footer: "Gewol (Didik Pribadi). Dibuat dengan ❤️ di Cilacap.",
   },
   en: {
     title: "Gewol — Streamer & Content Creator",
@@ -97,8 +106,9 @@ const I18N = {
     req_name: "Nickname (optional)", req_ph_name: "e.g. Budi",
     req_note: "Notes (optional)", req_ph_note: "Reason or extra details",
     req_send: "Send Request", req_ok: "Request sent. Thank you!", req_wait: "Please wait a moment before sending another request.",
-    wall_title: "Support Wall", wall_sub: "Thank you to everyone who has supported me. Names are shown with each person's permission.",
-    wall_empty: "No names here yet. Be the first supporter!", tribe_btn: "Join the Tribe",
+    tribe_btn: "Join the Tribe",
+    top_title: "🏆 Top Supporters", top_sub: "Thank you to the top supporters who keep this channel alive.",
+    top_cta: "Become a Top Supporter ☕",
     d_1: "Mon", d_2: "Tue", d_3: "Wed", d_4: "Thu", d_5: "Fri", d_6: "Sat", d_0: "Sun",
     ls_on: "Live hours are on now", ls_today: "Starts today at 1:00 PM WIB", ls_next: "Next one tomorrow at 1:00 PM WIB",
     gal_title: "Iconic Moments", gal_sub: "Memorable moments from my journey. Click a photo to enlarge.",
@@ -121,15 +131,23 @@ const I18N = {
     sup_title: "Support Gewol", don_h: "Buy Gewol a Coffee ☕",
     don_p: "Enjoying the content? Your support helps me keep creating and go live more often.",
     don_btn: "Donate via SociaBuzz",
-    mus_title: "Trending Songs", mus_sub: "Top Hits Indonesia, always kept up to date by Spotify",
-    mus_note: "Log in to Spotify in your browser to hear full tracks. Without logging in, you only get a 30-second preview.",
+    music_label: "Background music",
+    pl_prev: "Previous track", pl_next: "Next track", pl_play: "Play / pause", pl_vol: "Volume", pl_now: "Now playing",
+    nav_latest: "Latest", latest_title: "Latest Content", latest_sub: "The newest videos and posts from YouTube and TikTok.",
+    lt_short: "▶ Shorts", lt_tt: "♪ TikTok", lt_photo: "🖼 TikTok Photo",
+    lt_short_t: "Latest video on YouTube", lt_tt_t: "Latest video on TikTok", lt_photo_t: "Photo post on TikTok",
+    lt_play: "Play video", lt_open: "Open on TikTok", lt_open_yt: "Open on YouTube",
+    ls_in: "Live starts in {t}", ls_end: "Live now, ends in {t}",
+    u_h: "h", u_m: "m", u_s: "s",
+    gr_morning: "Good morning! ☀️", gr_noon: "Good afternoon! 🌤️", gr_evening: "Good evening! 🌇", gr_night: "Good evening! 🌙", gr_late: "Still up this late? 🦉",
+    nav_home: "Home", live_now: "LIVE NOW", tab_pc: "PC", tab_peri: "Peripherals", tab_av: "Audio & Video",
+    tabs_label: "Setup categories", bn_label: "Quick navigation",
     con_title: "Let's Connect", con_sub: "Questions, collaboration offers, or just want to say hi? Send me a message here.",
     lbl_name: "Name", lbl_msg: "Message", ph_name: "Your full name", ph_email: "email@example.com", ph_msg: "Write your message here...",
     send: "Send Message", sending: "Sending...",
     form_unlinked: "The form isn't connected yet. Replace ID_FORMSPREE_KAMU in index.html first.",
     form_ok: "Message sent. Thank you!", form_fail: "Message failed to send. Please try again later.",
     copied: "Copied!", toast_discord: "Discord username copied: ", close: "Close",
-    footer: "Gewol (Didik Pribadi). Made with ❤️ in Cilacap.",
   },
 };
 
@@ -161,10 +179,11 @@ function applyLang(next) {
   words = I18N[lang].words;
   wordIndex = 0; charIndex = 0; deleting = false;
   if (window.renderLive) window.renderLive();
+  if (window.renderLatestText) window.renderLatestText();
+  if (window.renderGreeting) window.renderGreeting();
 }
 
-// ===== Tahun otomatis di footer =====
-document.getElementById("year").textContent = new Date().getFullYear();
+
 
 // ===== Efek mengetik =====
 // Ubah daftar ini kapan saja
@@ -397,6 +416,24 @@ bindForm(document.getElementById("requestForm"), { okKey: "req_ok", cooldownKey:
   }, 6000);
 })();
 
+// ===== Sapaan sesuai jam (memakai jam di perangkat pengunjung) =====
+// Ubah rentang jam di sini kalau mau. Angka = jam 0–23.
+(function greeting() {
+  const el = document.getElementById("greet");
+  if (!el) return;
+  function key(h) {
+    if (h >= 4 && h < 11) return "gr_morning";   // 04.00 – 10.59
+    if (h >= 11 && h < 15) return "gr_noon";     // 11.00 – 14.59
+    if (h >= 15 && h < 18) return "gr_evening";  // 15.00 – 17.59
+    if (h >= 18 && h < 23) return "gr_night";    // 18.00 – 22.59
+    return "gr_late";                            // 23.00 – 03.59
+  }
+  function render() { el.textContent = t(key(new Date().getHours())); }
+  window.renderGreeting = render;
+  render();
+  setInterval(render, 60000); // ikut berganti kalau halaman dibiarkan terbuka
+})();
+
 // ===== Efek miring 3D pada foto =====
 (function tilt() {
   const wrap = document.querySelector(".hero-photo");
@@ -481,6 +518,181 @@ bindForm(document.getElementById("requestForm"), { okKey: "req_ok", cooldownKey:
   });
 })();
 
+// ===== Backsound musik: playlist, judul lagu, volume, tombol next =====
+// Tambah lagu baru cukup dengan menambah satu baris di PLAYLIST (file mp3 taruh di folder yang sama,
+// atau tulis path-nya, misalnya "musik/lagu2.mp3"). Jika hanya satu lagu, lagu itu diulang terus.
+// Jika lebih dari satu, lagu berpindah otomatis dan kembali ke awal setelah lagu terakhir.
+const PLAYLIST = [
+  { src: "backsound.mp3", title: "DJ Body Pata Pata (Thailand Edit)" },
+  { src: "anak-kampung.mp3", title: "DJ Bulan Triana “Anak Kampung” (Thailand Edit) prod.0landrys" },
+  // { src: "lagu3.mp3", title: "Judul Lagu 3" },
+];
+
+(function backsound() {
+  const audio = document.getElementById("bgm");
+  const navBtn = document.getElementById("musicToggle");
+  const box = document.getElementById("player");
+  if (!audio || !box || !PLAYLIST.length) return;
+  const plPlay = document.getElementById("plPlay");
+  const plPrev = document.getElementById("plPrev");
+  const plNext = document.getElementById("plNext");
+  const plTitle = document.getElementById("plTitle");
+  const plVol = document.getElementById("plVol");
+  const plVolIco = document.getElementById("plVolIco");
+  const multi = PLAYLIST.length > 1;
+  plPrev.hidden = plNext.hidden = !multi;
+
+  // Volume (diingat)
+  let vol = 0.3;
+  try { const v = parseFloat(localStorage.getItem("bgm_vol")); if (v >= 0 && v <= 1) vol = v; } catch (e) {}
+  const setVol = (v) => {
+    vol = Math.min(1, Math.max(0, v));
+    audio.volume = vol;
+    plVol.value = Math.round(vol * 100);
+    plVol.style.setProperty("--v", Math.round(vol * 100) + "%");
+    plVolIco.textContent = vol === 0 ? "🔇" : vol < 0.4 ? "🔈" : vol < 0.75 ? "🔉" : "🔊";
+    try { localStorage.setItem("bgm_vol", String(vol)); } catch (e) {}
+  };
+  plVol.addEventListener("input", () => setVol(plVol.value / 100));
+  setVol(vol);
+
+  let wanted = true; // pengunjung ingin musik menyala
+  try { wanted = localStorage.getItem("bgm") !== "off"; } catch (e) {}
+
+  // Lagu yang sedang aktif (urutan terakhir diingat selama sesi)
+  let index = 0;
+  function load(i) {
+    index = (i + PLAYLIST.length) % PLAYLIST.length;
+    audio.src = PLAYLIST[index].src;
+    audio.loop = !multi;           // satu lagu: ulang terus (loop)
+    setTitle(PLAYLIST[index].title);
+  }
+  // Judul panjang: teks berjalan (marquee) bila tidak muat
+  function setTitle(text) {
+    plTitle.classList.remove("marq");
+    plTitle.textContent = "";
+    const sp = document.createElement("span");
+    sp.textContent = text;
+    plTitle.appendChild(sp);
+    plTitle.title = text;
+    requestAnimationFrame(() => {
+      if (sp.scrollWidth > plTitle.clientWidth + 1) {
+        sp.textContent = text + "   •   " + text + "   •   ";
+        plTitle.classList.add("marq");
+      }
+    });
+  }
+  load(0);
+
+  const paint = () => {
+    const playing = !audio.paused;
+    plPlay.textContent = playing ? "⏸" : "▶";
+    box.classList.toggle("playing", playing);
+    if (navBtn) {
+      navBtn.textContent = playing ? "🎵" : "🔇";
+      navBtn.classList.toggle("playing", playing);
+      navBtn.classList.toggle("off", !playing);
+      navBtn.setAttribute("aria-pressed", String(playing));
+    }
+  };
+  const play = () => audio.play().then(paint).catch(paint);
+  const toggle = () => {
+    if (audio.paused) { wanted = true; play(); }
+    else { wanted = false; audio.pause(); }
+    try { localStorage.setItem("bgm", wanted ? "on" : "off"); } catch (e) {}
+  };
+  const go = (d) => { load(index + d); if (wanted) play(); };
+
+  plPlay.addEventListener("click", toggle);
+  if (navBtn) navBtn.addEventListener("click", toggle);
+  plNext.addEventListener("click", () => { wanted = true; try { localStorage.setItem("bgm", "on"); } catch (e) {} go(1); });
+  plPrev.addEventListener("click", () => { wanted = true; try { localStorage.setItem("bgm", "on"); } catch (e) {} go(-1); });
+
+  audio.addEventListener("play", paint);
+  audio.addEventListener("pause", paint);
+  audio.addEventListener("ended", () => { if (multi) go(1); });
+
+  // File tidak ditemukan: lewati ke lagu berikutnya; kalau semua gagal, sembunyikan pemutar
+  let failed = 0;
+  audio.addEventListener("error", () => {
+    failed++;
+    console.warn("Gagal memuat musik:", PLAYLIST[index].src);
+    if (multi && failed < PLAYLIST.length) go(1);
+    else { box.hidden = true; if (navBtn) navBtn.hidden = true; }
+  });
+  audio.addEventListener("playing", () => { failed = 0; });
+  paint();
+
+  // 1) Coba putar otomatis begitu halaman dibuka
+  if (wanted) play();
+
+  // 2) Cadangan: kalau diblokir browser, mulai saat interaksi pertama pengunjung
+  const unlockEvents = ["pointerdown", "click", "keydown", "touchend"];
+  const unlock = (e) => {
+    if (box.contains(e.target) || (navBtn && navBtn.contains(e.target))) return; // tombol musik diurus sendiri
+    if (wanted && audio.paused) play();
+  };
+  unlockEvents.forEach((ev) => document.addEventListener(ev, unlock, { passive: true }));
+  audio.addEventListener("play", () => unlockEvents.forEach((ev) => document.removeEventListener(ev, unlock)));
+
+  // ---- Equalizer: batang bergerak mengikuti musik (WebAudio) ----
+  // Aktif hanya untuk file satu domain (bukan file:// atau CDN lain) dan setelah pengunjung berinteraksi,
+  // supaya suara tidak pernah terblokir. Selain itu, batang memakai animasi CSS biasa.
+  const eqBars = Array.from(box.querySelectorAll("#plEq i"));
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const BINS = [1, 2, 4, 7, 12];
+  let actx = null, analyser = null, freq = null, raf = 0, gestured = false;
+
+  function sameOrigin() {
+    try { return new URL(audio.src, location.href).origin === location.origin; } catch (e) { return false; }
+  }
+  function initEq() {
+    if (actx || !gestured || reduceMotion || location.protocol === "file:" || !sameOrigin()) return;
+    const AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC || !eqBars.length) return;
+    try {
+      actx = new AC();
+      const src = actx.createMediaElementSource(audio);
+      analyser = actx.createAnalyser();
+      analyser.fftSize = 128;
+      analyser.smoothingTimeConstant = 0.72;
+      src.connect(analyser);
+      analyser.connect(actx.destination);
+      freq = new Uint8Array(analyser.frequencyBinCount);
+      box.classList.add("eq-real");
+    } catch (e) { actx = null; }
+  }
+  function eqFrame() {
+    if (!analyser || audio.paused) { raf = 0; return; }
+    analyser.getByteFrequencyData(freq);
+    for (let i = 0; i < eqBars.length; i++) {
+      const v = freq[BINS[i]] / 255;
+      eqBars[i].style.transform = "scaleY(" + (0.16 + Math.pow(v, 1.15) * 0.84).toFixed(3) + ")";
+    }
+    raf = requestAnimationFrame(eqFrame);
+  }
+  function eqStart() {
+    if (!analyser) return;
+    if (actx.state === "suspended") actx.resume().catch(() => {});
+    if (!raf) raf = requestAnimationFrame(eqFrame);
+  }
+  audio.addEventListener("play", () => { initEq(); eqStart(); });
+  audio.addEventListener("pause", () => { eqBars.forEach((b) => { b.style.transform = ""; }); });
+  const eqGesture = () => {
+    gestured = true;
+    setTimeout(() => { if (!audio.paused) { initEq(); eqStart(); } }, 0);
+    if (actx) ["pointerdown", "keydown", "touchend", "click"].forEach((ev) => document.removeEventListener(ev, eqGesture));
+  };
+  ["pointerdown", "keydown", "touchend", "click"].forEach((ev) => document.addEventListener(ev, eqGesture, { passive: true }));
+
+  // Jeda saat tab disembunyikan, lanjut saat kembali
+  let resume = false;
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) { resume = !audio.paused; audio.pause(); }
+    else if (resume && wanted) { resume = false; play(); }
+  });
+})();
+
 // ===== Penghitung angka naik otomatis =====
 (function counters() {
   const els = document.querySelectorAll(".count");
@@ -515,32 +727,54 @@ bindForm(document.getElementById("requestForm"), { okKey: "req_ok", cooldownKey:
   els.forEach((el) => io.observe(el));
 })();
 
-// ===== Jadwal live: hari ini & status (zona waktu WIB) =====
+// ===== Jadwal live: hari ini, status, dan HITUNG MUNDUR (zona waktu WIB) =====
 (function liveSchedule() {
   const status = document.getElementById("liveStatus");
   const days = document.querySelectorAll("#week li");
   if (!status) return;
-  const START = 13 * 60, END = 15 * 60; // 13.00 – 15.00 WIB
-  const DAY = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+  const START = 13 * 60, END = 15 * 60; // 13.00 – 15.00 WIB (ubah di sini jika jadwal berubah)
+  const WIB = 7 * 3600 * 1000;          // WIB = UTC+7, tanpa daylight saving
 
-  function nowWIB() {
-    const parts = new Intl.DateTimeFormat("en-US", {
-      timeZone: "Asia/Jakarta", weekday: "short", hour: "numeric", minute: "numeric", hourCycle: "h23",
-    }).formatToParts(new Date());
-    const get = (type) => (parts.find((p) => p.type === type) || {}).value;
-    return { day: DAY[get("weekday")], min: Number(get("hour")) * 60 + Number(get("minute")) };
+  // Waktu "dinding" WIB: getUTC*() pada objek ini = jam/tanggal di WIB
+  const wibNow = () => new Date(Date.now() + WIB);
+
+  function fmt(ms) {
+    const total = Math.max(0, Math.ceil(ms / 1000));
+    const h = Math.floor(total / 3600), m = Math.floor((total % 3600) / 60), sec = total % 60;
+    const two = (n) => String(n).padStart(2, "0");
+    const sep = lang === "en" ? "" : " ";
+    const parts = [];
+    if (h > 0) parts.push(h + sep + t("u_h"));
+    parts.push((h > 0 ? two(m) : m) + sep + t("u_m"));
+    parts.push(two(sec) + sep + t("u_s"));
+    return parts.join(" ");
   }
 
   function render() {
-    const n = nowWIB();
-    days.forEach((li) => li.classList.toggle("today", Number(li.dataset.d) === n.day));
-    const on = n.min >= START && n.min < END;
-    status.textContent = t(on ? "ls_on" : n.min < START ? "ls_today" : "ls_next");
+    const n = wibNow();
+    const day = n.getUTCDay();
+    days.forEach((li) => li.classList.toggle("today", Number(li.dataset.d) === day));
+
+    const minutesNow = n.getUTCHours() * 60 + n.getUTCMinutes();
+    const secNow = minutesNow * 60 + n.getUTCSeconds();
+    const ms = n.getUTCMilliseconds();
+    const startS = START * 60, endS = END * 60;
+    const on = secNow >= startS && secNow < endS;
+
+    let remain; // dalam milidetik
+    if (on) remain = (endS - secNow) * 1000 - ms;
+    else if (secNow < startS) remain = (startS - secNow) * 1000 - ms;
+    else remain = (86400 - secNow + startS) * 1000 - ms; // besok
+
+    status.textContent = t(on ? "ls_end" : "ls_in").replace("{t}", fmt(remain));
     status.classList.toggle("on", on);
+    const badge = document.getElementById("liveBadge");
+    if (badge) badge.hidden = !on;               // lencana LIVE di foto profil
+    document.body.classList.toggle("is-live", on);
   }
   window.renderLive = render;
   render();
-  setInterval(render, 60000);
+  setInterval(render, 1000);
 })();
 
 // ===== Pemutar video YouTube (dimuat saat diklik agar halaman tetap ringan) =====
@@ -556,6 +790,224 @@ bindForm(document.getElementById("requestForm"), { okKey: "req_ok", cooldownKey:
       iframe.parentNode.classList.add("playing");
     });
   });
+})();
+
+// ===== Konten Terbaru: YouTube Shorts & TikTok =====
+// CARA UPDATE: tempel link video/postingan terbaru di baris PALING ATAS daftar ini.
+// Jenisnya dikenali otomatis dari link: YouTube (shorts / watch / youtu.be) dan TikTok (video / photo).
+// Kartu TikTok memakai latar gradasi. Mau pakai gambar sampul? Ganti barisnya menjadi:
+//   { url: "https://www.tiktok.com/@gewolx/video/...", thumb: "sampul1.jpg" },
+const LATEST_LINKS = [
+  "https://www.tiktok.com/@gewolx/photo/7655332509227535623",
+  "https://www.tiktok.com/@gewolx/video/7562531400851770631",
+  "https://youtube.com/shorts/jfwP0--7ZHY",
+  "https://youtube.com/shorts/2GyJ8sfk8B4",
+];
+
+(function latestContent() {
+  const grid = document.getElementById("latestGrid");
+  if (!grid) return;
+
+  function parse(entry) {
+    const link = typeof entry === "string" ? entry : entry.url;
+    const thumb = typeof entry === "string" ? "" : entry.thumb;
+    const r = parseUrl(link);
+    if (r) r.thumb = thumb;
+    return r;
+  }
+  function parseUrl(link) {
+    try {
+      const u = new URL(link);
+      const host = u.hostname.replace(/^(www|m)\./, "");
+      if (host === "youtu.be") return { type: "yt", id: u.pathname.slice(1), url: link };
+      if (host.endsWith("youtube.com")) {
+        const m = u.pathname.match(/^\/(?:shorts|embed|live)\/([\w-]{11})/);
+        const id = m ? m[1] : u.searchParams.get("v");
+        if (id) return { type: "yt", id, url: "https://youtube.com/shorts/" + id };
+      }
+      if (host.endsWith("tiktok.com")) {
+        const m = u.pathname.match(/\/(video|photo)\/(\d+)/);
+        if (m) return { type: "tt", kind: m[1], id: m[2], url: u.origin + u.pathname };
+      }
+    } catch (e) {}
+    return null;
+  }
+
+  const ytIcon = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>';
+  const ttIcon = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.4a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .8.1V9.2a6.3 6.3 0 1 0 5.5 6.2V8.6a8.2 8.2 0 0 0 4.8 1.5V6.7z"/></svg>';
+
+  function el(tag, cls, text) {
+    const n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text) n.textContent = text;
+    return n;
+  }
+  function badge(key) {
+    const b = el("span", "badge", t(key));
+    b.dataset.i18n = key;
+    return b;
+  }
+  function info(titleKey, openKey, url) {
+    const box = el("div", "photo-info");
+    const h = el("h3", "", t(titleKey)); h.dataset.i18n = titleKey;
+    const a = el("a", "text-link", t(openKey));
+    a.dataset.i18n = openKey; a.href = url; a.target = "_blank"; a.rel = "noopener";
+    box.append(h, a);
+    return box;
+  }
+
+  function ytCard(item) {
+    const card = el("article", "lt-card yt");
+    const btn = el("button", "lt-media");
+    btn.type = "button";
+    btn.setAttribute("aria-label", t("lt_play"));
+    btn.dataset.i18nAttr = "aria-label:lt_play";
+    const img = new Image();
+    img.src = "https://i.ytimg.com/vi/" + item.id + "/hqdefault.jpg";
+    img.alt = ""; img.loading = "lazy";
+    const play = el("span", "play", "▶"); play.setAttribute("aria-hidden", "true");
+    btn.append(img, play);
+    btn.addEventListener("click", () => {
+      const f = document.createElement("iframe");
+      f.src = "https://www.youtube-nocookie.com/embed/" + item.id + "?autoplay=1&rel=0&playsinline=1";
+      f.title = t("lt_short_t");
+      f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+      f.allowFullscreen = true;
+      f.className = "lt-frame";
+      btn.replaceWith(f);
+    });
+    card.append(badge("lt_short"), btn, info("lt_short_t", "lt_open_yt", item.url));
+    return card;
+  }
+
+  function ttCard(item) {
+    const isPhoto = item.kind === "photo";
+    const card = el("article", "lt-card tt");
+    const link = el("a", "lt-media tt-media");
+    link.href = item.url; link.target = "_blank"; link.rel = "noopener";
+    link.setAttribute("aria-label", t("lt_open"));
+    link.dataset.i18nAttr = "aria-label:lt_open";
+    const logo = el("span", "tt-logo"); logo.innerHTML = ttIcon;
+    const play = el("span", "play", isPhoto ? "🖼" : "▶"); play.setAttribute("aria-hidden", "true");
+    link.append(logo, play);
+    if (item.thumb) {
+      const img = new Image();
+      img.alt = ""; img.loading = "lazy"; img.src = item.thumb;
+      img.onload = () => { link.prepend(img); link.classList.add("has-thumb"); };
+    }
+    const tk = isPhoto ? "lt_photo" : "lt_tt";
+    card.append(badge(tk), link, info(isPhoto ? "lt_photo_t" : "lt_tt_t", "lt_open", item.url));
+    return card;
+  }
+
+  LATEST_LINKS.map(parse).filter(Boolean).forEach((item) => {
+    grid.appendChild(item.type === "yt" ? ytCard(item) : ttCard(item));
+  });
+  grid.hidden = !grid.children.length;
+  window.renderLatestText = function () {
+    grid.querySelectorAll("[data-i18n]").forEach((n) => { n.textContent = t(n.dataset.i18n); });
+    grid.querySelectorAll("[data-i18n-attr]").forEach((n) => {
+      n.dataset.i18nAttr.split(",").forEach((pair) => {
+        const [attr, key] = pair.split(":");
+        n.setAttribute(attr.trim(), t(key.trim()));
+      });
+    });
+  };
+})();
+
+// ===== Menu aktif (scroll-spy) + garis progres scroll =====
+(function navSpy() {
+  const bar = document.querySelector("#progress span");
+  const ids = ["home", "about", "setup", "live", "proyek", "karya", "terbaru", "sosmed", "dukung", "kontak"];
+  const secs = ids.map((id) => document.getElementById(id)).filter(Boolean);
+  if (!secs.length) return;
+  const topLinks = document.querySelectorAll("#navLinks a");
+  const bottom = document.querySelectorAll("#bottomNav a");
+  // Bagian mana menyorot ikon mana di menu bawah
+  const group = { home: "home", about: "home", setup: "home", live: "live", proyek: "proyek", karya: "proyek", terbaru: "proyek", sosmed: "sosmed", dukung: "sosmed", kontak: "sosmed" };
+  let current = "", ticking = false;
+
+  function update() {
+    ticking = false;
+    const y = window.scrollY;
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar) bar.style.transform = "scaleX(" + (max > 0 ? Math.min(1, Math.max(0, y / max)) : 0).toFixed(4) + ")";
+
+    const line = window.innerHeight * 0.4;
+    let id = secs[0].id;
+    secs.forEach((el) => { if (el.getBoundingClientRect().top <= line) id = el.id; });
+    if (max > 0 && y >= max - 4) id = secs[secs.length - 1].id; // mentok di dasar halaman
+    if (id === current) return;
+    current = id;
+    topLinks.forEach((a) => {
+      const on = a.getAttribute("href") === "#" + id;
+      a.classList.toggle("active", on);
+      if (on) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current");
+    });
+    bottom.forEach((a) => {
+      const on = a.dataset.s === group[id];
+      a.classList.toggle("active", on);
+      if (on) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current");
+    });
+  }
+  const req = () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
+  window.addEventListener("scroll", req, { passive: true });
+  window.addEventListener("resize", req);
+  window.addEventListener("load", req);
+  update();
+})();
+
+// ===== Setup dalam tab (PC / Periferal / Audio & Video) =====
+(function setupTabs() {
+  const tabs = Array.from(document.querySelectorAll("#setupTabs [role=tab]"));
+  const panels = Array.from(document.querySelectorAll("[data-panel]"));
+  if (!tabs.length) return;
+  function select(name, focus) {
+    tabs.forEach((tb) => {
+      const on = tb.dataset.tab === name;
+      tb.classList.toggle("on", on);
+      tb.setAttribute("aria-selected", String(on));
+      tb.tabIndex = on ? 0 : -1;
+      if (on && focus) tb.focus();
+    });
+    panels.forEach((p) => { p.hidden = p.dataset.panel !== name; });
+  }
+  tabs.forEach((tb, i) => {
+    tb.addEventListener("click", () => select(tb.dataset.tab));
+    tb.addEventListener("keydown", (e) => {
+      if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+      e.preventDefault();
+      const next = tabs[(i + (e.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length];
+      select(next.dataset.tab, true);
+    });
+  });
+})();
+
+// ===== Galeri geser di HP: titik penunjuk posisi =====
+(function galleryDots() {
+  const wrap = document.getElementById("galWrap");
+  const dots = document.getElementById("galDots");
+  if (!wrap || !dots) return;
+  const cards = Array.from(wrap.querySelectorAll(".photo-card"));
+  cards.forEach((c, i) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("aria-label", (i + 1) + " / " + cards.length);
+    b.addEventListener("click", () => c.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" }));
+    dots.appendChild(b);
+  });
+  function update() {
+    const mid = wrap.scrollLeft + wrap.clientWidth / 2;
+    let best = 0, bestD = Infinity;
+    cards.forEach((c, i) => {
+      const d = Math.abs(c.offsetLeft + c.offsetWidth / 2 - mid);
+      if (d < bestD) { bestD = d; best = i; }
+    });
+    Array.from(dots.children).forEach((b, i) => b.classList.toggle("on", i === best));
+  }
+  wrap.addEventListener("scroll", () => requestAnimationFrame(update), { passive: true });
+  window.addEventListener("resize", update);
+  update();
 })();
 
 // ===== Menu hamburger (layar kecil) =====
@@ -584,36 +1036,74 @@ bindForm(document.getElementById("requestForm"), { okKey: "req_ok", cooldownKey:
   btn.addEventListener("click", () => window.scrollTo({ top: 0 }));
 })();
 
-// ===== Dinding dukungan =====
-// Tambahkan nama pendukung di sini SETELAH mereka setuju namanya ditampilkan.
-// Contoh:  { name: "Budi", note: "Semangat terus, Gewol!" },
-// "note" boleh dikosongkan. Jangan menampilkan nominal donasi tanpa izin.
-const SUPPORTERS = [
+// ===== Papan Top Supporter (podium) =====
+// Isi urutan dari peringkat 1 ke bawah (maksimal 10), SETELAH supporter setuju namanya tampil.
+// Contoh:
+//   { name: "Budi", amount: 50000 },          // nominal boleh angka (otomatis jadi Rp50.000)
+//   { name: "Siti", amount: "Rp25.000" },     // atau teks bebas
+//   { name: "Anonim" },                       // nominal boleh dikosongkan
+// Jangan menampilkan nominal tanpa izin. Kalau ragu, kosongkan "amount".
+const TOP_SUPPORTERS = [
+  { name: "Rel29", amount: 293000 },
+  { name: "HAYDAR X LTYBRO!!", amount: 278000 },
+  { name: "HanzXx", amount: 184991 },
 ];
 
-(function supportWall() {
-  const list = document.getElementById("wallList");
-  const empty = document.getElementById("wallEmpty");
-  if (!list || !empty) return;
-  if (!SUPPORTERS.length) { list.hidden = true; return; }
-  empty.hidden = true;
-  SUPPORTERS.forEach((s) => {
+(function topSupporters() {
+  const podium = document.getElementById("podium");
+  const rest = document.getElementById("topRest");
+  if (!podium || !rest) return;
+  const list = TOP_SUPPORTERS.slice(0, 10);
+  const fmt = (a) => (typeof a === "number" ? "Rp" + a.toLocaleString("id-ID") : a);
+
+  function pod(rank, data) {
+    const el = document.createElement("div");
+    el.className = "pod r" + rank + (data ? "" : " empty");
+    if (rank === 1) {
+      const crown = document.createElement("span");
+      crown.className = "crown";
+      crown.setAttribute("aria-hidden", "true");
+      crown.textContent = "👑";
+      el.appendChild(crown);
+    }
+    const av = document.createElement("div");
+    av.className = "pod-av";
+    av.textContent = data ? (data.name || "?").trim().charAt(0).toUpperCase() : "?";
+    const name = document.createElement("b");
+    name.className = "pod-name";
+    name.textContent = data ? data.name : "—";
+    const amt = document.createElement("small");
+    amt.className = "pod-amt";
+    amt.textContent = data && data.amount ? fmt(data.amount) : "";
+    const base = document.createElement("div");
+    base.className = "pod-base";
+    base.textContent = "#" + rank;
+    el.append(av, name, amt, base);
+    return el;
+  }
+
+  // Urutan tampil klasik: juara 2 - juara 1 - juara 3
+  [2, 1, 3].forEach((r) => podium.appendChild(pod(r, list[r - 1])));
+
+  list.slice(3).forEach((s, i) => {
     const li = document.createElement("li");
+    const no = document.createElement("span");
+    no.className = "no";
+    no.textContent = "#" + (i + 4);
     const av = document.createElement("span");
     av.className = "av";
     av.textContent = (s.name || "?").trim().charAt(0).toUpperCase();
-    const box = document.createElement("div");
     const name = document.createElement("b");
     name.textContent = s.name;
-    box.appendChild(name);
-    if (s.note) {
-      const note = document.createElement("small");
-      note.textContent = s.note;
-      box.appendChild(note);
+    li.append(no, av, name);
+    if (s.amount) {
+      const amt = document.createElement("small");
+      amt.textContent = fmt(s.amount);
+      li.appendChild(amt);
     }
-    li.append(av, box);
-    list.appendChild(li);
+    rest.appendChild(li);
   });
+  rest.hidden = list.length <= 3;
 })();
 
 // ===== Lightbox galeri: panah, geser jari, keyboard, keterangan foto =====
