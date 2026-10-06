@@ -5,7 +5,7 @@ const I18N = {
     title: "Gewol — Streamer & Kreator Konten",
     meta: "Gewol (Didik Pribadi), streamer dan kreator konten asal Cilacap, mahasiswa Teknik Informatika. Temukan semua media sosialnya di sini.",
     words: ["streamer", "kreator konten", "mahasiswa Teknik Informatika", "wong Cilacap"],
-    nav_about: "Tentang", nav_setup: "Setup", nav_live: "Live", nav_social: "Sosmed", nav_contact: "Kontak",
+    nav_about: "Tentang", nav_setup: "Setup", nav_live: "Live", nav_social: "Sosmed",
     donate_btn: "Donasi", sound_label: "Suara klik", theme_label: "Ganti tema", photo_alt: "Foto profil Gewol",
     hello: "Halo, saya", iam: "Saya",
     origin: "📍 Desa Rejodadi, Cimanggu, Cilacap, Jawa Tengah",
@@ -22,10 +22,12 @@ const I18N = {
     gpu_h: "Tanpa GPU terpisah", gpu_s: "Memakai grafis terintegrasi bawaan Ryzen 5 5600G",
     live_title: "Jadwal Live", live_sub: "Satu sesi setiap hari. Kalau berhalangan, kabar terbaru ada di media sosial.",
     live_day: "Live Setiap Hari", live_note: "Kecuali ada kesibukan.",
-    watch_tt: "Tonton di TikTok", watch_yt: "Tonton di YouTube",
+    watch_tt: "Tonton di TikTok", watch_yt: "Tonton di YouTube", watch_kick: "Tonton di Kick",
     nav_request: "Request", nav_gallery: "Galeri", nav_works: "Karya", nav_support: "Dukung",
     menu_label: "Buka menu", totop: "Kembali ke atas",
     lb_prev: "Foto sebelumnya", lb_next: "Foto berikutnya", lb_label: "Galeri foto",
+    games_title: "Game yang Saya Mainkan", games_sub: "Game yang paling sering muncul di live.",
+    g_rp: "Roleplay", g_br: "Battle Royale", g_sb: "Sandbox",
     req_title: "Request untuk Live", req_sub: "Punya game atau lagu yang ingin saya mainkan saat live? Tulis di sini, saya cek sebelum live berikutnya.",
     req_type: "Jenis request", req_game: "🎮 Game", req_song: "🎵 Lagu", req_other: "💬 Lainnya",
     req_item: "Judul game atau lagu", req_ph_item: "Judul game atau lagu",
@@ -68,18 +70,16 @@ const I18N = {
     gr_morning: "Selamat pagi! ☀️", gr_noon: "Selamat siang! 🌤️", gr_evening: "Selamat sore! 🌇", gr_night: "Selamat malam! 🌙", gr_late: "Selamat malam, belum tidur? 🦉",
     nav_home: "Home", live_now: "LIVE SEKARANG", tab_pc: "PC", tab_peri: "Periferal", tab_av: "Audio & Video",
     tabs_label: "Kategori setup", bn_label: "Navigasi cepat",
-    con_title: "Mari Terhubung", con_sub: "Ada pertanyaan, tawaran kolaborasi, atau sekadar ingin menyapa? Kirim pesan di sini.",
-    lbl_name: "Nama", lbl_msg: "Pesan", ph_name: "Nama lengkap", ph_email: "email@contoh.com", ph_msg: "Tulis pesanmu di sini...",
-    send: "Kirim Pesan", sending: "Mengirim...",
+    sending: "Mengirim...",
     form_unlinked: "Formulir belum tersambung. Ganti ID_FORMSPREE_KAMU di index.html terlebih dahulu.",
-    form_ok: "Pesan terkirim. Terima kasih!", form_fail: "Pesan gagal terkirim. Silakan coba lagi nanti.",
+    form_fail: "Pesan gagal terkirim. Silakan coba lagi nanti.",
     copied: "Berhasil disalin!", toast_discord: "Username Discord disalin: ", close: "Tutup",
   },
   en: {
     title: "Gewol — Streamer & Content Creator",
     meta: "Gewol (Didik Pribadi), a streamer and content creator from Cilacap and an Informatics Engineering student. Find all his social media here.",
     words: ["streamer", "content creator", "Informatics Engineering student", "Cilacap local"],
-    nav_about: "About", nav_setup: "Setup", nav_live: "Live", nav_social: "Socials", nav_contact: "Contact",
+    nav_about: "About", nav_setup: "Setup", nav_live: "Live", nav_social: "Socials",
     donate_btn: "Donate", sound_label: "Click sound", theme_label: "Toggle theme", photo_alt: "Gewol profile photo",
     hello: "Hi, I'm", iam: "I'm a",
     origin: "📍 Rejodadi Village, Cimanggu, Cilacap, Central Java",
@@ -96,10 +96,12 @@ const I18N = {
     gpu_h: "No dedicated GPU", gpu_s: "Uses the integrated graphics of the Ryzen 5 5600G",
     live_title: "Live Schedule", live_sub: "One session every day. If I can't make it, updates are on my socials.",
     live_day: "Live Every Day", live_note: "Unless I'm busy.",
-    watch_tt: "Watch on TikTok", watch_yt: "Watch on YouTube",
+    watch_tt: "Watch on TikTok", watch_yt: "Watch on YouTube", watch_kick: "Watch on Kick",
     nav_request: "Requests", nav_gallery: "Gallery", nav_works: "Films", nav_support: "Support",
     menu_label: "Open menu", totop: "Back to top",
     lb_prev: "Previous photo", lb_next: "Next photo", lb_label: "Photo gallery",
+    games_title: "Games I Play", games_sub: "The games that show up most on stream.",
+    g_rp: "Roleplay", g_br: "Battle Royale", g_sb: "Sandbox",
     req_title: "Live Requests", req_sub: "Got a game or a song you'd like me to play on stream? Drop it here and I'll check it before the next live.",
     req_type: "Request type", req_game: "🎮 Game", req_song: "🎵 Song", req_other: "💬 Other",
     req_item: "Game or song title", req_ph_item: "Title of the game or song",
@@ -142,11 +144,9 @@ const I18N = {
     gr_morning: "Good morning! ☀️", gr_noon: "Good afternoon! 🌤️", gr_evening: "Good evening! 🌇", gr_night: "Good evening! 🌙", gr_late: "Still up this late? 🦉",
     nav_home: "Home", live_now: "LIVE NOW", tab_pc: "PC", tab_peri: "Peripherals", tab_av: "Audio & Video",
     tabs_label: "Setup categories", bn_label: "Quick navigation",
-    con_title: "Let's Connect", con_sub: "Questions, collaboration offers, or just want to say hi? Send me a message here.",
-    lbl_name: "Name", lbl_msg: "Message", ph_name: "Your full name", ph_email: "email@example.com", ph_msg: "Write your message here...",
-    send: "Send Message", sending: "Sending...",
+    sending: "Sending...",
     form_unlinked: "The form isn't connected yet. Replace ID_FORMSPREE_KAMU in index.html first.",
-    form_ok: "Message sent. Thank you!", form_fail: "Message failed to send. Please try again later.",
+    form_fail: "Message failed to send. Please try again later.",
     copied: "Copied!", toast_discord: "Discord username copied: ", close: "Close",
   },
 };
@@ -280,7 +280,7 @@ document.querySelectorAll("[data-copy]").forEach((el) => {
   });
 });
 
-// ===== Formulir (kontak & request) lewat Formspree =====
+// ===== Formulir request lewat Formspree =====
 function onCooldown(key, seconds) {
   try { return Date.now() - Number(localStorage.getItem(key) || 0) < seconds * 1000; } catch (e) { return false; }
 }
@@ -322,7 +322,6 @@ function bindForm(form, opts) {
     }
   });
 }
-bindForm(document.getElementById("contactForm"), { okKey: "form_ok" });
 bindForm(document.getElementById("requestForm"), { okKey: "req_ok", cooldownKey: "req_last", cooldownSec: 60 });
 
 
@@ -918,13 +917,13 @@ const LATEST_LINKS = [
 // ===== Menu aktif (scroll-spy) + garis progres scroll =====
 (function navSpy() {
   const bar = document.querySelector("#progress span");
-  const ids = ["home", "about", "setup", "live", "proyek", "karya", "terbaru", "sosmed", "dukung", "kontak"];
+  const ids = ["home", "about", "setup", "live", "proyek", "karya", "terbaru", "sosmed", "dukung"];
   const secs = ids.map((id) => document.getElementById(id)).filter(Boolean);
   if (!secs.length) return;
   const topLinks = document.querySelectorAll("#navLinks a");
   const bottom = document.querySelectorAll("#bottomNav a");
   // Bagian mana menyorot ikon mana di menu bawah
-  const group = { home: "home", about: "home", setup: "home", live: "live", proyek: "proyek", karya: "proyek", terbaru: "proyek", sosmed: "sosmed", dukung: "sosmed", kontak: "sosmed" };
+  const group = { home: "home", about: "home", setup: "home", live: "live", proyek: "proyek", karya: "proyek", terbaru: "proyek", sosmed: "sosmed", dukung: "sosmed" };
   let current = "", ticking = false;
 
   function update() {

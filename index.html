@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="loading">
-  <!-- Layar pembuka -->
   <div id="loader">
     <div class="loader-inner">
       <div class="loader-kanji">配信中 · NOW LOADING</div>
@@ -22,14 +21,11 @@
     </div>
   </div>
 
-  <!-- Garis progres scroll -->
   <div id="progress" class="progress" aria-hidden="true"><span></span></div>
 
-  <!-- Kursor kustom -->
   <div class="cur-dot"></div>
   <div class="cur-ring"></div>
 
-  <!-- Kelopak sakura jatuh -->
   <canvas id="sakura"></canvas>
   <div class="bg">
     <span class="orb o1"></span>
@@ -38,7 +34,6 @@
     <span class="grid-lines"></span>
   </div>
 
-  <!-- Navigasi -->
   <header class="nav" id="nav">
     <button id="menuBtn" class="theme-btn menu-btn" aria-label="Buka menu" aria-expanded="false" aria-controls="navLinks" data-i18n-attr="aria-label:menu_label"><span></span><span></span><span></span></button>
     <a href="#home" class="logo">GEWOL<span>★</span></a>
@@ -52,7 +47,6 @@
       <a href="#terbaru" class="m-only" data-i18n="nav_latest">Terbaru</a>
       <a href="#sosmed" data-i18n="nav_social">Sosmed</a>
       <a href="#dukung" class="m-only" data-i18n="nav_support">Dukung</a>
-      <a href="#kontak" data-i18n="nav_contact">Kontak</a>
     </nav>
     <div class="nav-btns">
       <a href="https://sociabuzz.com/gewol/donate" target="_blank" rel="noopener" class="donate-pill" id="donateNav" title="Donate"><span aria-hidden="true">☕</span><b data-i18n="donate_btn">Donasi</b></a>
@@ -67,7 +61,6 @@
     <!-- HERO -->
     <section id="home" class="hero reveal">
       <div class="hero-text">
-        <!-- Sapaan sesuai jam di perangkat pengunjung (diatur di script.js: bagian "Sapaan sesuai jam") -->
         <p class="greet" id="greet" aria-live="off"></p>
         <span class="chip">配信者 · STREAMER</span>
         <p class="hello" data-i18n="hello">Halo, saya</p>
@@ -76,7 +69,8 @@
         <ul class="hero-social" aria-label="Media sosial">
           <li><a class="hs tt" href="https://tiktok.com/@gewolx" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.4a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .8.1V9.2a6.3 6.3 0 1 0 5.5 6.2V8.6a8.2 8.2 0 0 0 4.8 1.5V6.7z"/></svg></a></li>
           <li><a class="hs yt" href="https://youtube.com/@gewolx" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg></a></li>
-          <li><a class="hs ig" href="https://instagram.com/ddkpri" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 4 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7C8.3 24 8.7 24 12 24s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg></a></li>
+          <li><a class="hs kk" href="https://kick.com/gewolx" target="_blank" rel="noopener" aria-label="Kick" title="Kick"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M1.333 0h8v5.333H12V2.667h2.667V0h8v8H20v2.667h-2.667v2.666H20V16h2.667v8h-8v-2.667H12v-2.666H9.333V24h-8Z"/></svg></a></li>
+          <li><a class="hs ig" href="https://instagram.com/didikpribadii" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 4 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7C8.3 24 8.7 24 12 24s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg></a></li>
           <li><a class="hs dc" href="#" data-copy="gewolx" aria-label="Discord (gewolx)" title="Discord: gewolx" data-i18n-attr="title:dc_title"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.2.5a18 18 0 0 0-6.4 0L8.6 3a19.8 19.8 0 0 0-4.9 1.4C.6 9 -.3 13.5.1 18a19.9 19.9 0 0 0 6 3l1.3-2.1c-.7-.3-1.4-.6-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1l1.3 2.1a19.9 19.9 0 0 0 6-3c.5-5.2-.8-9.7-3.6-13.6zM8.5 15.3c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.1 1.1 2.1 2.4-.9 2.4-2.1 2.4zm7 0c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.1 1.1 2.1 2.4-.9 2.4-2.1 2.4z"/></svg></a></li>
         </ul>
         <p class="typing"><span data-i18n="iam">Saya</span> <span id="typed"></span><span class="cursor">|</span></p>
@@ -99,27 +93,22 @@
         </div>
         <span class="tag t1">クリエイター</span>
         <span class="tag t2">LIVE ●</span>
-        <!-- Muncul otomatis hanya saat jam live (jadwal diatur di script.js) -->
         <div class="live-badge" id="liveBadge" hidden>
           <span class="lb-dot" aria-hidden="true"></span><b data-i18n="live_now">LIVE SEKARANG</b>
           <a class="lb-btn tt" href="https://www.tiktok.com/@gewolx" target="_blank" rel="noopener" aria-label="Tonton di TikTok" title="Tonton di TikTok" data-i18n-attr="aria-label:watch_tt,title:watch_tt"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.4a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .8.1V9.2a6.3 6.3 0 1 0 5.5 6.2V8.6a8.2 8.2 0 0 0 4.8 1.5V6.7z"/></svg></a>
           <a class="lb-btn yt" href="https://youtube.com/@gewolx" target="_blank" rel="noopener" aria-label="Tonton di YouTube" title="Tonton di YouTube" data-i18n-attr="aria-label:watch_yt,title:watch_yt"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg></a>
+          <a class="lb-btn kk" href="https://kick.com/gewolx" target="_blank" rel="noopener" aria-label="Tonton di Kick" title="Tonton di Kick" data-i18n-attr="aria-label:watch_kick,title:watch_kick"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M1.333 0h8v5.333H12V2.667h2.667V0h8v8H20v2.667h-2.667v2.666H20V16h2.667v8h-8v-2.667H12v-2.666H9.333V24h-8Z"/></svg></a>
         </div>
       </div>
     </section>
 
-
-    <!-- STATISTIK -->
-    <!-- TikTok & YouTube disinkronkan otomatis lewat bagian SINKRONISASI di script.js.
-         Angka data-count di bawah dipakai sebagai cadangan (dan untuk Jam Streaming / Konten Dibuat). Ganti dengan angka aslimu. -->
     <section id="stats" class="stats reveal">
-      <div class="stat"><b class="count" data-stat="tiktok" data-count="1000" data-suffix="+">0</b><span data-i18n="stat_tt">Pengikut TikTok</span></div>
-      <div class="stat"><b class="count" data-stat="youtube" data-count="500" data-suffix="+">0</b><span data-i18n="stat_yt">Subscriber YouTube</span></div>
+      <div class="stat"><b class="count" data-stat="tiktok" data-count="2000" data-suffix="+">0</b><span data-i18n="stat_tt">Pengikut TikTok</span></div>
+      <div class="stat"><b class="count" data-stat="youtube" data-count="900" data-suffix="+">0</b><span data-i18n="stat_yt">Subscriber YouTube</span></div>
       <div class="stat"><b class="count" data-count="100" data-suffix="+">0</b><span data-i18n="stat_hours">Jam Live</span></div>
       <div class="stat"><b class="count" data-count="50" data-suffix="+">0</b><span data-i18n="stat_content">Konten Dibuat</span></div>
     </section>
 
-    <!-- TENTANG -->
     <section id="about" class="section reveal">
       <h2><small>01 / 自己紹介</small><span data-i18n="about_title">Tentang Saya</span></h2>
       <div class="card about-card">
@@ -135,7 +124,6 @@
       </div>
     </section>
 
-    <!-- SETUP SAYA -->
     <section id="setup" class="section reveal">
       <h2><small>02 / セットアップ</small><span data-i18n="setup_title">Setup Saya</span></h2>
       <p class="sub" data-i18n="setup_sub">Perangkat yang saya pakai untuk berkarya</p>
@@ -164,10 +152,8 @@
         <div class="part"><em>🔊</em><div><span>Speaker</span><h3>NEMESIS Falcon SPN-08</h3><small>Gaming Stereo • RGB</small></div></div>
         <div class="part"><em>📷</em><div><span>Webcam</span><h3>TECGEAR 2KV2</h3><small>QHD 2K • 30FPS • Autofocus • Mic • Privacy Shutter</small></div></div>
       </div>
-      <!-- Tambah perangkat: salin satu baris "part" ke panel yang sesuai (pc / peri / av) -->
     </section>
 
-    <!-- JADWAL LIVE -->
     <section id="live" class="section reveal">
       <h2><small>03 / ライブ</small><span data-i18n="live_title">Jadwal Live</span></h2>
       <p class="sub" data-i18n="live_sub">Satu sesi setiap hari. Kalau berhalangan, kabar terbaru ada di media sosial.</p>
@@ -182,6 +168,7 @@
         <div class="live-actions">
           <a class="live-btn tt" href="https://www.tiktok.com/@gewolx" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.4a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .8.1V9.2a6.3 6.3 0 1 0 5.5 6.2V8.6a8.2 8.2 0 0 0 4.8 1.5V6.7z"/></svg><span data-i18n="watch_tt">Tonton di TikTok</span></a>
           <a class="live-btn yt" href="https://youtube.com/@gewolx" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg><span data-i18n="watch_yt">Tonton di YouTube</span></a>
+          <a class="live-btn kk" href="https://kick.com/gewolx" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.333 0h8v5.333H12V2.667h2.667V0h8v8H20v2.667h-2.667v2.666H20V16h2.667v8h-8v-2.667H12v-2.666H9.333V24h-8Z"/></svg><span data-i18n="watch_kick">Tonton di Kick</span></a>
         </div>
       </div>
       <ol class="week" id="week">
@@ -193,10 +180,19 @@
         <li data-d="6" data-i18n="d_6">Sab</li>
         <li data-d="0" data-i18n="d_0">Min</li>
       </ol>
+      <div class="games" id="games">
+        <h3 data-i18n="games_title">Game yang Saya Mainkan</h3>
+        <p class="req-sub" data-i18n="games_sub">Game yang paling sering muncul di live.</p>
+        <div class="game-grid">
+          <div class="game gta"><div class="game-art"><img src="game-gta5.png" width="360" height="318" alt="Logo Grand Theft Auto V" loading="lazy" decoding="async" /></div><div class="game-info"><span data-i18n="g_rp">Roleplay</span><h3>GTA V Roleplay</h3></div></div>
+          <div class="game ff"><div class="game-art"><img src="game-freefire.png" width="640" height="91" alt="Logo Free Fire" loading="lazy" decoding="async" /></div><div class="game-info"><span data-i18n="g_br">Battle Royale</span><h3>Free Fire</h3></div></div>
+          <div class="game rb"><div class="game-art"><img src="game-roblox.png" width="256" height="256" alt="Logo Roblox" loading="lazy" decoding="async" /></div><div class="game-info"><span data-i18n="g_sb">Sandbox</span><h3>Roblox</h3></div></div>
+        </div>
+      </div>
       <div id="request" class="card request-card">
         <h3 data-i18n="req_title">Request untuk Live</h3>
         <p class="req-sub" data-i18n="req_sub">Punya game atau lagu yang ingin saya mainkan saat live? Tulis di sini, saya cek sebelum live berikutnya.</p>
-        <!-- Pakai ID Formspree yang sama dengan formulir kontak juga boleh. Request akan masuk ke email dengan subjek khusus. -->
+        <!-- Request akan masuk ke email dengan subjek khusus. -->
         <form id="requestForm" action="https://formspree.io/f/mdeaonrr" method="POST">
           <input type="hidden" name="_subject" value="Request live dari website Gewol" />
           <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
@@ -327,15 +323,21 @@
           <i>→</i>
         </a>
 
+        <a class="social kk" href="https://kick.com/gewolx" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.333 0h8v5.333H12V2.667h2.667V0h8v8H20v2.667h-2.667v2.666H20V16h2.667v8h-8v-2.667H12v-2.666H9.333V24h-8Z"/></svg>
+          <div><h3>Kick</h3><span>@gewolx</span></div>
+          <i>→</i>
+        </a>
+
         <a class="social dc" href="#" data-copy="gewolx" title="Klik untuk menyalin username" data-i18n-attr="title:dc_title">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.2.5a18 18 0 0 0-6.4 0L8.6 3a19.8 19.8 0 0 0-4.9 1.4C.6 9 -.3 13.5.1 18a19.9 19.9 0 0 0 6 3l1.3-2.1c-.7-.3-1.4-.6-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1l1.3 2.1a19.9 19.9 0 0 0 6-3c.5-5.2-.8-9.7-3.6-13.6zM8.5 15.3c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.1 1.1 2.1 2.4-.9 2.4-2.1 2.4zm7 0c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.1 1.1 2.1 2.4-.9 2.4-2.1 2.4z"/></svg>
           <div><h3>Discord</h3><span data-i18n="dc_copy">gewolx · klik untuk menyalin</span></div>
           <i>⧉</i>
         </a>
 
-        <a class="social ig" href="https://instagram.com/ddkpri" target="_blank" rel="noopener">
+        <a class="social ig" href="https://instagram.com/didikpribadii" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 4 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7C8.3 24 8.7 24 12 24s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg>
-          <div><h3>Instagram</h3><span>@ddkpri</span></div>
+          <div><h3>Instagram</h3><span>@didikpribadii</span></div>
           <i>→</i>
         </a>
 
@@ -372,31 +374,6 @@
       </div>
     </section>
 
-    <!-- KONTAK -->
-    <section id="kontak" class="section reveal">
-      <h2><small>09 / お問い合わせ</small><span data-i18n="con_title">Mari Terhubung</span></h2>
-      <p class="sub" data-i18n="con_sub">Ada pertanyaan, tawaran kolaborasi, atau sekadar ingin menyapa? Kirim pesan di sini.</p>
-      <div class="card">
-        <!-- Form tersambung ke Formspree. Untuk mengganti tujuan, ubah ID di atribut action di bawah -->
-        <form id="contactForm" action="https://formspree.io/f/mdeaonrr" method="POST">
-          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
-          <div class="field">
-            <label for="nama" data-i18n="lbl_name">Nama</label>
-            <input type="text" id="nama" name="nama" placeholder="Nama lengkap" data-i18n-attr="placeholder:ph_name" required />
-          </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="email@contoh.com" data-i18n-attr="placeholder:ph_email" required />
-          </div>
-          <div class="field">
-            <label for="pesan" data-i18n="lbl_msg">Pesan</label>
-            <textarea id="pesan" name="pesan" rows="5" placeholder="Tulis pesanmu di sini..." data-i18n-attr="placeholder:ph_msg" required></textarea>
-          </div>
-          <button type="submit" class="btn primary" id="submitBtn" data-i18n="send">Kirim Pesan</button>
-          <p id="formStatus" class="form-status"></p>
-        </form>
-      </div>
-    </section>
   </main>
 
   <!-- Menu bawah (hanya tampil di HP) -->

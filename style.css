@@ -265,17 +265,20 @@ main { position: relative; z-index: 1; max-width: 920px; margin: 0 auto; padding
   box-shadow: 0 14px 34px color-mix(in srgb, var(--brand) 38%, transparent);
 }
 .social:hover i { transform: translateX(5px); color: var(--brand); }
+.social.kk svg { color: #0b0e0f; }
+.hs.kk:hover, .hs.kk:focus-visible { color: #0b0e0f; }
 
 .fb { --brand: #1877f2; }
 .tt { --brand: #fe2c55; }
 .yt { --brand: #ff0000; }
+.kk { --brand: #53fc18; }
 .dc { --brand: #5865f2; }
 .ig { --brand: #e1306c; }
 .tg { --brand: #26a5e4; }
 
 .note { margin-top: 12px; font-size: 0.82rem; color: var(--muted); text-align: center; }
 
-/* ===== Form kontak ===== */
+/* ===== Form (request) ===== */
 .field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
 .field label { font-size: 0.86rem; font-weight: 600; color: var(--muted); }
 .field input, .field textarea {
@@ -291,8 +294,6 @@ main { position: relative; z-index: 1; max-width: 920px; margin: 0 auto; padding
   border-color: var(--pink);
   box-shadow: 0 0 0 3px rgba(255, 79, 163, 0.25);
 }
-#submitBtn { border: none; cursor: pointer; font-family: inherit; }
-#submitBtn:disabled { opacity: 0.6; cursor: wait; }
 .form-status { margin-top: 14px; font-size: 0.92rem; min-height: 1.4em; }
 .form-status.ok { color: #22c55e; }
 .form-status.err { color: #ef4444; }
@@ -563,6 +564,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .live-btn:hover { transform: translateY(-3px); }
 .live-btn.tt { --brand: #fe2c55; }
 .live-btn.yt { --brand: #ff0000; }
+.live-btn.kk { --brand: #53fc18; color: #0b0e0f; }
 @media (max-width: 560px) {
   .live-btn { flex: 1 1 100%; justify-content: center; }
 }
@@ -641,6 +643,38 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* ===== Request penonton ===== */
 #request { scroll-margin-top: 90px; }
 .request-card { margin-top: 22px; }
+.game-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.game {
+  --glow: var(--pink);
+  overflow: hidden; border-radius: 18px; background: var(--card); border: 1px solid var(--border);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+.game:hover { transform: translateY(-6px); border-color: var(--glow); box-shadow: 0 14px 34px color-mix(in srgb, var(--glow) 38%, transparent); }
+.game.gta { --glow: #4ade80; }
+.game.ff { --glow: #ffb800; }
+.game.rb { --glow: #e2e8f0; }
+.game-art {
+  height: 130px; overflow: hidden; box-sizing: border-box;
+  display: flex; align-items: center; justify-content: center;
+  background: radial-gradient(circle at 50% 120%, color-mix(in srgb, var(--glow) 28%, transparent), transparent 65%), linear-gradient(160deg, #14122b, #0b0b1c);
+}
+/* Ukuran tiap logo diatur sendiri lewat --w / --h (ubah di sini jika ingin lebih besar/kecil) */
+.game-art img {
+  flex: none; display: block; width: var(--w, auto); height: var(--h, auto);
+  max-width: 88%; max-height: 100px; object-fit: contain;
+  transition: transform 0.35s; filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.45));
+}
+.game.gta .game-art img { --h: 92px; }
+.game.ff .game-art img { --w: 74%; --h: auto; }
+.game.rb .game-art img { --h: 84px; border-radius: 22%; }
+.game:hover .game-art img { transform: scale(1.08); }
+.game-info { padding: 14px 18px 16px; border-top: 3px solid var(--glow); }
+.game-info span { font-size: 0.74rem; font-weight: 600; letter-spacing: 2px; color: var(--cyan); text-transform: uppercase; }
+.game-info h3 { font-size: 1rem; line-height: 1.35; }
+
+.games { margin-top: 26px; }
+.games > h3 { font-family: var(--font-head); font-weight: 400; font-size: 1.3rem; margin-bottom: 4px; }
 .request-card h3 { font-family: var(--font-head); font-weight: 400; font-size: 1.3rem; margin-bottom: 4px; }
 .req-sub { color: var(--muted); font-size: 0.95rem; margin-bottom: 18px; }
 fieldset.field { border: 0; min-width: 0; padding: 0; }
@@ -914,6 +948,7 @@ body.lb-open { overflow: hidden; }
 .lb-btn svg { width: 16px; height: 16px; }
 .lb-btn.tt { color: #fe2c55; }
 .lb-btn.yt { color: #f00; }
+.lb-btn.kk { background: #53fc18; color: #0b0e0f; }
 .lb-btn:hover, .lb-btn:focus-visible { transform: scale(1.14); }
 @keyframes liveGlow { 0%, 100% { box-shadow: 0 8px 26px rgba(255, 45, 85, 0.5), 0 0 0 0 rgba(255, 45, 85, 0.5); } 50% { box-shadow: 0 8px 30px rgba(255, 45, 85, 0.7), 0 0 0 10px rgba(255, 45, 85, 0); } }
 @keyframes lbBlink { 50% { opacity: 0.25; } }
