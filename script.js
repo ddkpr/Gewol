@@ -39,6 +39,25 @@ const I18N = {
     top_cta: "Jadi Top Supporter ☕",
     d_1: "Sen", d_2: "Sel", d_3: "Rab", d_4: "Kam", d_5: "Jum", d_6: "Sab", d_0: "Min",
     ls_on: "Sedang masuk jam live", ls_today: "Mulai hari ini pukul 13.00 WIB", ls_next: "Berikutnya besok pukul 13.00 WIB",
+    live_local: "Di zona waktu Anda: {a} – {b} ({z})",
+    cal_btn: "Tambahkan ke kalender",
+    cal_done: "File kalender diunduh",
+    cal_title: "Live Gewol",
+    cal_desc: "Live setiap hari di TikTok, YouTube, dan Kick (@gewolx). Kecuali ada kesibukan.",
+    gf_label: "Filter galeri",
+    gf_all: "Semua",
+    gf_prestasi: "Prestasi",
+    gf_sekolah: "Sekolah",
+    gf_kegiatan: "Kegiatan",
+    gf_live: "Live",
+    sum_label: "Ringkasan spesifikasi PC",
+    sp_open_all: "Buka semua spesifikasi",
+    sp_close_all: "Tutup semua spesifikasi",
+    dcw_title: "Komunitas Discord",
+    dcw_sub: "Gabung untuk ngobrol, nonton bareng, dan ikut event bersama komunitas.",
+    dcw_join: "Gabung Discord",
+    dcw_on: "{n} online",
+    dcw_mem: "{n} anggota",
     gal_title: "Momen Ikonik", gal_sub: "Momen berkesan dalam perjalanan saya. Klik foto untuk memperbesar.",
     g1_t: "Juara 1 Film Dokumenter 2024", g1_d: "LARWASIPDA 2024, Lomba Pembuatan Film Dokumenter tingkat Kabupaten Cilacap.",
     g1_alt: "Penganugerahan Juara 1 Lomba Film Dokumenter tingkat Kabupaten Cilacap 2024",
@@ -49,6 +68,12 @@ const I18N = {
     g3_alt: "Foto bersama sekelas XII.F5 SCIZOLASMA",
     g4_badge: "🐋 Live", g4_t: "Gift Paus dari Ainayy", g4_d: "Momen live streaming ketika Ainayy mengirim gift Paus.",
     g4_alt: "Momen live streaming saat mendapat gift Paus dari Ainayy",
+    g5_badge: "🎓 Study Campus", g5_t: "Study Campus 2025", g5_d: "Kegiatan study campus \"Goes to Campus\" bersama rombongan, berfoto di Museum Mini Sisa Hartaku.", g5_alt: "Foto bersama rombongan study campus Goes to Campus di Museum Mini Sisa Hartaku",
+    g6_badge: "🌙 Ramadan", g6_t: "Berbagi Takjil di Bulan Ramadan", g6_d: "Berbagi takjil kepada anak-anak dan warga sekitar di bulan Ramadan 2026.", g6_alt: "Kegiatan berbagi takjil kepada anak-anak di bulan Ramadan",
+    g7_badge: "🎬 2024", g7_t: "Good Team Film Dokumenter 2024", g7_d: "Tim film dokumenter 2024 kembali ke sekolah membawa piala dan piagam kemenangan.", g7_alt: "Tim film dokumenter 2024 berjalan menuju gedung SMAN 1 Majenang sambil membawa piala",
+    g8_badge: "🏐 Voli", g8_t: "Ekstrakurikuler Voli", g8_d: "Kegiatan ekstrakurikuler voli: pemanasan bersama sebelum latihan di lapangan sekolah.", g8_alt: "Kegiatan ekstrakurikuler voli, peserta melakukan pemanasan di lapangan",
+    g9_badge: "🎓 XII.F-5 & F-6", g9_t: "Kelas XII.F-5 & XII.F-6", g9_d: "Foto bersama kelas XII.F-5 dan XII.F-6 SMAN 1 Majenang.", g9_alt: "Foto bersama kelas XII.F-5 dan XII.F-6 SMAN 1 Majenang",
+    g10_badge: "📝 TKA 2025", g10_t: "After TKA 2025", g10_d: "Berfoto bersama setelah menyelesaikan Tes Kemampuan Akademik (TKA) 2025.", g10_alt: "Foto bersama seusai TKA 2025 sambil memegang kartu peserta",
     karya_title: "Karya Film", karya_sub: "Dua film dokumenter yang membawa saya ke podium. Klik untuk memutar.",
     v1_t: "Film Dokumenter Juara 1 (2024)", v1_d: "Karya yang meraih Juara 1 tingkat Kabupaten Cilacap.",
     v1_label: "Putar film dokumenter Juara 1 2024",
@@ -60,7 +85,7 @@ const I18N = {
     don_p: "Suka dengan kontennya? Dukunganmu membantu saya terus berkarya dan lebih sering live.",
     don_btn: "Dukung lewat SociaBuzz",
     music_label: "Musik latar",
-    pl_prev: "Lagu sebelumnya", pl_next: "Lagu berikutnya", pl_play: "Putar / jeda", pl_vol: "Volume", pl_now: "Sedang diputar",
+    pl_prev: "Lagu sebelumnya", pl_next: "Lagu berikutnya", pl_play: "Putar / jeda", pl_vol: "Volume", pl_now: "Sedang diputar", pl_list: "Daftar lagu", pl_songs: "lagu",
     nav_latest: "Terbaru", latest_title: "Konten Terbaru", latest_sub: "Video dan postingan terbaru dari YouTube dan TikTok.",
     lt_short: "▶ Shorts", lt_tt: "♪ TikTok", lt_photo: "🖼 Foto TikTok",
     lt_short_t: "Video terbaru di YouTube", lt_tt_t: "Video terbaru di TikTok", lt_photo_t: "Postingan foto di TikTok",
@@ -74,6 +99,150 @@ const I18N = {
     form_unlinked: "Formulir belum tersambung. Ganti ID_FORMSPREE_KAMU di index.html terlebih dahulu.",
     form_fail: "Pesan gagal terkirim. Silakan coba lagi nanti.",
     copied: "Berhasil disalin!", toast_discord: "Username Discord disalin: ", close: "Tutup",
+    share_btn: "Bagikan", share_text: "Cek website Gewol, streamer & kreator konten asal Cilacap!", copied_link: "Tautan disalin!",
+    buy_btn: "Beli", aff_note: "Tombol “Beli” bisa berupa tautan afiliasi: harga untukmu tetap sama, dan saya bisa mendapat komisi kecil yang mendukung channel ini.",
+    nav_faq: "FAQ", faq_title: "Pertanyaan Umum", faq_sub: "Jawaban singkat untuk hal yang paling sering ditanyakan.",
+    faq_q1: "Live jam berapa?",
+    faq_a1: "Setiap hari pukul <strong>13.00–15.00 WIB</strong>, kecuali ada kesibukan. Kalau berhalangan, kabarnya ada di <a href=\"#sosmed\">media sosial</a>.",
+    faq_q2: "Nonton live di mana?",
+    faq_a2: "Lewat TikTok, YouTube, atau Kick (@gewolx). Tautan ketiganya ada di bagian <a href=\"#live\">Jadwal Live</a>.",
+    faq_q3: "Bagaimana cara request game atau lagu?",
+    faq_a3: "Isi formulir di bagian <a href=\"#request\">Request untuk Live</a>. Saya cek sebelum live berikutnya.",
+    faq_q4: "Bisa diajak kolaborasi?",
+    faq_a4: "Bisa dibicarakan. Kirim pesan lewat DM <a href=\"https://instagram.com/didikpribadii\" target=\"_blank\" rel=\"noopener\">Instagram</a> atau <a href=\"https://t.me/didikpribadi\" target=\"_blank\" rel=\"noopener\">Telegram</a> dan ceritakan idenya.",
+    faq_q5: "Bagaimana cara mendukung Gewol?",
+    faq_a5: "Lewat <a href=\"https://sociabuzz.com/gewol/donate\" target=\"_blank\" rel=\"noopener\">SociaBuzz</a> atau gabung <a href=\"https://sociabuzz.com/gewol/tribe\" target=\"_blank\" rel=\"noopener\">Tribe</a>. Menonton, menyukai, dan membagikan konten juga sangat membantu.",
+    sp_btn: "Spesifikasi",
+    sp_cores: "Jumlah Core/Thread", sp_clock: "Kecepatan Clock", sp_igpu: "Grafis Terintegrasi", sp_tdp: "TDP (Konsumsi Daya)", sp_cache: "Cache",
+    sp_socket: "Socket & CPU", sp_mem: "Memori", sp_slots: "Slot Ekspansi", sp_storage: "Penyimpanan", sp_net: "Konektivitas", sp_av: "Audio & Grafis",
+    sp_socket_v: "AMD AM4, mendukung prosesor Ryzen seri 3000, 4000 G-Series, dan 5000",
+    sp_mem_v: "4 slot DDR4 DIMM, kecepatan hingga 4733+ MHz (dengan overclock)",
+    sp_slots_v: "1 slot PCIe 4.0 x16, 1 slot PCIe 3.0 x16, dan 1 slot PCIe 3.0 x1",
+    sp_storage_v: "4 port SATA3, 1 slot Hyper M.2 (PCIe Gen4 x4), dan 1 slot M.2 (PCIe Gen3 x2 & SATA3)",
+    sp_av_v: "Codec Realtek ALC897 7.1 CH HD Audio, output HDMI dan DisplayPort",
+    sp_gtype: "Tipe",
+    spa_0_0: "APU, grafis terintegrasi (iGPU)",
+    sp_gmodel: "Model",
+    sp_cu: "Compute Unit",
+    sp_gclock: "Clock Grafis",
+    sp_driver: "Driver Speaker",
+    spa_1_0: "Diameter 50mm, sensitivitas 115dB, impedansi 32Ω",
+    sp_mic: "Mikrofon",
+    spa_1_1: "Omnidirectional (beberapa arah), ukuran 6 × 5.0 mm",
+    spa_1_2: "USB (untuk lampu LED) dan twin 3.5mm (audio & mic), plus converter/splitter bawaan",
+    sp_cable: "Panjang Kabel",
+    spa_1_3: "Sekitar 2,2 meter",
+    sp_color: "Pilihan Warna",
+    spa_1_4: "Putih",
+    sp_sptype: "Jenis Speaker",
+    spa_2_0: "Stereo sound bar (2 driver 50,8 mm dengan magnet neodymium)",
+    sp_pout: "Output Daya",
+    sp_freq: "Respons Frekuensi",
+    spa_2_3: "Jack AUX 3,5 mm (audio) dan USB 2.0 (daya 5V-600mA)",
+    spa_2_4: "1,6 meter dengan sistem plug and play",
+    spa_2_5: "Lampu pencahayaan RGB, teknologi anti-noise, dan pengontrol inline",
+    spa_2_6: "Putih",
+    spa_2_7: "PC, Laptop, serta perangkat Mobile/HP",
+    sp_res: "Resolusi & Frame Rate",
+    spa_3_0: "QHD 2592 × 1944 px hingga 30 FPS (mendukung pengaturan 1080p dan 720p)",
+    sp_lens: "Lensa",
+    spa_3_1: "Kaca dengan Autofocus dan koreksi cahaya rendah otomatis",
+    sp_fov: "Sudut Pandang (FOV)",
+    spa_3_2: "78 derajat",
+    spa_3_3: "Built-in stereo microphones (mikrofon ganda)",
+    spa_3_4: "USB-A (plug and play, tanpa instalasi driver tambahan)",
+    spa_3_5: "2 meter",
+    spa_3_6: "Penutup privasi (privacy shutter), rotasi/swivel 360 derajat, pengaturan tilt, dan dudukan tripod-ready",
+    spa_3_7: "Windows, macOS, Linux, Chrome OS, dan Android (mendukung Zoom, Skype, OBS, dan Discord)",
+    sp_memtype: "Tipe Memori",
+    spv_0_0: "DDR4 U-DIMM (untuk PC desktop)",
+    sp_capacity: "Kapasitas",
+    sp_speed: "Kecepatan",
+    sp_volt: "Tegangan Kerja",
+    sp_cas: "CAS Latency",
+    sp_cool: "Pendingin & Desain",
+    spv_0_5: "Heatsink aluminium dengan pencahayaan RGB",
+    sp_warranty: "Garansi",
+    spv_0_6: "Limited lifetime warranty (seumur hidup) dari ADATA",
+    sp_iface: "Antarmuka",
+    sp_form: "Faktor Bentuk",
+    spv_1_1: "M.2 2280 (dengan atau tanpa heatsink)",
+    sp_read: "Kecepatan Baca (Maks.)",
+    spv_1_2: "Hingga 7.000 MB/s (PC/Laptop), 6.200 MB/s (PS5)",
+    sp_write: "Kecepatan Tulis (Maks.)",
+    spv_1_3: "Hingga 5.400 MB/s",
+    sp_tech: "Teknologi",
+    spv_1_4: "DRAM-less dengan dukungan HMB (Host Memory Buffer)",
+    spv_1_5: "Garansi resmi terbatas 5 tahun",
+    sp_power: "Kapasitas Daya",
+    spv_2_0: "650 Watt, desain DC-to-DC dengan jalur +12V penuh",
+    sp_cert: "Sertifikasi",
+    spv_2_1: "80 Plus Bronze dan Cybenetics Silver",
+    sp_capac: "Kapasitor",
+    spv_2_2: "Kapasitor utama buatan Jepang 105°C",
+    sp_fan: "Kipas",
+    spv_2_3: "Kipas 120mm dengan bantalan Fluid Dynamic Bearing (FDB) yang sunyi",
+    sp_prot: "Proteksi",
+    spv_2_4: "8 proteksi tingkat industri (OPP, UVP, OVP, SCP, OTP, OCP, NLO, SIP)",
+    spv_2_5: "Resmi 5 tahun",
+    sp_mobo: "Jenis Motherboard",
+    sp_dim: "Dimensi",
+    sp_mat: "Bahan",
+    spv_3_2: "SPCC 0,6 mm dan panel samping kaca tempered dengan sistem pintu magnetik (engsel)",
+    sp_front: "Panel Depan",
+    spv_3_3: "Besi jaring (iron mesh) untuk ventilasi udara yang lebih baik",
+    spv_3_4: "4 slot PCIe",
+    sp_gpu: "Dukungan GPU",
+    spv_3_5: "Panjang maksimal 330–350 mm",
+    sp_cpucool: "Dukungan CPU Cooler",
+    spv_3_6: "Tinggi maksimal 160 mm",
+    sp_bays: "Ruang Penyimpanan",
+    spv_3_7: "3 atau 2 HDD / 2 atau 1 SSD",
+    sp_io: "Port I/O Depan",
+    spv_3_8: "1× USB 3.0, 2× USB 2.0, dan HD Audio",
+    sp_panel: "Layar",
+    spv_4_0: "23,8 inci Fast IPS, 1920 × 1080 piksel, sudut pandang 178°",
+    sp_perf: "Performa",
+    spv_4_1: "Refresh rate 200 Hz, waktu respons 1 ms (GtG)",
+    sp_visual: "Visual & Warna",
+    spv_4_2: "HDR400 (kecerahan puncak 400 nit), 8-bit, 100% sRGB, 95% DCI-P3, akurasi warna ΔE<2",
+    sp_gaming: "Fitur Gaming",
+    spv_4_3: "FreeSync Premium dan kompatibel dengan G-Sync",
+    sp_eye: "Kenyamanan Mata",
+    spv_4_4: "Peredup DC dan sertifikasi Cahaya Biru Rendah TÜV",
+    sp_layout: "Tata Letak / Ukuran",
+    spv_5_0: "61 tombol (kompak 60%) yang hemat tempat di meja",
+    sp_switch: "Switch",
+    spv_5_1: "Mekanis hotswappable, pilihan Outemu (Brown, Blue, atau Red)",
+    sp_conn: "Koneksi",
+    spv_5_2: "Kabel USB Type-C yang bisa dilepas (detachable)",
+    sp_extra: "Fitur Tambahan",
+    spv_5_3: "N-Key rollover dan anti-ghosting penuh",
+    sp_light: "Pencahayaan",
+    spv_5_4: "Lampu latar RGB dengan hingga 13 mode bawaan",
+    spv_5_5: "Resmi distributor 2 tahun (tergantung toko)",
+    sp_sensor: "Sensor",
+    sp_weight: "Berat",
+    spv_6_1: "Sekitar 58–59 g",
+    sp_shape: "Bentuk",
+    spv_6_2: "Ergonomis untuk tangan kanan",
+    spv_6_3: "Huano Blue Shell White Dot (20 juta klik)",
+    spv_6_4: "Nirkabel 2.4GHz, Bluetooth, dan kabel USB-C (tri-mode)",
+    sp_lod: "Lift-Off Distance",
+    spv_6_5: "1 mm (dapat disesuaikan lewat software)",
+    spv_6_6: "Resmi 12 bulan",
+    sp_incl: "Kelengkapan",
+    spv_6_7: "Grip tape universal, dongle USB, kabel USB C-to-A, dan buku manual",
+    spv_7_0: "Triple mode: Bluetooth 5.1, Wireless 2.4GHz (dongle), dan kabel USB-C",
+    sp_polling: "Polling Rate",
+    spv_7_1: "Hingga 1000 Hz (nirkabel maupun kabel) untuk meminimalisasi delay",
+    sp_analog: "Sensor Analog & Trigger",
+    spv_7_2: "Hall Effect magnetic, lebih awet dan anti drift",
+    sp_compat: "Kompatibilitas",
+    spv_7_3: "PC, PS4, PS3, Android, Nintendo Switch, dan Nintendo Switch 2",
+    sp_battery: "Baterai",
+    spv_7_4: "600 mAh, pemakaian sekitar 8–20 jam (pengisian 2–3 jam)",
+    spv_7_5: "Motor getar ganda, fungsi turbo, tombol yang dapat diprogram, dan dukungan charging dock",
   },
   en: {
     title: "Gewol — Streamer & Content Creator",
@@ -113,6 +282,25 @@ const I18N = {
     top_cta: "Become a Top Supporter ☕",
     d_1: "Mon", d_2: "Tue", d_3: "Wed", d_4: "Thu", d_5: "Fri", d_6: "Sat", d_0: "Sun",
     ls_on: "Live hours are on now", ls_today: "Starts today at 1:00 PM WIB", ls_next: "Next one tomorrow at 1:00 PM WIB",
+    live_local: "In your time zone: {a} – {b} ({z})",
+    cal_btn: "Add to calendar",
+    cal_done: "Calendar file downloaded",
+    cal_title: "Gewol Live",
+    cal_desc: "Live every day on TikTok, YouTube, and Kick (@gewolx), unless something comes up.",
+    gf_label: "Gallery filter",
+    gf_all: "All",
+    gf_prestasi: "Achievements",
+    gf_sekolah: "School",
+    gf_kegiatan: "Activities",
+    gf_live: "Live",
+    sum_label: "PC specs summary",
+    sp_open_all: "Show all specs",
+    sp_close_all: "Hide all specs",
+    dcw_title: "Discord Community",
+    dcw_sub: "Join to chat, watch together, and take part in community events.",
+    dcw_join: "Join Discord",
+    dcw_on: "{n} online",
+    dcw_mem: "{n} members",
     gal_title: "Iconic Moments", gal_sub: "Memorable moments from my journey. Click a photo to enlarge.",
     g1_t: "1st Place, Documentary Film 2024", g1_d: "LARWASIPDA 2024, Documentary Film Competition, Cilacap Regency level.",
     g1_alt: "Award ceremony for 1st Place in the Documentary Film competition, Cilacap Regency 2024",
@@ -123,6 +311,12 @@ const I18N = {
     g3_alt: "Class photo of XII.F5 SCIZOLASMA",
     g4_badge: "🐋 Live", g4_t: "Whale Gift from Ainayy", g4_d: "A live stream moment when Ainayy sent a Whale gift.",
     g4_alt: "Live stream moment receiving a Whale gift from Ainayy",
+    g5_badge: "🎓 Study Campus", g5_t: "Study Campus 2025", g5_d: "The \"Goes to Campus\" study campus trip with the group, photographed at Museum Mini Sisa Hartaku.", g5_alt: "Group photo of the Goes to Campus study trip at Museum Mini Sisa Hartaku",
+    g6_badge: "🌙 Ramadan", g6_t: "Sharing Takjil During Ramadan", g6_d: "Handing out takjil (iftar snacks) to children and neighbors during Ramadan 2026.", g6_alt: "Sharing takjil with children during Ramadan",
+    g7_badge: "🎬 2024", g7_t: "Good Team, Documentary Film 2024", g7_d: "The 2024 documentary film team heading back to school with the trophy and certificates.", g7_alt: "The 2024 documentary film team walking toward SMAN 1 Majenang carrying the trophy",
+    g8_badge: "🏐 Volley", g8_t: "Volleyball Extracurricular", g8_d: "Volleyball extracurricular: a group warm-up before practice on the school court.", g8_alt: "Volleyball extracurricular, participants warming up on the court",
+    g9_badge: "🎓 XII.F-5 & F-6", g9_t: "Classes XII.F-5 & XII.F-6", g9_d: "Group photo of classes XII.F-5 and XII.F-6, SMAN 1 Majenang.", g9_alt: "Group photo of classes XII.F-5 and XII.F-6, SMAN 1 Majenang",
+    g10_badge: "📝 TKA 2025", g10_t: "After TKA 2025", g10_d: "A group photo after finishing the 2025 Academic Competency Test (TKA).", g10_alt: "Group photo after the 2025 TKA holding exam cards",
     karya_title: "Film Works", karya_sub: "Two documentary films that took me to the podium. Click to play.",
     v1_t: "Documentary Film, 1st Place (2024)", v1_d: "The film that won 1st Place at the Cilacap Regency level.",
     v1_label: "Play the 2024 1st Place documentary film",
@@ -134,7 +328,7 @@ const I18N = {
     don_p: "Enjoying the content? Your support helps me keep creating and go live more often.",
     don_btn: "Donate via SociaBuzz",
     music_label: "Background music",
-    pl_prev: "Previous track", pl_next: "Next track", pl_play: "Play / pause", pl_vol: "Volume", pl_now: "Now playing",
+    pl_prev: "Previous track", pl_next: "Next track", pl_play: "Play / pause", pl_vol: "Volume", pl_now: "Now playing", pl_list: "Playlist", pl_songs: "tracks",
     nav_latest: "Latest", latest_title: "Latest Content", latest_sub: "The newest videos and posts from YouTube and TikTok.",
     lt_short: "▶ Shorts", lt_tt: "♪ TikTok", lt_photo: "🖼 TikTok Photo",
     lt_short_t: "Latest video on YouTube", lt_tt_t: "Latest video on TikTok", lt_photo_t: "Photo post on TikTok",
@@ -148,6 +342,150 @@ const I18N = {
     form_unlinked: "The form isn't connected yet. Replace ID_FORMSPREE_KAMU in index.html first.",
     form_fail: "Message failed to send. Please try again later.",
     copied: "Copied!", toast_discord: "Discord username copied: ", close: "Close",
+    share_btn: "Share", share_text: "Check out Gewol's website: streamer & content creator from Cilacap!", copied_link: "Link copied!",
+    buy_btn: "Buy", aff_note: "The “Buy” buttons may be affiliate links: the price stays the same for you, and I may earn a small commission that supports this channel.",
+    nav_faq: "FAQ", faq_title: "FAQ", faq_sub: "Quick answers to the things people ask most.",
+    faq_q1: "What time do you go live?",
+    faq_a1: "Every day at <strong>1:00–3:00 PM WIB</strong> (Jakarta time), unless something comes up. If I can't make it, I post an update on <a href=\"#sosmed\">social media</a>.",
+    faq_q2: "Where can I watch the live stream?",
+    faq_a2: "On TikTok, YouTube, or Kick (@gewolx). Links to all three are in the <a href=\"#live\">Live Schedule</a> section.",
+    faq_q3: "How do I request a game or a song?",
+    faq_a3: "Fill in the form in the <a href=\"#request\">Live Request</a> section. I check it before the next stream.",
+    faq_q4: "Are you open to collaborations?",
+    faq_a4: "Happy to talk about it. Send a DM on <a href=\"https://instagram.com/didikpribadii\" target=\"_blank\" rel=\"noopener\">Instagram</a> or <a href=\"https://t.me/didikpribadi\" target=\"_blank\" rel=\"noopener\">Telegram</a> and tell me your idea.",
+    faq_q5: "How can I support Gewol?",
+    faq_a5: "Through <a href=\"https://sociabuzz.com/gewol/donate\" target=\"_blank\" rel=\"noopener\">SociaBuzz</a>, or join the <a href=\"https://sociabuzz.com/gewol/tribe\" target=\"_blank\" rel=\"noopener\">Tribe</a>. Watching, liking, and sharing my content helps a lot too.",
+    sp_btn: "Specs",
+    sp_cores: "Cores / Threads", sp_clock: "Clock speed", sp_igpu: "Integrated graphics", sp_tdp: "TDP (power draw)", sp_cache: "Cache",
+    sp_socket: "Socket & CPU", sp_mem: "Memory", sp_slots: "Expansion slots", sp_storage: "Storage", sp_net: "Connectivity", sp_av: "Audio & video out",
+    sp_socket_v: "AMD AM4, supports Ryzen 3000, 4000 G-Series, and 5000 series processors",
+    sp_mem_v: "4 DDR4 DIMM slots, speeds up to 4733+ MHz (overclocked)",
+    sp_slots_v: "1× PCIe 4.0 x16, 1× PCIe 3.0 x16, and 1× PCIe 3.0 x1",
+    sp_storage_v: "4 SATA3 ports, 1 Hyper M.2 slot (PCIe Gen4 x4), and 1 M.2 slot (PCIe Gen3 x2 & SATA3)",
+    sp_av_v: "Realtek ALC897 7.1 CH HD Audio codec, HDMI and DisplayPort outputs",
+    sp_gtype: "Type",
+    spa_0_0: "APU, integrated graphics (iGPU)",
+    sp_gmodel: "Model",
+    sp_cu: "Compute units",
+    sp_gclock: "Graphics clock",
+    sp_driver: "Speaker driver",
+    spa_1_0: "50mm diameter, 115dB sensitivity, 32Ω impedance",
+    sp_mic: "Microphone",
+    spa_1_1: "Omnidirectional, 6 × 5.0 mm",
+    spa_1_2: "USB (for the LED lighting) and twin 3.5mm (audio & mic), plus a bundled converter/splitter",
+    sp_cable: "Cable length",
+    spa_1_3: "About 2.2 meters",
+    sp_color: "Color",
+    spa_1_4: "White",
+    sp_sptype: "Speaker type",
+    spa_2_0: "Stereo sound bar (2 × 50.8 mm drivers with neodymium magnets)",
+    sp_pout: "Power output",
+    sp_freq: "Frequency response",
+    spa_2_3: "3.5 mm AUX jack (audio) and USB 2.0 (5V-600mA power)",
+    spa_2_4: "1.6 meters, plug and play",
+    spa_2_5: "RGB lighting, anti-noise technology, and an inline controller",
+    spa_2_6: "White",
+    spa_2_7: "PC, laptops, and mobile devices",
+    sp_res: "Resolution & frame rate",
+    spa_3_0: "QHD 2592 × 1944 px up to 30 FPS (1080p and 720p settings supported)",
+    sp_lens: "Lens",
+    spa_3_1: "Glass lens with autofocus and automatic low-light correction",
+    sp_fov: "Field of view",
+    spa_3_2: "78 degrees",
+    spa_3_3: "Built-in stereo microphones (dual mic)",
+    spa_3_4: "USB-A (plug and play, no extra driver needed)",
+    spa_3_5: "2 meters",
+    spa_3_6: "Privacy shutter, 360° swivel, tilt adjustment, and tripod-ready mount",
+    spa_3_7: "Windows, macOS, Linux, Chrome OS, and Android (works with Zoom, Skype, OBS, and Discord)",
+    sp_memtype: "Memory type",
+    spv_0_0: "DDR4 U-DIMM (for desktop PCs)",
+    sp_capacity: "Capacity",
+    sp_speed: "Speed",
+    sp_volt: "Operating voltage",
+    sp_cas: "CAS latency",
+    sp_cool: "Cooling & design",
+    spv_0_5: "Aluminium heatsink with RGB lighting",
+    sp_warranty: "Warranty",
+    spv_0_6: "ADATA limited lifetime warranty",
+    sp_iface: "Interface",
+    sp_form: "Form factor",
+    spv_1_1: "M.2 2280 (with or without heatsink)",
+    sp_read: "Read speed (max)",
+    spv_1_2: "Up to 7,000 MB/s (PC/laptop), 6,200 MB/s (PS5)",
+    sp_write: "Write speed (max)",
+    spv_1_3: "Up to 5,400 MB/s",
+    sp_tech: "Technology",
+    spv_1_4: "DRAM-less with HMB (Host Memory Buffer) support",
+    spv_1_5: "5-year limited official warranty",
+    sp_power: "Power capacity",
+    spv_2_0: "650 W, DC-to-DC design with full +12V rails",
+    sp_cert: "Certification",
+    spv_2_1: "80 Plus Bronze and Cybenetics Silver",
+    sp_capac: "Capacitors",
+    spv_2_2: "Japanese 105°C primary capacitors",
+    sp_fan: "Fan",
+    spv_2_3: "120mm fan with a quiet Fluid Dynamic Bearing (FDB)",
+    sp_prot: "Protection",
+    spv_2_4: "8 industrial-grade protections (OPP, UVP, OVP, SCP, OTP, OCP, NLO, SIP)",
+    spv_2_5: "5-year official warranty",
+    sp_mobo: "Motherboard support",
+    sp_dim: "Dimensions",
+    sp_mat: "Material",
+    spv_3_2: "0.6 mm SPCC steel and a tempered glass side panel with a magnetic hinged door",
+    sp_front: "Front panel",
+    spv_3_3: "Iron mesh for better airflow",
+    spv_3_4: "4 PCIe slots",
+    sp_gpu: "GPU support",
+    spv_3_5: "Up to 330–350 mm long",
+    sp_cpucool: "CPU cooler support",
+    spv_3_6: "Up to 160 mm tall",
+    sp_bays: "Drive bays",
+    spv_3_7: "3 or 2 HDD / 2 or 1 SSD",
+    sp_io: "Front I/O",
+    spv_3_8: "1× USB 3.0, 2× USB 2.0, and HD Audio",
+    sp_panel: "Display",
+    spv_4_0: "23.8-inch Fast IPS, 1920 × 1080 pixels, 178° viewing angle",
+    sp_perf: "Performance",
+    spv_4_1: "200 Hz refresh rate, 1 ms (GtG) response time",
+    sp_visual: "Visual & color",
+    spv_4_2: "HDR400 (400 nits peak), 8-bit, 100% sRGB, 95% DCI-P3, color accuracy ΔE<2",
+    sp_gaming: "Gaming features",
+    spv_4_3: "FreeSync Premium and G-Sync compatible",
+    sp_eye: "Eye comfort",
+    spv_4_4: "DC dimming and TÜV Low Blue Light certification",
+    sp_layout: "Layout / size",
+    spv_5_0: "61 keys (compact 60%) that saves desk space",
+    sp_switch: "Switch",
+    spv_5_1: "Hot-swappable mechanical, Outemu options (Brown, Blue, or Red)",
+    sp_conn: "Connection",
+    spv_5_2: "Detachable USB Type-C cable",
+    sp_extra: "Extra features",
+    spv_5_3: "N-key rollover and full anti-ghosting",
+    sp_light: "Lighting",
+    spv_5_4: "RGB backlight with up to 13 built-in modes",
+    spv_5_5: "2-year official distributor warranty (varies by store)",
+    sp_sensor: "Sensor",
+    sp_weight: "Weight",
+    spv_6_1: "About 58–59 g",
+    sp_shape: "Shape",
+    spv_6_2: "Ergonomic, right-handed",
+    spv_6_3: "Huano Blue Shell White Dot (20 million clicks)",
+    spv_6_4: "2.4GHz wireless, Bluetooth, and USB-C wired (tri-mode)",
+    sp_lod: "Lift-off distance",
+    spv_6_5: "1 mm (adjustable via software)",
+    spv_6_6: "12-month official warranty",
+    sp_incl: "In the box",
+    spv_6_7: "Universal grip tape, USB dongle, USB C-to-A cable, and manual",
+    spv_7_0: "Triple mode: Bluetooth 5.1, 2.4GHz wireless (dongle), and USB-C wired",
+    sp_polling: "Polling rate",
+    spv_7_1: "Up to 1000 Hz (wireless and wired) to minimize latency",
+    sp_analog: "Analog sticks & triggers",
+    spv_7_2: "Hall Effect magnetic, more durable and drift-free",
+    sp_compat: "Compatibility",
+    spv_7_3: "PC, PS4, PS3, Android, Nintendo Switch, and Nintendo Switch 2",
+    sp_battery: "Battery",
+    spv_7_4: "600 mAh, roughly 8–20 hours of use (2–3 hour charge)",
+    spv_7_5: "Dual vibration motors, turbo function, programmable buttons, and charging dock support",
   },
 };
 
@@ -180,6 +518,7 @@ function applyLang(next) {
   wordIndex = 0; charIndex = 0; deleting = false;
   if (window.renderLive) window.renderLive();
   if (window.renderLatestText) window.renderLatestText();
+  if (window.renderDiscord) window.renderDiscord();
   if (window.renderGreeting) window.renderGreeting();
 }
 
@@ -472,7 +811,7 @@ bindForm(document.getElementById("requestForm"), { okKey: "req_ok", cooldownKey:
     requestAnimationFrame(loop);
   })();
 
-  const hoverables = "a, button, input, textarea, [data-copy]";
+  const hoverables = "a, button, input, textarea, summary, [data-copy]";
   document.addEventListener("mouseover", (e) => {
     ring.classList.toggle("hover", !!e.target.closest(hoverables));
   });
@@ -508,7 +847,7 @@ bindForm(document.getElementById("requestForm"), { okKey: "req_ok", cooldownKey:
   }
 
   document.addEventListener("click", (e) => {
-    if (e.target.closest("a, button, [data-copy]")) blip();
+    if (e.target.closest("a, button, summary, [data-copy]")) blip();
   });
   btn.addEventListener("click", () => {
     on = !on;
@@ -517,14 +856,17 @@ bindForm(document.getElementById("requestForm"), { okKey: "req_ok", cooldownKey:
   });
 })();
 
-// ===== Backsound musik: playlist, judul lagu, volume, tombol next =====
-// Tambah lagu baru cukup dengan menambah satu baris di PLAYLIST (file mp3 taruh di folder yang sama,
-// atau tulis path-nya, misalnya "musik/lagu2.mp3"). Jika hanya satu lagu, lagu itu diulang terus.
-// Jika lebih dari satu, lagu berpindah otomatis dan kembali ke awal setelah lagu terakhir.
+// ===== Backsound musik: playlist, daftar lagu, ganti lagu, volume =====
+// Tambah lagu baru cukup dengan menambah satu baris di PLAYLIST (taruh file mp3 di folder "musik/").
+// Jika hanya satu lagu, lagu itu diulang terus. Jika lebih dari satu, lagu berpindah otomatis
+// dan kembali ke awal setelah lagu terakhir.
 const PLAYLIST = [
-  { src: "backsound.mp3", title: "DJ Body Pata Pata (Thailand Edit)" },
-  { src: "anak-kampung.mp3", title: "DJ Bulan Triana “Anak Kampung” (Thailand Edit) prod.0landrys" },
-  // { src: "lagu3.mp3", title: "Judul Lagu 3" },
+  { src: "musik/menari-nari.mp3",     title: "Menari-nari",     artist: "Raim Laode" },
+  { src: "musik/iqro.mp3",            title: "IQRO",            artist: "Raim Laode" },
+  { src: "musik/bersenja-gurau.mp3",  title: "Bersenja Gurau",  artist: "Raim Laode" },
+  { src: "musik/dunia-yang-nanti.mp3", title: "Dunia Yang Nanti", artist: "Raim Laode" },
+  { src: "musik/lesung-pipi.mp3",     title: "Lesung Pipi",     artist: "Raim Laode" },
+  { src: "musik/komang.mp3",          title: "Komang",          artist: "Raim Laode" },
 ];
 
 (function backsound() {
@@ -538,8 +880,14 @@ const PLAYLIST = [
   const plTitle = document.getElementById("plTitle");
   const plVol = document.getElementById("plVol");
   const plVolIco = document.getElementById("plVolIco");
+  const plList = document.getElementById("plList");
+  const plPanel = document.getElementById("plPanel");
+  const plItems = document.getElementById("plItems");
+  const plCount = document.getElementById("plCount");
+  const plClose = document.getElementById("plClose");
   const multi = PLAYLIST.length > 1;
-  plPrev.hidden = plNext.hidden = !multi;
+  plPrev.hidden = plNext.hidden = plList.hidden = !multi;
+  const label = (tr) => (tr.artist ? tr.artist + " — " : "") + tr.title;
 
   // Volume (diingat)
   let vol = 0.3;
@@ -560,12 +908,64 @@ const PLAYLIST = [
 
   // Lagu yang sedang aktif (urutan terakhir diingat selama sesi)
   let index = 0;
+  try { const k = parseInt(localStorage.getItem("bgm_idx"), 10); if (k >= 0 && k < PLAYLIST.length) index = k; } catch (e) {}
   function load(i) {
     index = (i + PLAYLIST.length) % PLAYLIST.length;
     audio.src = PLAYLIST[index].src;
     audio.loop = !multi;           // satu lagu: ulang terus (loop)
-    setTitle(PLAYLIST[index].title);
+    setTitle(label(PLAYLIST[index]));
+    markActive();
+    try { localStorage.setItem("bgm_idx", String(index)); } catch (e) {}
   }
+
+  // ---- Daftar lagu (panel) ----
+  PLAYLIST.forEach((tr, i) => {
+    const li = document.createElement("li");
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "pl-item";
+    btn.dataset.i = i;
+    btn.innerHTML = '<span class="pl-num"></span><span class="pl-meta"><b></b><small></small></span>' +
+      '<span class="pl-state" aria-hidden="true"><i></i><i></i><i></i></span>';
+    btn.querySelector(".pl-num").textContent = i + 1;
+    btn.querySelector(".pl-meta b").textContent = tr.title;
+    btn.querySelector(".pl-meta small").textContent = tr.artist || "";
+    li.appendChild(btn);
+    plItems.appendChild(li);
+  });
+  const setCount = () => { plCount.textContent = PLAYLIST.length + " " + t("pl_songs"); };
+  setCount();
+  document.getElementById("langToggle")?.addEventListener("click", () => setTimeout(setCount, 0));
+  function markActive() {
+    plItems.querySelectorAll(".pl-item").forEach((b) => {
+      const on = Number(b.dataset.i) === index;
+      b.classList.toggle("on", on);
+      if (on) b.setAttribute("aria-current", "true"); else b.removeAttribute("aria-current");
+    });
+  }
+  function openList(open) {
+    plPanel.hidden = !open;
+    plList.setAttribute("aria-expanded", String(open));
+    plList.classList.toggle("on", open);
+    if (open) {
+      const cur = plItems.querySelector(".pl-item.on");
+      if (cur) cur.scrollIntoView({ block: "nearest" });
+    }
+  }
+  plList.addEventListener("click", () => openList(plPanel.hidden));
+  plClose.addEventListener("click", () => { openList(false); plList.focus(); });
+  document.addEventListener("pointerdown", (e) => { if (!plPanel.hidden && !box.contains(e.target)) openList(false); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !plPanel.hidden) { openList(false); plList.focus(); } });
+  plItems.addEventListener("click", (e) => {
+    const b = e.target.closest(".pl-item");
+    if (!b) return;
+    const i = Number(b.dataset.i);
+    if (i === index) { toggle(); return; }       // lagu yang sama: putar / jeda
+    wanted = true;
+    try { localStorage.setItem("bgm", "on"); } catch (err) {}
+    load(i);
+    play();
+  });
   // Judul panjang: teks berjalan (marquee) bila tidak muat
   function setTitle(text) {
     plTitle.classList.remove("marq");
@@ -581,7 +981,7 @@ const PLAYLIST = [
       }
     });
   }
-  load(0);
+  load(index);
 
   const paint = () => {
     const playing = !audio.paused;
@@ -617,7 +1017,12 @@ const PLAYLIST = [
     failed++;
     console.warn("Gagal memuat musik:", PLAYLIST[index].src);
     if (multi && failed < PLAYLIST.length) go(1);
-    else { box.hidden = true; if (navBtn) navBtn.hidden = true; }
+    else {
+      // Semua file gagal dimuat: pemutar tetap tampil dengan pesan, supaya mudah dicari penyebabnya
+      setTitle("File lagu tidak ditemukan. Cek folder musik/");
+      audio.removeAttribute("src");
+      paint();
+    }
   });
   audio.addEventListener("playing", () => { failed = 0; });
   paint();
@@ -771,9 +1176,66 @@ const PLAYLIST = [
     if (badge) badge.hidden = !on;               // lencana LIVE di foto profil
     document.body.classList.toggle("is-live", on);
   }
-  window.renderLive = render;
+
+  // --- Waktu lokal pengunjung (tampil hanya jika zona waktunya bukan WIB) ---
+  const localEl = document.getElementById("liveLocal");
+  let localKey = "";
+  function renderLocal() {
+    if (!localEl) return;
+    if (-new Date().getTimezoneOffset() === 420) { localEl.hidden = true; localKey = ""; return; }
+    try {
+      const d = new Date();
+      const base = Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate());
+      const loc = lang === "en" ? "en-GB" : "id-ID";
+      const f = new Intl.DateTimeFormat(loc, { hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
+      const a = f.format(new Date(base + (START - 420) * 60000));
+      const b = f.format(new Date(base + (END - 420) * 60000));
+      const part = new Intl.DateTimeFormat(loc, { timeZoneName: "short" }).formatToParts(d).find((p) => p.type === "timeZoneName");
+      const z = part ? part.value : "";
+      const key = lang + a + b + z;
+      if (key === localKey) return;
+      localKey = key;
+      localEl.textContent = t("live_local").replace("{a}", a).replace("{b}", b).replace("{z}", z);
+      localEl.hidden = false;
+    } catch (e) { localEl.hidden = true; }
+  }
+
+  // --- Tombol "Tambahkan ke kalender": unduh file .ics (acara berulang setiap hari) ---
+  const calBtn = document.getElementById("calBtn");
+  if (calBtn) {
+    const esc = (s) => String(s).replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\n/g, "\\n");
+    const fold = (line) => { const out = []; while (line.length > 74) { out.push(line.slice(0, 74)); line = " " + line.slice(74); } out.push(line); return out.join("\r\n"); };
+    const pad = (n) => String(n).padStart(2, "0");
+    const hm = (min) => { min = ((min % 1440) + 1440) % 1440; return pad(Math.floor(min / 60)) + pad(min % 60) + "00"; };
+    calBtn.addEventListener("click", () => {
+      const n = new Date();
+      const day = n.getUTCFullYear() + pad(n.getUTCMonth() + 1) + pad(n.getUTCDate());
+      const stamp = day + "T" + pad(n.getUTCHours()) + pad(n.getUTCMinutes()) + pad(n.getUTCSeconds()) + "Z";
+      const lines = [
+        "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Gewol//Live//ID", "CALSCALE:GREGORIAN",
+        "BEGIN:VEVENT", "UID:gewol-live-daily@gewol",
+        "DTSTAMP:" + stamp,
+        "DTSTART:" + day + "T" + hm(START - 420) + "Z",
+        "DTEND:" + day + "T" + hm(END - 420) + "Z",
+        "RRULE:FREQ=DAILY",
+        "SUMMARY:" + esc(t("cal_title")),
+        "DESCRIPTION:" + esc(t("cal_desc") + "\nhttps://www.tiktok.com/@gewolx"),
+        "URL:https://www.tiktok.com/@gewolx",
+        "BEGIN:VALARM", "TRIGGER:-PT10M", "ACTION:DISPLAY", "DESCRIPTION:" + esc(t("cal_title")), "END:VALARM",
+        "END:VEVENT", "END:VCALENDAR",
+      ].map(fold).join("\r\n");
+      const url = URL.createObjectURL(new Blob([lines], { type: "text/calendar;charset=utf-8" }));
+      const a = document.createElement("a");
+      a.href = url; a.download = "gewol-live.ics";
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 4000);
+      if (typeof showToast === "function") showToast(t("cal_done"));
+    });
+  }
+  window.renderLive = function () { render(); renderLocal(); };
   render();
-  setInterval(render, 1000);
+  renderLocal();
+  setInterval(() => { render(); renderLocal(); }, 1000);
 })();
 
 // ===== Pemutar video YouTube (dimuat saat diklik agar halaman tetap ringan) =====
@@ -917,13 +1379,13 @@ const LATEST_LINKS = [
 // ===== Menu aktif (scroll-spy) + garis progres scroll =====
 (function navSpy() {
   const bar = document.querySelector("#progress span");
-  const ids = ["home", "about", "setup", "live", "proyek", "karya", "terbaru", "sosmed", "dukung"];
+  const ids = ["home", "about", "setup", "live", "proyek", "karya", "terbaru", "sosmed", "faq", "dukung"];
   const secs = ids.map((id) => document.getElementById(id)).filter(Boolean);
   if (!secs.length) return;
   const topLinks = document.querySelectorAll("#navLinks a");
   const bottom = document.querySelectorAll("#bottomNav a");
   // Bagian mana menyorot ikon mana di menu bawah
-  const group = { home: "home", about: "home", setup: "home", live: "live", proyek: "proyek", karya: "proyek", terbaru: "proyek", sosmed: "sosmed", dukung: "sosmed" };
+  const group = { home: "home", about: "home", setup: "home", live: "live", proyek: "proyek", karya: "proyek", terbaru: "proyek", sosmed: "sosmed", faq: "sosmed", dukung: "sosmed" };
   let current = "", ticking = false;
 
   function update() {
@@ -987,14 +1449,8 @@ const LATEST_LINKS = [
   const wrap = document.getElementById("galWrap");
   const dots = document.getElementById("galDots");
   if (!wrap || !dots) return;
-  const cards = Array.from(wrap.querySelectorAll(".photo-card"));
-  cards.forEach((c, i) => {
-    const b = document.createElement("button");
-    b.type = "button";
-    b.setAttribute("aria-label", (i + 1) + " / " + cards.length);
-    b.addEventListener("click", () => c.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" }));
-    dots.appendChild(b);
-  });
+  const all = Array.from(wrap.querySelectorAll(".photo-card"));
+  let cards = all;
   function update() {
     const mid = wrap.scrollLeft + wrap.clientWidth / 2;
     let best = 0, bestD = Infinity;
@@ -1004,9 +1460,106 @@ const LATEST_LINKS = [
     });
     Array.from(dots.children).forEach((b, i) => b.classList.toggle("on", i === best));
   }
+  function build() {
+    cards = all.filter((c) => !c.hidden);
+    dots.textContent = "";
+    cards.forEach((c, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.setAttribute("aria-label", (i + 1) + " / " + cards.length);
+      b.addEventListener("click", () => c.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" }));
+      dots.appendChild(b);
+    });
+    update();
+  }
+  window.rebuildGalDots = build;
   wrap.addEventListener("scroll", () => requestAnimationFrame(update), { passive: true });
   window.addEventListener("resize", update);
-  update();
+  build();
+})();
+
+// ===== Filter galeri (Prestasi / Sekolah / Kegiatan / Live) =====
+// Kategori tiap foto diatur lewat atribut data-cat di index.html (boleh lebih dari satu, pisahkan spasi).
+(function galleryFilter() {
+  const tabs = document.getElementById("galTabs");
+  const wrap = document.getElementById("galWrap");
+  if (!tabs || !wrap) return;
+  const cards = Array.from(wrap.querySelectorAll(".photo-card"));
+  tabs.addEventListener("click", (e) => {
+    const btn = e.target.closest("button[data-cat]");
+    if (!btn) return;
+    const cat = btn.dataset.cat;
+    tabs.querySelectorAll("button").forEach((b) => {
+      const on = b === btn;
+      b.classList.toggle("on", on);
+      b.setAttribute("aria-pressed", String(on));
+    });
+    cards.forEach((c) => { c.hidden = cat !== "all" && !(c.dataset.cat || "").split(/\s+/).includes(cat); });
+    wrap.classList.toggle("filtered", cat !== "all");
+    wrap.scrollLeft = 0;
+    if (window.rebuildGalDots) window.rebuildGalDots();
+    if (window.refreshLightbox) window.refreshLightbox();
+  });
+})();
+
+// ===== Ringkasan spek: tombol buka / tutup semua spesifikasi =====
+(function specToggle() {
+  const btn = document.getElementById("specToggle");
+  const txt = document.getElementById("specToggleTxt");
+  const list = Array.from(document.querySelectorAll("#setup details.spec"));
+  if (!btn || !txt || !list.length) return;
+  function sync() {
+    const all = list.every((d) => d.open);
+    txt.dataset.i18n = all ? "sp_close_all" : "sp_open_all";
+    txt.textContent = t(txt.dataset.i18n);
+    btn.setAttribute("aria-pressed", String(all));
+  }
+  btn.addEventListener("click", () => {
+    const open = !list.every((d) => d.open);
+    list.forEach((d) => { d.open = open; });
+    sync();
+  });
+  list.forEach((d) => d.addEventListener("toggle", sync));
+})();
+
+// ===== Widget Discord: jumlah online & anggota diambil dari tautan undangan =====
+(function discordWidget() {
+  const box = document.getElementById("dcWidget");
+  if (!box) return;
+  const CODE = "kVjbpRTXEP"; // kode undangan: discord.gg/kVjbpRTXEP
+  const nameEl = document.getElementById("dcwName");
+  const statsEl = document.getElementById("dcwStats");
+  const onEl = document.getElementById("dcwOnline");
+  const memEl = document.getElementById("dcwMembers");
+  const iconEl = document.getElementById("dcwIcon");
+  let info = null;
+  const num = (n) => new Intl.NumberFormat(lang === "en" ? "en-US" : "id-ID").format(n);
+  window.renderDiscord = function () {
+    if (!info) return;
+    if (info.name) { nameEl.textContent = info.name; nameEl.hidden = false; }
+    if (typeof info.online === "number") onEl.textContent = t("dcw_on").replace("{n}", num(info.online));
+    if (typeof info.members === "number") memEl.textContent = t("dcw_mem").replace("{n}", num(info.members));
+    statsEl.hidden = !(typeof info.online === "number" || typeof info.members === "number");
+  };
+  function use(j) {
+    const g = j.guild || {};
+    info = { name: g.name, online: j.approximate_presence_count, members: j.approximate_member_count };
+    if (g.id && g.icon) {
+      iconEl.src = "https://cdn.discordapp.com/icons/" + g.id + "/" + g.icon + ".png?size=128";
+      iconEl.onload = () => { iconEl.hidden = false; box.classList.add("has-icon"); };
+    }
+    window.renderDiscord();
+  }
+  try { // cache 5 menit supaya tidak memanggil API terus
+    const c = JSON.parse(sessionStorage.getItem("dcw") || "null");
+    if (c && Date.now() - c.at < 300000) { use(c.j); return; }
+  } catch (e) {}
+  const ctl = "AbortController" in window ? new AbortController() : null;
+  const timer = setTimeout(() => ctl && ctl.abort(), 7000);
+  fetch("https://discord.com/api/v10/invites/" + CODE + "?with_counts=true", ctl ? { signal: ctl.signal } : {})
+    .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then((j) => { clearTimeout(timer); use(j); try { sessionStorage.setItem("dcw", JSON.stringify({ at: Date.now(), j })); } catch (e) {} })
+    .catch(() => { clearTimeout(timer); /* gagal: kartu tetap tampil dengan tombol Gabung, tanpa angka */ });
 })();
 
 // ===== Menu hamburger (layar kecil) =====
@@ -1115,11 +1668,18 @@ const TOP_SUPPORTERS = [
   const closeBtn = box.querySelector(".lb-close");
   const prevBtn = box.querySelector(".lb-nav.prev");
   const nextBtn = box.querySelector(".lb-nav.next");
-  const cards = Array.from(document.querySelectorAll(".photo-card")).filter((c) => c.querySelector("img[data-full]"));
-  if (!cards.length) return;
-  const multi = cards.length > 1;
-  prevBtn.hidden = nextBtn.hidden = !multi;
-  countEl.hidden = !multi;
+  const all = Array.from(document.querySelectorAll(".photo-card")).filter((c) => c.querySelector("img[data-full]"));
+  if (!all.length) return;
+  let cards = all.slice();
+  let multi = false;
+  function sync() { // hanya foto yang sedang tampil (sesuai filter galeri)
+    cards = all.filter((c) => !c.hidden);
+    multi = cards.length > 1;
+    prevBtn.hidden = nextBtn.hidden = !multi;
+    countEl.hidden = !multi;
+  }
+  sync();
+  window.refreshLightbox = sync;
 
   let index = 0;
   let lastFocus = null;
@@ -1162,13 +1722,13 @@ const TOP_SUPPORTERS = [
     render();
   }
 
-  cards.forEach((card, i) => {
+  all.forEach((card) => {
     const im = card.querySelector("img[data-full]");
     im.tabIndex = 0;
     im.setAttribute("role", "button");
-    im.addEventListener("click", () => open(i));
+    im.addEventListener("click", () => open(cards.indexOf(card)));
     im.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(i); }
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(cards.indexOf(card)); }
     });
   });
 
@@ -1207,6 +1767,114 @@ const TOP_SUPPORTERS = [
       if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
       else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
     }
+  });
+})();
+
+
+// =====================================================================
+// ===== TOMBOL BAGIKAN =================================================
+// =====================================================================
+// Di HP: membuka menu bagikan bawaan (WhatsApp, Telegram, dll.).
+// Di komputer atau jika tidak didukung: menyalin tautan halaman.
+async function copyText(text) {
+  try { await navigator.clipboard.writeText(text); return true; } catch (err) {}
+  try {
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.select();
+    const ok = document.execCommand("copy");
+    ta.remove();
+    return ok;
+  } catch (err) { return false; }
+}
+
+document.querySelectorAll("[data-share]").forEach((el) => {
+  el.addEventListener("click", async () => {
+    const url = location.href.split("#")[0];
+    const touch = window.matchMedia("(pointer: coarse)").matches;
+    if (touch && navigator.share) {
+      try {
+        await navigator.share({ title: t("title"), text: t("share_text"), url });
+        return;
+      } catch (err) {
+        if (err && err.name === "AbortError") return; // pengunjung menutup menu bagikan
+      }
+    }
+    showToast((await copyText(url)) ? t("copied_link") : url);
+  });
+});
+
+// =====================================================================
+// ===== TOMBOL "BELI" DI SETUP (TAUTAN AFILIASI) ======================
+// =====================================================================
+// Tempel link produkmu di antara tanda kutip. Kosong = tombol Beli tidak tampil.
+// Nama produk di kiri harus sama dengan judul kartu di bagian Setup
+// (huruf besar/kecil dan tanda baca tidak berpengaruh).
+// Catatan afiliasi di bawah kartu otomatis muncul begitu ada satu link terisi.
+const SETUP_LINKS = {
+  // PC
+  "AMD Ryzen 5 5600G": "",
+  "ASRock B550M Pro SE": "",
+  "ADATA XPG Spectrix 32GB (2×16GB)": "",
+  "ADATA Legend 900 512GB": "",
+  "ADATA XPG Pylon 650W": "",
+  "aigo darkFlash DLM21 MESH": "",
+  // Periferal
+  "Xiaomi Gaming Monitor G24i 2026": "",
+  "Redragon DRAGONBORN K630W-RGB": "",
+  "Press Play ATLAS 3311": "",
+  "Rexus Pro Gaming ASTA GX150": "",
+  // Audio & Video
+  "Rexus Vonix F30": "",
+  "NEMESIS Falcon SPN-08": "",
+  "TECGEAR 2KV2": "",
+};
+
+(function setupLinks() {
+  const norm = (s) => s.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const map = {};
+  Object.keys(SETUP_LINKS).forEach((k) => {
+    const u = (SETUP_LINKS[k] || "").trim();
+    if (/^https?:\/\//i.test(u)) map[norm(k)] = u;
+  });
+  let shown = 0;
+  document.querySelectorAll(".setup-grid .part").forEach((part) => {
+    const h3 = part.querySelector("h3");
+    const box = h3 && h3.parentElement;
+    const url = h3 && map[norm(h3.textContent)];
+    if (!url) return;
+    const a = document.createElement("a");
+    a.className = "buy";
+    a.href = url;
+    a.target = "_blank";
+    a.rel = "sponsored nofollow noopener";
+    const label = document.createElement("span");
+    label.dataset.i18n = "buy_btn";
+    label.textContent = t("buy_btn");
+    const vh = document.createElement("span");
+    vh.className = "vh";
+    vh.textContent = " " + h3.textContent.trim(); // untuk pembaca layar: "Beli AMD Ryzen 5 5600G"
+    a.append("🛒 ", label, vh);
+    box.insertBefore(a, box.querySelector(".spec")); // sebelum blok Spesifikasi; jika tak ada, di akhir
+    shown++;
+  });
+  const note = document.getElementById("affNote");
+  if (note) note.hidden = shown === 0;
+})();
+
+// =====================================================================
+// ===== FAQ: buka satu per satu ========================================
+// =====================================================================
+(function faq() {
+  const items = document.querySelectorAll(".faq-item");
+  items.forEach((d) => {
+    d.addEventListener("toggle", () => {
+      if (d.open) items.forEach((o) => { if (o !== d) o.open = false; });
+    });
   });
 })();
 

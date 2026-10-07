@@ -46,6 +46,7 @@
       <a href="#karya" class="m-only" data-i18n="nav_works">Karya</a>
       <a href="#terbaru" class="m-only" data-i18n="nav_latest">Terbaru</a>
       <a href="#sosmed" data-i18n="nav_social">Sosmed</a>
+      <a href="#faq" class="m-only" data-i18n="nav_faq">FAQ</a>
       <a href="#dukung" class="m-only" data-i18n="nav_support">Dukung</a>
     </nav>
     <div class="nav-btns">
@@ -84,12 +85,13 @@
           <a href="#sosmed" class="btn primary" data-i18n="btn_follow">Ikuti Saya</a>
           <a href="#about" class="btn ghost" data-i18n="btn_intro">Kenalan Dulu</a>
           <a href="https://sociabuzz.com/gewol/donate" target="_blank" rel="noopener" class="btn donate-btn">☕ <span data-i18n="donate_btn">Donasi</span></a>
+          <button type="button" class="btn ghost share-btn" data-share>🔗 <span data-i18n="share_btn">Bagikan</span></button>
         </div>
       </div>
 
       <div class="hero-photo">
         <div class="photo-frame">
-          <img src="foto.png" alt="Foto profil Gewol" data-i18n-attr="alt:photo_alt" />
+          <img src="foto.webp" alt="Foto profil Gewol" data-i18n-attr="alt:photo_alt" />
         </div>
         <span class="tag t1">クリエイター</span>
         <span class="tag t2">LIVE ●</span>
@@ -127,31 +129,38 @@
     <section id="setup" class="section reveal">
       <h2><small>02 / セットアップ</small><span data-i18n="setup_title">Setup Saya</span></h2>
       <p class="sub" data-i18n="setup_sub">Perangkat yang saya pakai untuk berkarya</p>
+      <div class="setup-summary">
+        <ul class="spec-chips" aria-label="Ringkasan spesifikasi PC" data-i18n-attr="aria-label:sum_label">
+          <li>🧠 Ryzen 5 5600G</li><li>🧩 32GB DDR4</li><li>💾 512GB NVMe</li><li>🖥️ 200Hz</li><li>⚡ 650W</li>
+        </ul>
+        <button type="button" class="spec-toggle" id="specToggle" aria-pressed="false"><span id="specToggleTxt" data-i18n="sp_open_all">Buka semua spesifikasi</span></button>
+      </div>
       <div class="tabs" id="setupTabs" role="tablist" aria-label="Kategori setup" data-i18n-attr="aria-label:tabs_label">
         <button type="button" role="tab" class="tab on" data-tab="pc" aria-selected="true" data-i18n="tab_pc">PC</button>
         <button type="button" role="tab" class="tab" data-tab="peri" aria-selected="false" tabindex="-1" data-i18n="tab_peri">Periferal</button>
         <button type="button" role="tab" class="tab" data-tab="av" aria-selected="false" tabindex="-1" data-i18n="tab_av">Audio &amp; Video</button>
       </div>
       <div class="setup-grid" role="tabpanel" data-panel="pc">
-        <div class="part"><em>🧠</em><div><span>CPU</span><h3>AMD Ryzen 5 5600G</h3></div></div>
-        <div class="part"><em>🔌</em><div><span>Motherboard</span><h3>ASRock B550M Pro SE</h3></div></div>
-        <div class="part"><em>⚡</em><div><span>RAM</span><h3>ADATA XPG Spectrix 32GB (2×16GB)</h3></div></div>
-        <div class="part"><em>💾</em><div><span>SSD</span><h3>ADATA Legend 900 512GB</h3></div></div>
-        <div class="part"><em>🔋</em><div><span>PSU</span><h3>ADATA XPG Pylon 650W</h3></div></div>
-        <div class="part"><em>🎮</em><div><span>GPU</span><h3 data-i18n="gpu_h">Tanpa GPU terpisah</h3><small data-i18n="gpu_s">Memakai grafis terintegrasi bawaan Ryzen 5 5600G</small></div></div>
-        <div class="part"><em>🧱</em><div><span>Case</span><h3>aigo darkFlash DLM21 MESH</h3><small>Tempered Glass • Micro ATX</small></div></div>
+        <div class="part"><div class="part-art"><img src="setup-cpu.webp" width="400" height="433" alt="" loading="lazy" decoding="async" /></div><div class="part-info"><span>CPU</span><h3>AMD Ryzen 5 5600G</h3><details class="spec"><summary data-i18n="sp_btn">Spesifikasi</summary><dl><div><dt data-i18n="sp_cores">Jumlah Core/Thread</dt><dd>6 Core / 12 Thread</dd></div><div><dt data-i18n="sp_clock">Kecepatan Clock</dt><dd>3.9 GHz (Base) – 4.4 GHz (Boost)</dd></div><div><dt data-i18n="sp_igpu">Grafis Terintegrasi</dt><dd>AMD Radeon Graphics (Vega 7)</dd></div><div><dt data-i18n="sp_tdp">TDP (Konsumsi Daya)</dt><dd>65 Watt</dd></div><div><dt data-i18n="sp_cache">Cache</dt><dd>16MB L3 Cache</dd></div></dl></details></div></div>
+        <div class="part"><div class="part-art"><img src="setup-mobo.webp" width="520" height="337" alt="" loading="lazy" decoding="async" /></div><div class="part-info"><span>Motherboard</span><h3>ASRock B550M Pro SE</h3><details class="spec"><summary data-i18n="sp_btn">Spesifikasi</summary><dl><div><dt data-i18n="sp_socket">Socket & CPU</dt><dd data-i18n="sp_socket_v">AMD AM4, mendukung prosesor Ryzen seri 3000, 4000 G-Series, dan 5000</dd></div><div><dt data-i18n="sp_mem">Memori</dt><dd data-i18n="sp_mem_v">4 slot DDR4 DIMM, kecepatan hingga 4733+ MHz (dengan overclock)</dd></div><div><dt data-i18n="sp_slots">Slot Ekspansi</dt><dd data-i18n="sp_slots_v">1 slot PCIe 4.0 x16, 1 slot PCIe 3.0 x16, dan 1 slot PCIe 3.0 x1</dd></div><div><dt data-i18n="sp_storage">Penyimpanan</dt><dd data-i18n="sp_storage_v">4 port SATA3, 1 slot Hyper M.2 (PCIe Gen4 x4), dan 1 slot M.2 (PCIe Gen3 x2 &amp; SATA3)</dd></div><div><dt data-i18n="sp_net">Konektivitas</dt><dd>Dragon 2.5G LAN</dd></div><div><dt data-i18n="sp_av">Audio &amp; Grafis</dt><dd data-i18n="sp_av_v">Codec Realtek ALC897 7.1 CH HD Audio, output HDMI dan DisplayPort</dd></div></dl></details></div></div>
+        <div class="part"><div class="part-art"><img src="setup-ram.webp" width="520" height="152" alt="" loading="lazy" decoding="async" /></div><div class="part-info"><span>RAM</span><h3>ADATA XPG Spectrix 32GB (2×16GB)</h3><small>White • DDR4 3200MHz</small><details class="spec"><summary data-i18n="sp_btn">Spesifikasi</summary><dl><div><dt data-i18n="sp_memtype">Tipe Memori</dt><dd data-i18n="spv_0_0">DDR4 U-DIMM (untuk PC desktop)</dd></div><div><dt data-i18n="sp_capacity">Kapasitas</dt><dd>32GB (2 × 16GB) Dual Channel</dd></div><div><dt data-i18n="sp_speed">Kecepatan</dt><dd>3200 MT/s</dd></div><div><dt data-i18n="sp_volt">Tegangan Kerja</dt><dd>1.35V</dd></div><div><dt data-i18n="sp_cas">CAS Latency</dt><dd>CL16 / CL18</dd></div><div><dt data-i18n="sp_cool">Pendingin &amp; Desain</dt><dd data-i18n="spv_0_5">Heatsink aluminium dengan pencahayaan RGB</dd></div><div><dt data-i18n="sp_warranty">Garansi</dt><dd data-i18n="spv_0_6">Limited lifetime warranty (seumur hidup) dari ADATA</dd></div></dl></details></div></div>
+        <div class="part"><div class="part-art"><img src="setup-ssd.webp" width="520" height="472" alt="" loading="lazy" decoding="async" /></div><div class="part-info"><span>SSD</span><h3>ADATA Legend 900 512GB</h3><details class="spec"><summary data-i18n="sp_btn">Spesifikasi</summary><dl><div><dt data-i18n="sp_iface">Antarmuka</dt><dd>PCIe Gen4 x4, NVMe 1.4</dd></div><div><dt data-i18n="sp_form">Faktor Bentuk</dt><dd data-i18n="spv_1_1">M.2 2280 (dengan atau tanpa heatsink)</dd></div><div><dt data-i18n="sp_read">Kecepatan Baca (Maks.)</dt><dd data-i18n="spv_1_2">Hingga 7.000 MB/s (PC/Laptop), 6.200 MB/s (PS5)</dd></div><div><dt data-i18n="sp_write">Kecepatan Tulis (Maks.)</dt><dd data-i18n="spv_1_3">Hingga 5.400 MB/s</dd></div><div><dt data-i18n="sp_tech">Teknologi</dt><dd data-i18n="spv_1_4">DRAM-less dengan dukungan HMB (Host Memory Buffer)</dd></div><div><dt data-i18n="sp_warranty">Garansi</dt><dd data-i18n="spv_1_5">Garansi resmi terbatas 5 tahun</dd></div></dl></details></div></div>
+        <div class="part"><div class="part-art"><img src="setup-psu.webp" width="520" height="501" alt="" loading="lazy" decoding="async" /></div><div class="part-info"><span>PSU</span><h3>ADATA XPG Pylon 650W</h3><details class="spec"><summary data-i18n="sp_btn">Spesifikasi</summary><dl><div><dt data-i18n="sp_power">Kapasitas Daya</dt><dd data-i18n="spv_2_0">650 Watt, desain DC-to-DC dengan jalur +12V penuh</dd></div><div><dt data-i18n="sp_cert">Sertifikasi</dt><dd data-i18n="spv_2_1">80 Plus Bronze dan Cybenetics Silver</dd></div><div><dt data-i18n="sp_capac">Kapasitor</dt><dd data-i18n="spv_2_2">Kapasitor utama buatan Jepang 105°C</dd></div><div><dt data-i18n="sp_fan">Kipas</dt><dd data-i18n="spv_2_3">Kipas 120mm dengan bantalan Fluid Dynamic Bearing (FDB) yang sunyi</dd></div><div><dt data-i18n="sp_prot">Proteksi</dt><dd data-i18n="spv_2_4">8 proteksi tingkat industri (OPP, UVP, OVP, SCP, OTP, OCP, NLO, SIP)</dd></div><div><dt data-i18n="sp_warranty">Garansi</dt><dd data-i18n="spv_2_5">Resmi 5 tahun</dd></div></dl></details></div></div>
+        <div class="part"><div class="part-art"><img src="setup-gpu.webp" width="373" height="372" alt="" loading="lazy" decoding="async" /></div><div class="part-info"><span>GPU</span><h3 data-i18n="gpu_h">Tanpa GPU terpisah</h3><small data-i18n="gpu_s">Memakai grafis terintegrasi bawaan Ryzen 5 5600G</small><details class="spec"><summary data-i18n="sp_btn">Spesifikasi</summary><dl><div><dt data-i18n="sp_gtype">Tipe</dt><dd data-i18n="spa_0_0">APU, grafis terintegrasi (iGPU)</dd></div><div><dt data-i18n="sp_gmodel">Model</dt><dd>AMD Radeon Vega 7</dd></div><div><dt data-i18n="sp_cu">Compute Unit</dt><dd>7 CU</dd></div><div><dt data-i18n="sp_gclock">Clock Grafis</dt><dd>1900 MHz</dd></div></dl></details></div></div>
+        <div class="part"><div class="part-art"><img src="setup-case.webp" width="443" height="520" alt="" loading="lazy" decoding="async" /></div><div class="part-info"><span>Case</span><h3>aigo darkFlash DLM21 MESH</h3><small>Tempered Glass • Micro ATX</small><details class="spec"><summary data-i18n="sp_btn">Spesifikasi</summary><dl><div><dt data-i18n="sp_mobo">Jenis Motherboard</dt><dd>Micro-ATX (M-ATX) / ITX</dd></div><div><dt data-i18n="sp_dim">Dimensi</dt><dd>376 × 208 × 405 mm</dd></div><div><dt data-i18n="sp_mat">Bahan</dt><dd data-i18n="spv_3_2">SPCC 0,6 mm dan panel samping kaca tempered dengan sistem pintu magnetik (engsel)</dd></div><div><dt data-i18n="sp_front">Panel Depan</dt><dd data-i18n="spv_3_3">Besi jaring (iron mesh) untuk ventilasi udara yang lebih baik</dd></div><div><dt data-i18n="sp_slots">Slot Ekspansi</dt><dd data-i18n="spv_3_4">4 slot PCIe</dd></div><div><dt data-i18n="sp_gpu">Dukungan GPU</dt><dd data-i18n="spv_3_5">Panjang maksimal 330–350 mm</dd></div><div><dt data-i18n="sp_cpucool">Dukungan CPU Cooler</dt><dd data-i18n="spv_3_6">Tinggi maksimal 160 mm</dd></div><div><dt data-i18n="sp_bays">Ruang Penyimpanan</dt><dd data-i18n="spv_3_7">3 atau 2 HDD / 2 atau 1 SSD</dd></div><div><dt data-i18n="sp_io">Port I/O Depan</dt><dd data-i18n="spv_3_8">1× USB 3.0, 2× USB 2.0, dan HD Audio</dd></div></dl></details></div></div>
       </div>
       <div class="setup-grid" role="tabpanel" data-panel="peri" hidden>
-        <div class="part"><em>🖥️</em><div><span>Monitor</span><h3>Xiaomi Gaming Monitor G24i 2026</h3><small>Fast IPS • FHD • 200Hz</small></div></div>
-        <div class="part"><em>⌨️</em><div><span>Keyboard</span><h3>Redragon DRAGONBORN K630W-RGB</h3><small>Mechanical Gaming Keyboard • RGB • White</small></div></div>
-        <div class="part"><em>🖱️</em><div><span>Mouse</span><h3>Press Play ATLAS 3311</h3><small>Ergo Ultralight • Wireless Gaming Mouse</small></div></div>
-        <div class="part"><em>🕹️</em><div><span>Gamepad</span><h3>Rexus Pro Gaming ASTA GX150</h3><small>Wireless Gamepad</small></div></div>
+        <div class="part"><div class="part-art"><img src="setup-monitor.webp" width="520" height="437" alt="" loading="lazy" decoding="async" /></div><div class="part-info"><span>Monitor</span><h3>Xiaomi Gaming Monitor G24i 2026</h3><small>Fast IPS • FHD • 200Hz</small><details class="spec"><summary data-i18n="sp_btn">Spesifikasi</summary><dl><div><dt data-i18n="sp_panel">Layar</dt><dd data-i18n="spv_4_0">23,8 inci Fast IPS, 1920 × 1080 piksel, sudut pandang 178°</dd></div><div><dt data-i18n="sp_perf">Performa</dt><dd data-i18n="spv_4_1">Refresh rate 200 Hz, waktu respons 1 ms (GtG)</dd></div><div><dt data-i18n="sp_visual">Visual &amp; Warna</dt><dd data-i18n="spv_4_2">HDR400 (kecerahan puncak 400 nit), 8-bit, 100% sRGB, 95% DCI-P3, akurasi warna ΔE&lt;2</dd></div><div><dt data-i18n="sp_gaming">Fitur Gaming</dt><dd data-i18n="spv_4_3">FreeSync Premium dan kompatibel dengan G-Sync</dd></div><div><dt data-i18n="sp_eye">Kenyamanan Mata</dt><dd data-i18n="spv_4_4">Peredup DC dan sertifikasi Cahaya Biru Rendah TÜV</dd></div></dl></details></div></div>
+        <div class="part"><div class="part-art dark"><img src="setup-keyboard.webp" width="520" height="203" alt="" loading="lazy" decoding="async" /></div><div class="part-info"><span>Keyboard</span><h3>Redragon DRAGONBORN K630W-RGB</h3><small>Mechanical Gaming Keyboard • RGB • White</small><details class="spec"><summary data-i18n="sp_btn">Spesifikasi</summary><dl><div><dt data-i18n="sp_layout">Tata Letak / Ukuran</dt><dd data-i18n="spv_5_0">61 tombol (kompak 60%) yang hemat tempat di meja</dd></div><div><dt data-i18n="sp_switch">Switch</dt><dd data-i18n="spv_5_1">Mekanis hotswappable, pilihan Outemu (Brown, Blue, atau Red)</dd></div><div><dt data-i18n="sp_conn">Koneksi</dt><dd data-i18n="spv_5_2">Kabel USB Type-C yang bisa dilepas (detachable)</dd></div><div><dt data-i18n="sp_extra">Fitur Tambahan</dt><dd data-i18n="spv_5_3">N-Key rollover dan anti-ghosting penuh</dd></div><div><dt data-i18n="sp_light">Pencahayaan</dt><dd data-i18n="spv_5_4">Lampu latar RGB dengan hingga 13 mode bawaan</dd></div><div><dt data-i18n="sp_warranty">Garansi</dt><dd data-i18n="spv_5_5">Resmi distributor 2 tahun (tergantung toko)</dd></div></dl></details></div></div>
+        <div class="part"><div class="part-art"><img src="setup-mouse.webp" width="373" height="520" alt="" loading="lazy" decoding="async" /></div><div class="part-info"><span>Mouse</span><h3>Press Play ATLAS 3311</h3><small>Ergo Ultralight • Wireless Gaming Mouse</small><details class="spec"><summary data-i18n="sp_btn">Spesifikasi</summary><dl><div><dt data-i18n="sp_sensor">Sensor</dt><dd>PixArt PAW3311</dd></div><div><dt data-i18n="sp_weight">Berat</dt><dd data-i18n="spv_6_1">Sekitar 58–59 g</dd></div><div><dt data-i18n="sp_shape">Bentuk</dt><dd data-i18n="spv_6_2">Ergonomis untuk tangan kanan</dd></div><div><dt data-i18n="sp_switch">Switch</dt><dd data-i18n="spv_6_3">Huano Blue Shell White Dot (20 juta klik)</dd></div><div><dt data-i18n="sp_net">Konektivitas</dt><dd data-i18n="spv_6_4">Nirkabel 2.4GHz, Bluetooth, dan kabel USB-C (tri-mode)</dd></div><div><dt data-i18n="sp_lod">Lift-Off Distance</dt><dd data-i18n="spv_6_5">1 mm (dapat disesuaikan lewat software)</dd></div><div><dt data-i18n="sp_warranty">Garansi</dt><dd data-i18n="spv_6_6">Resmi 12 bulan</dd></div><div><dt data-i18n="sp_incl">Kelengkapan</dt><dd data-i18n="spv_6_7">Grip tape universal, dongle USB, kabel USB C-to-A, dan buku manual</dd></div></dl></details></div></div>
+        <div class="part"><div class="part-art"><img src="setup-gamepad.webp" width="426" height="304" alt="" loading="lazy" decoding="async" /></div><div class="part-info"><span>Gamepad</span><h3>Rexus Pro Gaming ASTA GX150</h3><small>Wireless Gamepad</small><details class="spec"><summary data-i18n="sp_btn">Spesifikasi</summary><dl><div><dt data-i18n="sp_conn">Koneksi</dt><dd data-i18n="spv_7_0">Triple mode: Bluetooth 5.1, Wireless 2.4GHz (dongle), dan kabel USB-C</dd></div><div><dt data-i18n="sp_polling">Polling Rate</dt><dd data-i18n="spv_7_1">Hingga 1000 Hz (nirkabel maupun kabel) untuk meminimalisasi delay</dd></div><div><dt data-i18n="sp_analog">Sensor Analog &amp; Trigger</dt><dd data-i18n="spv_7_2">Hall Effect magnetic, lebih awet dan anti drift</dd></div><div><dt data-i18n="sp_compat">Kompatibilitas</dt><dd data-i18n="spv_7_3">PC, PS4, PS3, Android, Nintendo Switch, dan Nintendo Switch 2</dd></div><div><dt data-i18n="sp_battery">Baterai</dt><dd data-i18n="spv_7_4">600 mAh, pemakaian sekitar 8–20 jam (pengisian 2–3 jam)</dd></div><div><dt data-i18n="sp_extra">Fitur Tambahan</dt><dd data-i18n="spv_7_5">Motor getar ganda, fungsi turbo, tombol yang dapat diprogram, dan dukungan charging dock</dd></div></dl></details></div></div>
       </div>
       <div class="setup-grid" role="tabpanel" data-panel="av" hidden>
-        <div class="part"><em>🎧</em><div><span>Headset</span><h3>Rexus Vonix F30</h3><small>Gaming Headset • Free Splitter</small></div></div>
-        <div class="part"><em>🔊</em><div><span>Speaker</span><h3>NEMESIS Falcon SPN-08</h3><small>Gaming Stereo • RGB</small></div></div>
-        <div class="part"><em>📷</em><div><span>Webcam</span><h3>TECGEAR 2KV2</h3><small>QHD 2K • 30FPS • Autofocus • Mic • Privacy Shutter</small></div></div>
+        <div class="part"><div class="part-art"><img src="setup-headset.webp" width="451" height="520" alt="" loading="lazy" decoding="async" /></div><div class="part-info"><span>Headset</span><h3>Rexus Vonix F30</h3><small>Gaming Headset • Free Splitter</small><details class="spec"><summary data-i18n="sp_btn">Spesifikasi</summary><dl><div><dt data-i18n="sp_driver">Driver Speaker</dt><dd data-i18n="spa_1_0">Diameter 50mm, sensitivitas 115dB, impedansi 32Ω</dd></div><div><dt data-i18n="sp_mic">Mikrofon</dt><dd data-i18n="spa_1_1">Omnidirectional (beberapa arah), ukuran 6 × 5.0 mm</dd></div><div><dt data-i18n="sp_conn">Koneksi</dt><dd data-i18n="spa_1_2">USB (untuk lampu LED) dan twin 3.5mm (audio &amp; mic), plus converter/splitter bawaan</dd></div><div><dt data-i18n="sp_cable">Panjang Kabel</dt><dd data-i18n="spa_1_3">Sekitar 2,2 meter</dd></div><div><dt data-i18n="sp_color">Pilihan Warna</dt><dd data-i18n="spa_1_4">Putih</dd></div></dl></details></div></div>
+        <div class="part"><div class="part-art"><img src="setup-speaker.webp" width="520" height="263" alt="" loading="lazy" decoding="async" /></div><div class="part-info"><span>Speaker</span><h3>NEMESIS Falcon SPN-08</h3><small>Gaming Stereo • RGB</small><details class="spec"><summary data-i18n="sp_btn">Spesifikasi</summary><dl><div><dt data-i18n="sp_sptype">Jenis Speaker</dt><dd data-i18n="spa_2_0">Stereo sound bar (2 driver 50,8 mm dengan magnet neodymium)</dd></div><div><dt data-i18n="sp_pout">Output Daya</dt><dd>3W × 2</dd></div><div><dt data-i18n="sp_freq">Respons Frekuensi</dt><dd>25Hz – 20KHz (SNR: 35dB)</dd></div><div><dt data-i18n="sp_net">Konektivitas</dt><dd data-i18n="spa_2_3">Jack AUX 3,5 mm (audio) dan USB 2.0 (daya 5V-600mA)</dd></div><div><dt data-i18n="sp_cable">Panjang Kabel</dt><dd data-i18n="spa_2_4">1,6 meter dengan sistem plug and play</dd></div><div><dt data-i18n="sp_extra">Fitur Tambahan</dt><dd data-i18n="spa_2_5">Lampu pencahayaan RGB, teknologi anti-noise, dan pengontrol inline</dd></div><div><dt data-i18n="sp_color">Pilihan Warna</dt><dd data-i18n="spa_2_6">Putih</dd></div><div><dt data-i18n="sp_compat">Kompatibilitas</dt><dd data-i18n="spa_2_7">PC, Laptop, serta perangkat Mobile/HP</dd></div></dl></details></div></div>
+        <div class="part"><div class="part-art"><img src="setup-webcam.webp" width="520" height="392" alt="" loading="lazy" decoding="async" /></div><div class="part-info"><span>Webcam</span><h3>TECGEAR 2KV2</h3><small>QHD 2K • 30FPS • Autofocus • Mic • Privacy Shutter</small><details class="spec"><summary data-i18n="sp_btn">Spesifikasi</summary><dl><div><dt data-i18n="sp_res">Resolusi &amp; Frame Rate</dt><dd data-i18n="spa_3_0">QHD 2592 × 1944 px hingga 30 FPS (mendukung pengaturan 1080p dan 720p)</dd></div><div><dt data-i18n="sp_lens">Lensa</dt><dd data-i18n="spa_3_1">Kaca dengan Autofocus dan koreksi cahaya rendah otomatis</dd></div><div><dt data-i18n="sp_fov">Sudut Pandang (FOV)</dt><dd data-i18n="spa_3_2">78 derajat</dd></div><div><dt data-i18n="sp_mic">Mikrofon</dt><dd data-i18n="spa_3_3">Built-in stereo microphones (mikrofon ganda)</dd></div><div><dt data-i18n="sp_conn">Koneksi</dt><dd data-i18n="spa_3_4">USB-A (plug and play, tanpa instalasi driver tambahan)</dd></div><div><dt data-i18n="sp_cable">Panjang Kabel</dt><dd data-i18n="spa_3_5">2 meter</dd></div><div><dt data-i18n="sp_extra">Fitur Tambahan</dt><dd data-i18n="spa_3_6">Penutup privasi (privacy shutter), rotasi/swivel 360 derajat, pengaturan tilt, dan dudukan tripod-ready</dd></div><div><dt data-i18n="sp_compat">Kompatibilitas</dt><dd data-i18n="spa_3_7">Windows, macOS, Linux, Chrome OS, dan Android (mendukung Zoom, Skype, OBS, dan Discord)</dd></div></dl></details></div></div>
       </div>
+      <p class="aff-note" id="affNote" data-i18n="aff_note" hidden>Tombol “Beli” bisa berupa tautan afiliasi: harga untukmu tetap sama, dan saya bisa mendapat komisi kecil yang mendukung channel ini.</p>
     </section>
 
     <section id="live" class="section reveal">
@@ -162,6 +171,7 @@
         <div>
           <h3 data-i18n="live_day">Live Setiap Hari</h3>
           <p class="time">13.00 – 15.00 <small>WIB</small></p>
+          <p class="live-local" id="liveLocal" hidden></p>
           <p class="live-note" data-i18n="live_note">Kecuali ada kesibukan.</p>
         </div>
         <p class="live-status" id="liveStatus" aria-live="polite"></p>
@@ -169,6 +179,7 @@
           <a class="live-btn tt" href="https://www.tiktok.com/@gewolx" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.4a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .8.1V9.2a6.3 6.3 0 1 0 5.5 6.2V8.6a8.2 8.2 0 0 0 4.8 1.5V6.7z"/></svg><span data-i18n="watch_tt">Tonton di TikTok</span></a>
           <a class="live-btn yt" href="https://youtube.com/@gewolx" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg><span data-i18n="watch_yt">Tonton di YouTube</span></a>
           <a class="live-btn kk" href="https://kick.com/gewolx" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.333 0h8v5.333H12V2.667h2.667V0h8v8H20v2.667h-2.667v2.666H20V16h2.667v8h-8v-2.667H12v-2.666H9.333V24h-8Z"/></svg><span data-i18n="watch_kick">Tonton di Kick</span></a>
+          <button type="button" class="live-btn cal" id="calBtn"><span aria-hidden="true">📅</span><span data-i18n="cal_btn">Tambahkan ke kalender</span></button>
         </div>
       </div>
       <ol class="week" id="week">
@@ -184,9 +195,9 @@
         <h3 data-i18n="games_title">Game yang Saya Mainkan</h3>
         <p class="req-sub" data-i18n="games_sub">Game yang paling sering muncul di live.</p>
         <div class="game-grid">
-          <div class="game gta"><div class="game-art"><img src="game-gta5.png" width="360" height="318" alt="Logo Grand Theft Auto V" loading="lazy" decoding="async" /></div><div class="game-info"><span data-i18n="g_rp">Roleplay</span><h3>GTA V Roleplay</h3></div></div>
-          <div class="game ff"><div class="game-art"><img src="game-freefire.png" width="640" height="91" alt="Logo Free Fire" loading="lazy" decoding="async" /></div><div class="game-info"><span data-i18n="g_br">Battle Royale</span><h3>Free Fire</h3></div></div>
-          <div class="game rb"><div class="game-art"><img src="game-roblox.png" width="256" height="256" alt="Logo Roblox" loading="lazy" decoding="async" /></div><div class="game-info"><span data-i18n="g_sb">Sandbox</span><h3>Roblox</h3></div></div>
+          <div class="game gta"><div class="game-art"><img src="game-gta5.webp" width="360" height="318" alt="Logo Grand Theft Auto V" loading="lazy" decoding="async" /></div><div class="game-info"><span data-i18n="g_rp">Roleplay</span><h3>GTA V Roleplay</h3></div></div>
+          <div class="game ff"><div class="game-art"><img src="game-freefire.webp" width="640" height="91" alt="Logo Free Fire" loading="lazy" decoding="async" /></div><div class="game-info"><span data-i18n="g_br">Battle Royale</span><h3>Free Fire</h3></div></div>
+          <div class="game rb"><div class="game-art"><img src="game-roblox.webp" width="256" height="256" alt="Logo Roblox" loading="lazy" decoding="async" /></div><div class="game-info"><span data-i18n="g_sb">Sandbox</span><h3>Roblox</h3></div></div>
         </div>
       </div>
       <div id="request" class="card request-card">
@@ -228,29 +239,70 @@
     <section id="proyek" class="section reveal">
       <h2><small>04 / ギャラリー</small><span data-i18n="gal_title">Momen Ikonik</span></h2>
       <p class="sub" data-i18n="gal_sub">Momen berkesan dalam perjalanan saya. Klik foto untuk memperbesar.</p>
+      <div class="tabs gal-tabs" id="galTabs" role="group" aria-label="Filter galeri" data-i18n-attr="aria-label:gf_label">
+        <button type="button" class="tab on" data-cat="all" aria-pressed="true" data-i18n="gf_all">Semua</button>
+        <button type="button" class="tab" data-cat="prestasi" aria-pressed="false" data-i18n="gf_prestasi">Prestasi</button>
+        <button type="button" class="tab" data-cat="sekolah" aria-pressed="false" data-i18n="gf_sekolah">Sekolah</button>
+        <button type="button" class="tab" data-cat="kegiatan" aria-pressed="false" data-i18n="gf_kegiatan">Kegiatan</button>
+        <button type="button" class="tab" data-cat="live" aria-pressed="false" data-i18n="gf_live">Live</button>
+      </div>
       <div class="gallery-wrap" id="galWrap">
       <div class="gallery">
-        <article class="photo-card portrait">
+        <article class="photo-card portrait" data-cat="prestasi">
           <span class="badge">🏆 2024</span>
-          <img src="momen-2024.jpg" data-full="momen-2024.jpg" width="1200" height="1600" alt="Penganugerahan Juara 1 Lomba Film Dokumenter tingkat Kabupaten Cilacap 2024" data-i18n-attr="alt:g1_alt" loading="lazy" />
+          <img src="momen-2024.webp" data-full="momen-2024.webp" width="1200" height="1600" alt="Penganugerahan Juara 1 Lomba Film Dokumenter tingkat Kabupaten Cilacap 2024" data-i18n-attr="alt:g1_alt" loading="lazy" />
           <div class="photo-info"><h3 data-i18n="g1_t">Juara 1 Film Dokumenter 2024</h3><p data-i18n="g1_d">LARWASIPDA 2024, Lomba Pembuatan Film Dokumenter tingkat Kabupaten Cilacap.</p></div>
         </article>
-        <article class="photo-card landscape">
+        <article class="photo-card landscape" data-cat="prestasi">
           <span class="badge">🥇 2025</span>
-          <img src="momen-2025.jpg" data-full="momen-2025.jpg" width="1600" height="904" alt="Penganugerahan Juara Harapan 1 Lomba Film Dokumenter tingkat Kabupaten Cilacap 2025" data-i18n-attr="alt:g2_alt" loading="lazy" />
+          <img src="momen-2025.webp" data-full="momen-2025.webp" width="1600" height="904" alt="Penganugerahan Juara Harapan 1 Lomba Film Dokumenter tingkat Kabupaten Cilacap 2025" data-i18n-attr="alt:g2_alt" loading="lazy" />
           <div class="photo-info"><h3 data-i18n="g2_t">Juara Harapan 1 Film Dokumenter 2025</h3><p data-i18n="g2_d">Lomba Pembuatan Film Dokumenter tingkat Kabupaten Cilacap 2025.</p></div>
         </article>
       </div>
       <div class="gallery gallery-2">
-        <article class="photo-card landscape wide">
+        <article class="photo-card landscape wide" data-cat="sekolah">
           <span class="badge" data-i18n="g3_badge">🎓 XII.F5</span>
-          <img src="momen-kelas.jpg" data-full="momen-kelas.jpg" width="1600" height="900" alt="Foto bersama sekelas XII.F5 SCIZOLASMA" data-i18n-attr="alt:g3_alt" loading="lazy" />
+          <img src="momen-kelas.webp" data-full="momen-kelas.webp" width="1600" height="900" alt="Foto bersama sekelas XII.F5 SCIZOLASMA" data-i18n-attr="alt:g3_alt" loading="lazy" />
           <div class="photo-info"><h3 data-i18n="g3_t">Foto Bareng Sekelas XII.F5</h3><p data-i18n="g3_d">Kelas XII.F5 "SCIZOLASMA" berfoto bersama.</p></div>
         </article>
-        <article class="photo-card portrait tall">
+        <article class="photo-card portrait tall" data-cat="live">
           <span class="badge" data-i18n="g4_badge">🐋 Live</span>
-          <img src="momen-live.jpg" data-full="momen-live.jpg" width="1200" height="2132" alt="Momen live streaming saat mendapat gift Paus dari Ainayy" data-i18n-attr="alt:g4_alt" loading="lazy" />
+          <img src="momen-live.webp" data-full="momen-live.webp" width="1200" height="2132" alt="Momen live streaming saat mendapat gift Paus dari Ainayy" data-i18n-attr="alt:g4_alt" loading="lazy" />
           <div class="photo-info"><h3 data-i18n="g4_t">Gift Paus dari Ainayy</h3><p data-i18n="g4_d">Momen live streaming ketika Ainayy mengirim gift Paus.</p></div>
+        </article>
+      </div>
+      <div class="gallery gallery-3">
+        <article class="photo-card ultra" data-cat="kegiatan">
+          <span class="badge" data-i18n="g5_badge">🎓 Study Campus</span>
+          <img src="momen-study-campus.webp" data-full="momen-study-campus.webp" width="1600" height="703" alt="Foto bersama rombongan study campus Goes to Campus di Museum Mini Sisa Hartaku" data-i18n-attr="alt:g5_alt" loading="lazy" />
+          <div class="photo-info"><h3 data-i18n="g5_t">Study Campus 2025</h3><p data-i18n="g5_d">Kegiatan study campus "Goes to Campus" bersama rombongan, berfoto di Museum Mini Sisa Hartaku.</p></div>
+        </article>
+        <article class="photo-card wide" data-cat="kegiatan">
+          <span class="badge" data-i18n="g6_badge">🌙 Ramadan</span>
+          <img src="momen-takjil.webp" data-full="momen-takjil.webp" width="1600" height="900" alt="Kegiatan berbagi takjil kepada anak-anak di bulan Ramadan" data-i18n-attr="alt:g6_alt" loading="lazy" />
+          <div class="photo-info"><h3 data-i18n="g6_t">Berbagi Takjil di Bulan Ramadan</h3><p data-i18n="g6_d">Berbagi takjil kepada anak-anak dan warga sekitar di bulan Ramadan 2026.</p></div>
+        </article>
+      </div>
+      <div class="gallery gallery-4">
+        <article class="photo-card portrait" data-cat="prestasi">
+          <span class="badge" data-i18n="g7_badge">🎬 2024</span>
+          <img src="momen-good-team.webp" data-full="momen-good-team.webp" width="1200" height="1600" alt="Tim film dokumenter 2024 berjalan menuju gedung SMAN 1 Majenang sambil membawa piala" data-i18n-attr="alt:g7_alt" loading="lazy" />
+          <div class="photo-info"><h3 data-i18n="g7_t">Good Team Film Dokumenter 2024</h3><p data-i18n="g7_d">Tim film dokumenter 2024 kembali ke sekolah membawa piala dan piagam kemenangan.</p></div>
+        </article>
+        <article class="photo-card portrait" data-cat="kegiatan">
+          <span class="badge" data-i18n="g8_badge">🏐 Voli</span>
+          <img src="momen-voli.webp" data-full="momen-voli.webp" width="1200" height="1600" alt="Kegiatan ekstrakurikuler voli, peserta melakukan pemanasan di lapangan" data-i18n-attr="alt:g8_alt" loading="lazy" />
+          <div class="photo-info"><h3 data-i18n="g8_t">Ekstrakurikuler Voli</h3><p data-i18n="g8_d">Kegiatan ekstrakurikuler voli: pemanasan bersama sebelum latihan di lapangan sekolah.</p></div>
+        </article>
+        <article class="photo-card portrait" data-cat="sekolah">
+          <span class="badge" data-i18n="g9_badge">🎓 XII.F-5 &amp; F-6</span>
+          <img src="momen-kelas-f5-f6.webp" data-full="momen-kelas-f5-f6.webp" width="1200" height="1600" alt="Foto bersama kelas XII.F-5 dan XII.F-6 SMAN 1 Majenang" data-i18n-attr="alt:g9_alt" loading="lazy" />
+          <div class="photo-info"><h3 data-i18n="g9_t">Kelas XII.F-5 &amp; XII.F-6</h3><p data-i18n="g9_d">Foto bersama kelas XII.F-5 dan XII.F-6 SMAN 1 Majenang.</p></div>
+        </article>
+        <article class="photo-card tall" data-cat="sekolah">
+          <span class="badge" data-i18n="g10_badge">📝 TKA 2025</span>
+          <img src="momen-tka-2025.webp" data-full="momen-tka-2025.webp" width="1200" height="2133" alt="Foto bersama seusai TKA 2025 sambil memegang kartu peserta" data-i18n-attr="alt:g10_alt" loading="lazy" />
+          <div class="photo-info"><h3 data-i18n="g10_t">After TKA 2025</h3><p data-i18n="g10_d">Berfoto bersama setelah menyelesaikan Tes Kemampuan Akademik (TKA) 2025.</p></div>
         </article>
       </div>
       </div>
@@ -347,11 +399,50 @@
           <i>→</i>
         </a>
       </div>
+
+      <aside class="dc-widget" id="dcWidget" aria-labelledby="dcwTitle">
+        <div class="dcw-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.2.5a18 18 0 0 0-6.4 0L8.6 3a19.8 19.8 0 0 0-4.9 1.4C.6 9 -.3 13.5.1 18a19.9 19.9 0 0 0 6 3l1.3-2.1c-.7-.3-1.4-.6-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1l1.3 2.1a19.9 19.9 0 0 0 6-3c.5-5.2-.8-9.7-3.6-13.6zM8.5 15.3c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.1 1.1 2.1 2.4-.9 2.4-2.1 2.4zm7 0c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.1 1.1 2.1 2.4-.9 2.4-2.1 2.4z"/></svg><img id="dcwIcon" alt="" width="56" height="56" hidden /></div>
+        <div class="dcw-body">
+          <h3 id="dcwTitle" data-i18n="dcw_title">Komunitas Discord</h3>
+          <p class="dcw-name" id="dcwName" hidden></p>
+          <p class="dcw-stats" id="dcwStats" hidden><span class="dcw-on"><i aria-hidden="true"></i><b id="dcwOnline"></b></span><span id="dcwMembers"></span></p>
+          <p class="dcw-sub" data-i18n="dcw_sub">Gabung untuk ngobrol, nonton bareng, dan ikut event bersama komunitas.</p>
+        </div>
+        <a class="btn primary dcw-join" href="https://discord.gg/kVjbpRTXEP" target="_blank" rel="noopener" data-i18n="dcw_join">Gabung Discord</a>
+      </aside>
+    </section>
+
+    <!-- FAQ: teks ada di script.js (kunci faq_q1..faq_a5), dua bahasa -->
+    <section id="faq" class="section reveal">
+      <h2><small>08 / よくある質問</small><span data-i18n="faq_title">Pertanyaan Umum</span></h2>
+      <p class="sub" data-i18n="faq_sub">Jawaban singkat untuk hal yang paling sering ditanyakan.</p>
+      <div class="faq">
+        <details class="faq-item">
+          <summary data-i18n="faq_q1">Live jam berapa?</summary>
+          <p data-i18n-html="faq_a1">Setiap hari pukul <strong>13.00–15.00 WIB</strong>, kecuali ada kesibukan. Kalau berhalangan, kabarnya ada di <a href="#sosmed">media sosial</a>.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq_q2">Nonton live di mana?</summary>
+          <p data-i18n-html="faq_a2">Lewat TikTok, YouTube, atau Kick (@gewolx). Tautan ketiganya ada di bagian <a href="#live">Jadwal Live</a>.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq_q3">Bagaimana cara request game atau lagu?</summary>
+          <p data-i18n-html="faq_a3">Isi formulir di bagian <a href="#request">Request untuk Live</a>. Saya cek sebelum live berikutnya.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq_q4">Bisa diajak kolaborasi?</summary>
+          <p data-i18n-html="faq_a4">Bisa dibicarakan. Kirim pesan lewat DM <a href="https://instagram.com/didikpribadii" target="_blank" rel="noopener">Instagram</a> atau <a href="https://t.me/didikpribadi" target="_blank" rel="noopener">Telegram</a> dan ceritakan idenya.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq_q5">Bagaimana cara mendukung Gewol?</summary>
+          <p data-i18n-html="faq_a5">Lewat <a href="https://sociabuzz.com/gewol/donate" target="_blank" rel="noopener">SociaBuzz</a> atau gabung <a href="https://sociabuzz.com/gewol/tribe" target="_blank" rel="noopener">Tribe</a>. Menonton, menyukai, dan membagikan konten juga sangat membantu.</p>
+        </details>
+      </div>
     </section>
 
     <!-- DUKUNGAN -->
     <section id="dukung" class="section reveal">
-      <h2><small>08 / サポート</small><span data-i18n="sup_title">Dukung Gewol</span></h2>
+      <h2><small>09 / サポート</small><span data-i18n="sup_title">Dukung Gewol</span></h2>
       <div class="card donate">
         <div class="donate-text">
           <h3 data-i18n="don_h">Traktir Gewol ☕</h3>
@@ -401,6 +492,7 @@
   </div>
 
   <footer>
+    <button type="button" class="foot-share" data-share>🔗 <span data-i18n="share_btn">Bagikan</span></button>
     <p>© 2026 Gewol. All Rights Reserved.</p>
   </footer>
 
@@ -411,10 +503,20 @@
     <button id="plNext" class="pl-btn" type="button" aria-label="Lagu berikutnya" data-i18n-attr="aria-label:pl_next" hidden>⏭</button>
     <span class="eq" id="plEq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
     <div class="pl-info"><small data-i18n="pl_now">Sedang diputar</small><b id="plTitle">Backsound</b></div>
+    <button id="plList" class="pl-btn" type="button" aria-label="Daftar lagu" title="Daftar lagu" aria-expanded="false" aria-controls="plPanel" data-i18n-attr="aria-label:pl_list,title:pl_list" hidden>☰</button>
     <label class="pl-vol"><span id="plVolIco" aria-hidden="true">🔉</span><input id="plVol" type="range" min="0" max="100" step="1" value="30" aria-label="Volume" data-i18n-attr="aria-label:pl_vol" /></label>
+
+    <div id="plPanel" class="pl-panel" role="dialog" aria-label="Daftar lagu" data-i18n-attr="aria-label:pl_list" hidden>
+      <div class="pl-panel-head">
+        <b data-i18n="pl_list">Daftar lagu</b>
+        <span id="plCount" class="pl-count"></span>
+        <button id="plClose" class="pl-x" type="button" aria-label="Tutup" data-i18n-attr="aria-label:close">✕</button>
+      </div>
+      <ol id="plItems" class="pl-items"></ol>
+    </div>
   </div>
 
-  <audio id="bgm" preload="auto"></audio>
+  <audio id="bgm" preload="metadata"></audio>
 
   <script src="script.js"></script>
 </body>
