@@ -857,16 +857,17 @@ bindForm(document.getElementById("requestForm"), { okKey: "req_ok", cooldownKey:
 })();
 
 // ===== Backsound musik: playlist, daftar lagu, ganti lagu, volume =====
-// Tambah lagu baru cukup dengan menambah satu baris di PLAYLIST (taruh file mp3 di folder "musik/").
+// Tambah lagu baru cukup dengan menambah satu baris di PLAYLIST (taruh file mp3 di folder yang sama dengan index.html).
 // Jika hanya satu lagu, lagu itu diulang terus. Jika lebih dari satu, lagu berpindah otomatis
 // dan kembali ke awal setelah lagu terakhir.
 const PLAYLIST = [
-  { src: "musik/menari-nari.mp3",     title: "Menari-nari",     artist: "Raim Laode" },
-  { src: "musik/iqro.mp3",            title: "IQRO",            artist: "Raim Laode" },
-  { src: "musik/bersenja-gurau.mp3",  title: "Bersenja Gurau",  artist: "Raim Laode" },
-  { src: "musik/dunia-yang-nanti.mp3", title: "Dunia Yang Nanti", artist: "Raim Laode" },
-  { src: "musik/lesung-pipi.mp3",     title: "Lesung Pipi",     artist: "Raim Laode" },
-  { src: "musik/komang.mp3",          title: "Komang",          artist: "Raim Laode" },
+  { src: "menari-nari.mp3",     title: "Menari-nari",     artist: "Raim Laode" },
+  { src: "iqro.mp3",            title: "IQRO",            artist: "Raim Laode" },
+  { src: "bersenja-gurau.mp3",  title: "Bersenja Gurau",  artist: "Raim Laode" },
+  { src: "dunia-yang-nanti.mp3", title: "Dunia Yang Nanti", artist: "Raim Laode" },
+  { src: "lesung-pipi.mp3",     title: "Lesung Pipi",     artist: "Raim Laode" },
+  { src: "komang.mp3",          title: "Komang",          artist: "Raim Laode" },
+  { src: "suasana-rumah.mp3",   title: "Suasana Rumah",   artist: "Raim Laode" },
 ];
 
 (function backsound() {
@@ -1019,7 +1020,7 @@ const PLAYLIST = [
     if (multi && failed < PLAYLIST.length) go(1);
     else {
       // Semua file gagal dimuat: pemutar tetap tampil dengan pesan, supaya mudah dicari penyebabnya
-      setTitle("File lagu tidak ditemukan. Cek folder musik/");
+      setTitle("File lagu tidak ditemukan. Cek file mp3 di folder yang sama dengan index.html");
       audio.removeAttribute("src");
       paint();
     }
